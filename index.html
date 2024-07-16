@@ -1,65 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zohal Mirkhel Portfolio</title>
     <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-  <header>
-  <body>
-  <header>
-    <nav> 
-      <ul class="sidebar">
-        <li><a href="#about">About</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#project">Projects</a></li>
-        <li><a href="#skill">Skills</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li onclick=hideSidebar()><a href=""><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
-      </ul>
-      <ul id="desktop-menu">
-        <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
-        <li class="hide"><a href="#about">About</a></li>
-        <li class="hide"><a href="#education">Education</a></li>
-        <li class="hide"><a href="#project">Projects</a></li>
-        <li class="hide"><a href="#skill">Skills</a></li>
-        <li class="hide"><a href="#contact">Contact</a></li>
-      </ul>
+</head>
+<body>
+<header>
+    <nav>
+        <ul class="sidebar">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#project">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#certification">Certification</a></li>
+          <li onclick="hideSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+        </ul>
+        <ul id="navbar">
+            <li class="menu-button" onclick="showSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+            <li class="hide"><a href="#home">Home</a></li>
+            <li class="hide"><a href="#about">About</a></li>
+            <li class="hide"><a href="#education">Education</a></li>
+            <li class="hide"><a href="#project">Projects</a></li>
+            <li class="hide"><a href="#skills">Skills</a></li>
+            <li class="hide"><a href="#certification">Certification</a></li>
+        </ul>
     </nav>
-  </header>
+</header>
 
-  <section id="about">
+<section id="about">
     <h2>About Me</h2>
     <div id="about-me"></div>
-  </section>
-  <section id="education">
+</section>
+<section id="education">
     <h2>Education</h2>
     <div id="my-edu"></div>
-  </section>
-  <section id="project">
+</section>
+<section id="project">
     <h2>My Projects</h2>
     <div id="my-projects"></div>
     <div id="pop-up" class="hidden">
-      <div id="popup-content"></div>
-      <button id="close-pop">Close</button>
+        <div id="popup-content"></div>
+        <button id="close-pop">Close</button>
     </div>
-  </section>
-  <section id="skills">
+</section>
+<section id="skills">
     <h2>Skills</h2>
     <div id="my-skills"></div>
-  </section>
-  <section id="contact">
+</section>
+<section id="contact">
     <h2>Contact Me</h2>
     <form id="contact-form" action="">
-      <input type="text" id="name" placeholder="Enter Your Name..." required>
-      <input type="email" id="email" placeholder="Enter Your Email..." required>
-      <textarea id="message" placeholder="Leave a Message" required></textarea>
-      <button type="submit">Submit</button>
-      <p id="error-message" class="hidden">Email Must be in Lower Case</p>
+        <input type="text" id="name" placeholder="Enter Your Name..." required>
+        <input type="email" id="email" placeholder="Enter Your Email..." required>
+        <textarea id="message" placeholder="Leave a Message" required></textarea>
+        <button type="submit">Submit</button>
+        <p id="error-message" class="hidden">Email Must be in Lower Case</p>
     </form>
-  </section>
-  <script src="script.js"></script>  
-  </body>
+</section>
+<script src="script.js"></script>
+</body>
 </html>
