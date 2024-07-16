@@ -1,5 +1,29 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
 body {
+  min-height: 100vh;
   background-color: aquamarine;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 250px;
+  z-index: 999;
+  background-color: antiquewhite;
+  flex-direction: column;
+  justify-content: flex-start;
+  display: none;
+}
+
+
+.menu-button {
+  display: none;
 }
 
 .hidden {
@@ -14,4 +38,21 @@ body {
   background-color: white;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   padding: 20px;
+  backdrop-filter: blur(20px);
+}
+
+/* hide sidebar on mobile*/
+@media(max-width: 800px){
+  .hide{
+    display: none;
+  }
+  .menu-button {
+    display: block;
+  }
+}
+
+@media (max-width: 600px) {
+  .menu-button {
+    display: block;
+  }
 }

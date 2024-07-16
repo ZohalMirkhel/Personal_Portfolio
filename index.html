@@ -10,18 +10,22 @@
   <header>
   <body>
   <header>
-    <nav>
-      <button id="toggle">
-        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50" viewBox="0 0 50 50">
-          <path d="M 3 9 A 1.0001 1.0001 0 1 0 3 11 L 47 11 A 1.0001 1.0001 0 1 0 47 9 L 3 9 z M 3 24 A 1.0001 1.0001 0 1 0 3 26 L 47 26 A 1.0001 1.0001 0 1 0 47 24 L 3 24 z M 3 39 A 1.0001 1.0001 0 1 0 3 41 L 47 41 A 1.0001 1.0001 0 1 0 47 39 L 3 39 z"></path>
-        </svg>
-      </button>
-      <ul id="mobile-menu" class="hidden">
-        <li><a href="#project">Projects</a></li>
+    <nav> 
+      <ul class="sidebar">
         <li><a href="#about">About</a></li>
-        <li><a href="#contact">Projects</a></li>
-        <li><a href="#contact">Education</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#project">Projects</a></li>
+        <li><a href="#skill">Skills</a></li>
         <li><a href="#contact">Contact</a></li>
+        <li onclick=hideSidebar()><a href=""><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+      </ul>
+      <ul id="desktop-menu">
+        <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+        <li class="hide"><a href="#about">About</a></li>
+        <li class="hide"><a href="#education">Education</a></li>
+        <li class="hide"><a href="#project">Projects</a></li>
+        <li class="hide"><a href="#skill">Skills</a></li>
+        <li class="hide"><a href="#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
@@ -30,6 +34,10 @@
     <h2>About Me</h2>
     <div id="about-me"></div>
   </section>
+  <section id="education">
+    <h2>Education</h2>
+    <div id="my-edu"></div>
+  </section>
   <section id="project">
     <h2>My Projects</h2>
     <div id="my-projects"></div>
@@ -37,6 +45,10 @@
       <div id="popup-content"></div>
       <button id="close-pop">Close</button>
     </div>
+  </section>
+  <section id="skills">
+    <h2>Skills</h2>
+    <div id="my-skills"></div>
   </section>
   <section id="contact">
     <h2>Contact Me</h2>
