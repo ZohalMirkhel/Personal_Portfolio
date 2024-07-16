@@ -18,6 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
       <h2>Zohal Mirkhel</h2>
       <h1>Web Developer</h1>
       <a href="#contact" class="contact-btn">Contact Me</a>
+      <div class="circle"></div>
   `;
 
   heroImage.innerHTML = `
@@ -25,12 +26,12 @@ document.addEventListener("DOMContentLoaded", () => {
   `;
 
   const socialLinks = document.createElement('div');
-  socialLinks.className = 'social-links';
-  socialLinks.innerHTML = `
-      <a href="#"><img src="path/to/facebook/icon.png" alt="Facebook"></a>
-      <a href="#"><img src="path/to/github/icon.png" alt="GitHub"></a>
-      <a href="#"><img src="path/to/linkedin/icon.png" alt="LinkedIn"></a>
-  `;
+    socialLinks.className = 'social-links';
+    socialLinks.innerHTML = `
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-github"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+    `;
 
   const heroContent = document.querySelector('.hero-content');
   heroContent.appendChild(socialLinks);

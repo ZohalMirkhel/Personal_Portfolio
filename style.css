@@ -14,7 +14,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #d4af37;
+  background-color: #514724;
   padding: 1.4rem 2rem;
   border-radius: 40px;
   font-size: large;
@@ -87,9 +87,10 @@ body {
 /* home part */
 .hero {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 3rem;
+  padding: 4rem;
   background-color: black;
   position: relative;
   height: calc(100vh - 100px);
@@ -107,53 +108,57 @@ body {
   position: relative;
   z-index: 1;
   text-align: center;
-  margin-top: 2rem;
 }
 
 .circle {
-  width: 300px;
-  height: 180px;
-  background-color: #d4af37;
-  border-radius: 150px 150px 0 0;
+  width: 270px;
+  height: 270px;
+  background: linear-gradient(to bottom, #958340 0%, #5E532D 20%, #433A1A 35%, black 100%);
+  border-radius: 50%;
   position: absolute;
-  left: -130px;
+  left: -80px;
   top: 90%;
-  transform: translateY(-130%) rotate(-40deg);
+  transform: translateY(-100%) rotate(-40deg);
   z-index: -1;
 }
 
 .hero-text h1,
 .hero-text h2,
 .hero-text h3 {
-  margin: 0;
+  margin: 10px;
   line-height: 1.2;
+  text-align: left;
 }
 
 .hero-text h3 {
+  font-family: 'jockey one';
   color: #fff;
 }
 
 .hero-text h2 {
   font-size: 2.1rem;
+  font-family: 'knewave';
   color: #d4af37;
 }
 
 .hero-text h1 {
-  font-size: 2.8rem;
+  font-family: 'jockey one';
+  font-size: 3.8rem;
   color: #fff;
 }
 
 .contact-btn {
   display: inline-block;
-  margin-top: 1rem;
-  padding: 0.5rem 1rem;
+  padding: 0.8rem 2.2rem;
   background-color: #d4af37;
   color: #000;
   text-decoration: none;
-  border-radius: 5px;
+  border-radius: 40px;
+  position: relative;
 }
 
 .hero-image {
+  top: 2rem;
   max-width: 50%;
   text-align: center;
 }
@@ -168,15 +173,16 @@ body {
   flex-direction: column;
   position: absolute;
   left: -9rem;
-  top: 100%;
+  top: 70%;
   transform: translateY(-50%);
 }
 
 .social-links a {
   margin: 0.5rem 0;
+  color: #fff;
 }
 
-.social-links img {
+.social-links {
   width: 30px;
   height: 30px;
 }
