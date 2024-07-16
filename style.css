@@ -12,14 +12,17 @@ body {
 
 #navbar {
   display: flex;
+  position: fixed;
   align-items: center;
   justify-content: center;
   background-color: #514724;
+  width: calc(100% - 24rem);
+  position: fixed;
+  top: 0;
   padding: 1.4rem 2rem;
   border-radius: 40px;
   font-size: large;
-  margin: 1rem 8rem;
-  position: relative;
+  margin: 3rem 12rem;
   z-index: 10;
   flex-wrap: wrap;
   list-style: none;
@@ -93,7 +96,6 @@ body {
   padding: 4rem;
   background-color: black;
   position: relative;
-  height: calc(100vh - 100px);
 }
 
 .hero-content {
@@ -101,6 +103,7 @@ body {
   align-items: center;
   width: 80%;
   position: relative;
+  height: 100vh;
 }
 
 .hero-text {
@@ -164,8 +167,10 @@ body {
 }
 
 .hero-image img {
-  max-width: 100%;
-  border-radius: 10px;
+  max-width: 70%;
+  border-radius: 50px;
+  margin-left: 60%;
+  margin-top: 25%;
 }
 
 .social-links {
@@ -173,7 +178,7 @@ body {
   flex-direction: column;
   position: absolute;
   left: -9rem;
-  top: 70%;
+  top: 25%;
   transform: translateY(-50%);
 }
 
@@ -187,3 +192,37 @@ body {
   height: 30px;
 }
 
+/* About Me */
+.about-content {
+  display: flex;
+  justify-content: center;
+  color: #fff;
+}
+
+.about-image img {
+  width: 50%;
+  float: left; 
+  margin-right: 0px;
+}
+
+#about-me {
+  margin-top: 150px;
+  max-width: 80%;
+  margin-left: 20px;
+}
+
+#about-me h2 {
+  color: #f1c40f;
+}
+
+#about-me p {
+  color: #ccc;
+  margin-top: 40px;
+  margin-left: 90px;
+}
+
+.h2 {
+  top: 50%;
+  background: #514724;
+  font-size: larger;
+}
