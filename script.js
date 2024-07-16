@@ -7,6 +7,37 @@ function hideSidebar(){
   sidebar.style.display = 'none'
 }
 
+//home page 
+document.addEventListener("DOMContentLoaded", () => {
+  const heroText = document.querySelector('.hero-text');
+  const heroImage = document.querySelector('.hero-image');
+
+  heroText.innerHTML = `
+      <div class="circle"></div>
+      <h3>Hello, My Name is</h3>
+      <h2>Zohal Mirkhel</h2>
+      <h1>Web Developer</h1>
+      <a href="#contact" class="contact-btn">Contact Me</a>
+  `;
+
+  heroImage.innerHTML = `
+      <img src="path/to/your/image.jpg" alt="Zohal Mirkhel working on a laptop">
+  `;
+
+  const socialLinks = document.createElement('div');
+  socialLinks.className = 'social-links';
+  socialLinks.innerHTML = `
+      <a href="#"><img src="path/to/facebook/icon.png" alt="Facebook"></a>
+      <a href="#"><img src="path/to/github/icon.png" alt="GitHub"></a>
+      <a href="#"><img src="path/to/linkedin/icon.png" alt="LinkedIn"></a>
+  `;
+
+  const heroContent = document.querySelector('.hero-content');
+  heroContent.appendChild(socialLinks);
+});
+
+
+//about page 
 const aboutMe = document.getElementById("about-me");
 
 const skills = {
