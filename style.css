@@ -270,9 +270,10 @@ body {
 
 .edu-button {
   margin-top: 20px;
-  padding: 15px 80px;
+  padding: 15px 60px;
+  margin-right: 7px;
   background-color: #514724;
-  color: #fff;
+  color: #000;
   border: none;
   font-family: 'Sansita One';
   text-align: center;

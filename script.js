@@ -32,9 +32,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const socialLinks = document.createElement('div');
   socialLinks.className = 'social-links';
   socialLinks.innerHTML = `
-      <a href="#"><i class="fab fa-facebook-f"></i></a>
-      <a href="#"><i class="fab fa-github"></i></a>
-      <a href="#"><i class="fab fa-linkedin-in"></i></a>
+      <a href="https://github.com/ZohalMirkhel"><i class="fab fa-github"></i></a>
+      <a href="https://www.facebook.com/profile.php?id=61559887775140"><i class="fa-brands fa-facebook"></i></a>
+      <a href="https://www.linkedin.com/in/zohal-mirkhel-840a7530a/"><i class="fa-brands fa-linkedin"></i></a>
   `;
 
   heroContent.appendChild(socialLinks);
@@ -70,7 +70,7 @@ document.addEventListener("DOMContentLoaded", () => {
         </div>
         <div class="edu-image">
           <img src="images/cv.png" alt="Education Image">
-          <a href="CV/Zohal Mirkhel CV.pdf" download="Zohal_Mirkhel_CV.pdf" class="edu-button">Download</a>
+          <a href="CV/Zohal Mirkhel CV.pdf" download="Zohal_Mirkhel_CV.pdf" class="edu-button">Download CV</a>
         </div>
       </div>
     `;
