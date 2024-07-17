@@ -1,212 +1,213 @@
-@media (max-width:480px) and (max-width: 780px) {
+@media (max-width: 480px) and (max-width: 780px) {
   #home {
     margin-bottom: -50%;
   }  
+  
   #navbar {
-      align-items: right;
-      width: 100%;
-      margin: 0;
-      justify-content: right;
-      background-color: #514724;
-      padding: none;
-      border-radius: 0;
-      flex-wrap: wrap;
-      position: fixed;
-      z-index: 10;
-    }
-  
-    .hero-image {
-      position: absolute;
-      top: 0;
-      left: 0;
-      margin-left: -85%;
-      margin-right: 76%;
-      max-width: 200%;
-      text-align: center;
-      height: 100vh;
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat; 
-      position: relative;
-      justify-content: left;
-      float: left;
-    }
-  
-    .hero-content {
-      display: flex;
-      align-items: center;
-      width: 80%;
-      position: relative;
-      height: 100vh;
-    }
-    
-    .hero-text {
-      max-width: 50%;
-      z-index: 1;
-      text-align: left;
-      position: relative;
-    }
-    
-    .circle {
-      width: 270px;
-      height: 270px;
-      background: linear-gradient(to bottom, #958340 0%, #5E532D 20%, #433A1A 35%, black 100%);
-      border-radius: 50%;
-      position: absolute;
-      left: -90px;
-      top: 74%;
-      transform: translateY(-50%) rotate(-40deg);
-      z-index: -1;
-    }
-    
-    .hero-text h1,
-    .hero-text h2,
-    .hero-text h3 {
-      line-height: 1.2;
-      text-align: start;
-      justify-content: flex-start;
-    }
-    
-    .hero-text h3 {
-      font-size: 25px;
-      white-space: nowrap;
-      overflow: visible;
-      font-family: 'jockey one';
-      color: #fff;
-      margin-top: 90%;
-      margin-left: -39%;
-    }
-    
-    .hero-text h2 {
-      font-size: 2.8rem;
-      white-space: nowrap;
-      overflow: visible;
-      margin: 0;
-      font-family: 'knewave';
-      color: #d4af37;
-      margin-left: -39%;
-    }
-    
-    .hero-text h1 {
-      font-family: 'jockey one';
-      font-size: 2.9rem;
-      color: #fff;
-      white-space: nowrap;
-      overflow: visible;
-      margin-left: 30%;
-    }
-  
-    .social-links {
-      display: flex;
-      flex-direction: row;
-      position: absolute;
-      left: 0;
-      top: 65%;
-      transform: translateY(-50%);
-      z-index: 2;
-      margin-left: 15%;
-      margin-bottom: 40%;
-      margin-top: 15%;
-    }
-    
-    .social-links a {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 0 1rem;
-      }
-      
-      .social-links img {
-        width: 40px;
-        height: 40px;
-      }
-  
-    .contact-btn {
-      display: inline-block;
-      padding: 0.8rem 2.2rem;
-      background-color: #d4af37;
-      color: #000;
-      text-decoration: none;
-      border-radius: 40px;
-      position: absolute;
-      margin-top: 180%;
-      z-index: 2;
-      white-space: nowrap;
-      overflow: visible;
-      top: 60%;
-      margin-left: 40%;
-      font-family: 'Sansita One';
-      font-weight: bolder;
-    }
-  
-    .hero-image img {
-      max-width: 300%;
-      border-radius: 0;
-      margin: 0;
-    }
-  
-    .about-image img {
-      width: 120%;
-      display: block;
-      margin: 0;
-      margin-left: -40px;
-    }
-    #about-me {
-      max-width: 90%;
-      margin-top: -70%;
-      margin-bottom: -90%;
-      display: flex;
-      justify-content: center;
-      flex-direction: column;
-    }
-    
-    #about-me h2 {
-      display: inline-block;
-      padding: 5px 70px;
-      padding-left: 70px;
-      margin: 0 auto;
-      color: #fff;
-      justify-content: left;
-      align-items: center;
-      margin-left: -5%;
-    }
-    
-    #about-me p {
-      margin-top: 10px;
-      margin-left: 0px;
-      text-align: left;
-      display: block;
-    }
-  
-    .edu-image img {
-      width: 120%;
-      display: block;
-      margin: 0;
-    }
-  
-    .edu-section {
-      max-width: 100%;
-      margin-top: -90%;
-      margin: 0;
-      display: flex;
-      justify-content: center;
-      flex-direction: column;
-    }
-    
-    #my-edu h2 {
-      display: block;
-      padding: 10px 50px;
-      padding-left: 70px;
-      justify-content: left;
-      margin-right: 20%;
-      color: #fff;
-    }
-  
-    #my-edu p {
-      margin-top: 10px;
-      margin-left: 30px;
-      text-align: left;
-      display: block;
-    }
+    align-items: right;
+    width: 100%;
+    margin: 0;
+    justify-content: right;
+    background-color: #514724;
+    padding: none;
+    border-radius: 0;
+    flex-wrap: wrap;
+    position: fixed;
+    z-index: 10;
   }
-  
+
+  .hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: -85%;
+    margin-right: 76%;
+    max-width: 200%;
+    text-align: center;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
+    position: relative;
+    justify-content: left;
+    float: left;
+  }
+
+  .hero-content {
+    display: flex;
+    align-items: center;
+    width: 80%;
+    position: relative;
+    height: 100vh;
+  }
+
+  .hero-text {
+    max-width: 50%;
+    z-index: 1;
+    text-align: left;
+    position: relative;
+  }
+
+  .circle {
+    width: 270px;
+    height: 270px;
+    background: linear-gradient(to bottom, #958340 0%, #5E532D 20%, #433A1A 35%, black 100%);
+    border-radius: 50%;
+    position: absolute;
+    left: -90px;
+    top: 74%;
+    transform: translateY(-50%) rotate(-40deg);
+    z-index: -1;
+  }
+
+  .hero-text h1,
+  .hero-text h2,
+  .hero-text h3 {
+    line-height: 1.2;
+    text-align: start;
+    justify-content: flex-start;
+  }
+
+  .hero-text h3 {
+    font-size: 25px;
+    white-space: nowrap;
+    overflow: visible;
+    font-family: 'jockey one';
+    color: #fff;
+    margin-top: 90%;
+    margin-left: -39%;
+  }
+
+  .hero-text h2 {
+    font-size: 2.8rem;
+    white-space: nowrap;
+    overflow: visible;
+    margin: 0;
+    font-family: 'knewave';
+    color: #d4af37;
+    margin-left: -39%;
+  }
+
+  .hero-text h1 {
+    font-family: 'jockey one';
+    font-size: 2.9rem;
+    color: #fff;
+    white-space: nowrap;
+    overflow: visible;
+    margin-left: 30%;
+  }
+
+  .social-links {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    left: 0;
+    top: 65%;
+    transform: translateY(-50%);
+    z-index: 2;
+    margin-left: 15%;
+    margin-bottom: 40%;
+    margin-top: 15%;
+  }
+
+  .social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 1rem;
+  }
+
+  .social-links img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .contact-btn {
+    display: inline-block;
+    padding: 0.8rem 2.2rem;
+    background-color: #d4af37;
+    color: #000;
+    text-decoration: none;
+    border-radius: 40px;
+    position: absolute;
+    margin-top: 180%;
+    z-index: 2;
+    white-space: nowrap;
+    overflow: visible;
+    top: 60%;
+    margin-left: 40%;
+    font-family: 'Sansita One';
+    font-weight: bolder;
+  }
+
+  .hero-image img {
+    max-width: 300%;
+    border-radius: 0;
+    margin: 0;
+  }
+
+  .about-image img {
+    width: 120%;
+    display: block;
+    margin: 0;
+    margin-left: -40px;
+  }
+
+  #about-me {
+    max-width: 90%;
+    margin-top: -70%;
+    margin-bottom: -90%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  #about-me h2 {
+    display: inline-block;
+    padding: 5px 70px;
+    padding-left: 70px;
+    margin: 0 auto;
+    color: #fff;
+    justify-content: left;
+    align-items: center;
+    margin-left: -5%;
+  }
+
+  #about-me p {
+    margin-top: 10px;
+    margin-left: 0px;
+    text-align: left;
+    display: block;
+  }
+
+  .edu-image img {
+    width: 120%;
+    display: block;
+    margin: 0;
+  }
+
+  .edu-section {
+    max-width: 100%;
+    margin-top: -90%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  #my-edu h2 {
+    display: block;
+    padding: 10px 50px;
+    padding-left: 70px;
+    justify-content: left;
+    margin-right: 20%;
+    color: #fff;
+  }
+
+  #my-edu p {
+    margin-top: 10px;
+    margin-left: 30px;
+    text-align: left;
+    display: block;
+  }
+}

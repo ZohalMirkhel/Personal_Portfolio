@@ -291,18 +291,18 @@ body {
 /* Media Queries  */
 @media (max-width: 800px) {
   .hide {
-      display: none;
+    display: none;
   }
 
   .menu-button {
-      display: block;
-      color: #fff;
+    display: block;
+    color: #fff;
   }
 }
 
 @media (max-width: 600px) {
   .menu-button {
-      display: block;
-      color: #fff;
+    display: block;
+    color: #fff;
   }
 }
