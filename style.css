@@ -230,6 +230,7 @@ body {
   max-width: 70%;
   margin: 0 auto;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .edu-text {
@@ -294,11 +295,13 @@ body {
 
   .menu-button {
       display: block;
+      color: #fff;
   }
 }
 
 @media (max-width: 600px) {
   .menu-button {
       display: block;
+      color: #fff;
   }
 }

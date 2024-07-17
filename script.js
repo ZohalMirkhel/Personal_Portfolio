@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
       <h2>Zohal Mirkhel</h2>
       <h1>Web Developer</h1>
       <a href="#contact" class="contact-btn">Contact Me</a>
-      <div class="circle"></div>
+      
   `;
 
   heroImage.innerHTML = `
