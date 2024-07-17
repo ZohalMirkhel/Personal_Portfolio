@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -29,7 +30,7 @@ body {
 }
 
 #navbar li {
-  margin: 0 2rem;
+  margin: 0 1.5rem;
 }
 
 #navbar li a {
@@ -69,22 +70,6 @@ body {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   padding: 20px;
   backdrop-filter: blur(20px);
-}
-
-@media (max-width: 800px) {
-  .hide {
-      display: none;
-  }
-
-  .menu-button {
-      display: block;
-  }
-}
-
-@media (max-width: 600px) {
-  .menu-button {
-      display: block;
-  }
 }
 
 /* home part */
@@ -178,7 +163,7 @@ body {
   flex-direction: column;
   position: absolute;
   left: -9rem;
-  top: 25%;
+  top: 60%;
   transform: translateY(-50%);
 }
 
@@ -196,33 +181,124 @@ body {
 .about-content {
   display: flex;
   justify-content: center;
+  align-items: center;
   color: #fff;
+  height: 100vh;
+  text-align: center;
 }
 
 .about-image img {
   width: 50%;
   float: left; 
-  margin-right: 0px;
+  margin-top: 30px;
 }
 
 #about-me {
-  margin-top: 150px;
   max-width: 80%;
   margin-left: 20px;
 }
 
 #about-me h2 {
-  color: #f1c40f;
+  color: #fff;
+  font-family: 'Jockey One';
+  background-color: #514724;
+  clip-path: polygon(0% 0, 80% 0, 100% 100%, 20% 100%);
+  display: inline-block;
+  padding: 5px 40px;
+  padding-left: 60px;
 }
 
 #about-me p {
   color: #ccc;
   margin-top: 40px;
   margin-left: 90px;
+  text-align: left;
 }
 
-.h2 {
-  top: 50%;
-  background: #514724;
-  font-size: larger;
+/* Education */
+#education {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  height: 100vh;
+  text-align: center;
+}
+
+.edu-section {
+  display: flex;
+  max-width: 70%;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.edu-text {
+  flex: 1;
+  text-align: left;
+}
+
+.edu-image {
+  flex: 1;
+  text-align: right;
+  margin-top: 40px;
+}
+
+.edu-image img {
+  width: 70%;
+  max-width: 230px;
+}
+
+#my-edu h2 {
+  color: #fff;
+  font-family: 'Jockey One';
+  background-color: #514724;
+  clip-path: polygon(0% 0, 80% 0, 100% 100%, 20% 100%);
+  display: inline-block;
+  padding: 5px 40px;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  padding-left: 60px;
+  margin-left: 25%;
+}
+
+#my-edu p {
+  color: #ccc;
+  margin-top: 60px;
+}
+
+.edu-button {
+  margin-top: 20px;
+  padding: 15px 80px;
+  background-color: #514724;
+  color: #fff;
+  border: none;
+  font-family: 'Sansita One';
+  text-align: center;
+  text-decoration: underline;
+  border-radius: 30px;
+  cursor: pointer;
+  display: inline-block;
+  width: auto;
+}
+
+.edu-button:hover {
+  background-color: #6e5a31;
+}
+
+/* Media Queries  */
+@media (max-width: 800px) {
+  .hide {
+      display: none;
+  }
+
+  .menu-button {
+      display: block;
+  }
+}
+
+@media (max-width: 600px) {
+  .menu-button {
+      display: block;
+  }
 }
