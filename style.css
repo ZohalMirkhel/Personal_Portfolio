@@ -387,12 +387,12 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: #F4DA6A; /* Background color similar to the image */
+  background: #d1b44b;
   padding: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   z-index: 1000;
-  width: 80%; /* Adjust as needed */
-  max-width: 600px; /* Adjust as needed */
+  width: 80%;
+  max-width: 600px;
   border-radius: 10px;
 }
 
@@ -404,7 +404,7 @@ body {
 #popup-content img {
   max-width: 100%;
   width: 450px;
-  height: 300px;
+  height: 200px;
   border-radius: 30px;
 }
 
@@ -431,18 +431,222 @@ body {
 .popup-button {
   display: inline-block;
   padding: 10px 20px;
-  margin: 10px;
+  margin: 40px 60px;
   background: #000;
-  color: #fff;
+  font-family: 'Sansita One';
+  color: #d1b44b;
   text-decoration: none;
-  border-radius: 5px;
+  border-radius: 30px;
   transition: background 0.3s;
+}
+
+#live {
+  float: left;
+}
+
+#git {
+  float: right;
 }
 
 .popup-button:hover {
   background: #333;
 }
 
+/* Certification */
+#certification {
+  padding: 35px;
+  text-align: center;
+}
+
+#certification h2 {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+  color: #fff;
+  background-color: #cdad3c;
+  clip-path: polygon(0% 0, 80% 0, 100% 100%, 20% 100%);
+  padding: 5px 40px;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  padding-left: 60px;
+  margin-left: 36%;
+  margin-right: 34%;
+}
+
+#certification .cert-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 20px;
+  justify-items: center;
+}
+
+#certification .cert {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: transparent;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+  width: 100%;
+  max-width: 450px;
+  margin: 10px;
+  padding: 15px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+#certification .cert:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+#certification .cert img {
+  max-width: 100%;
+  border-radius: 30px;
+  height: 280px;
+}
+
+#certification .cert h3 {
+  font-family: 'Jockey One';
+  font-size: 1.4rem;
+  margin: 10px 0;
+  color: #d4af37;
+}
+
+#certification .cert p {
+  font-family: 'Jockey One';
+  font-size: 1rem;
+  margin: 10px 0;
+  color: #fff;
+}
+
+#certification .cert a {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 15px 60px;
+  margin-right: 7px;
+  background-color: #d4af37;
+  color: #000;
+  border: none;
+  font-family: 'Sansita One';
+  text-align: center;
+  border-radius: 30px;
+  cursor: pointer;
+  text-decoration: none;
+  width: auto;
+}
+
+#certification .cert a:hover {
+  background-color: #6e5a31;
+}
+
+/* Skills Section */
+#skills {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  height: 100vh;
+  text-align: center;
+  padding: 35px;
+  flex-direction: column;
+}
+
+#skills h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  font-family: 'Jockey One';
+  font-weight: 100;
+  border: solid 2px #000;
+  color: #fff;
+  background-color: #cdad3c;
+  clip-path: polygon(0% 0, 80% 0, 100% 100%, 20% 100%);
+  padding: 0px 60px;
+  display: inline-block;
+}
+
+#skills #skills-content {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.list {
+  width: 45%;
+  margin-top: 2%;
+  margin-left: 29%;
+  text-align: left;
+}
+
+.image {
+  width: 45%;
+  display: inline-block;
+  text-align: right;
+}
+
+#skills #skills-lists {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+#skills .skills-category {
+  width: 100%;
+  margin: 10px 0;
+}
+
+#skills .skills-category h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #fff;
+  cursor: pointer;
+  position: relative;
+  padding-left: 20px;
+}
+
+#skills .skills-category h3::before {
+  content: "►";
+  position: absolute;
+  left: -10px;
+  top: 0;
+  font-size: 1.5rem;
+  transition: transform 0.3s;
+}
+
+#skills .skills-list {
+  list-style: none;
+  padding: 0;
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+#skills .skills-list.visible {
+  display: flex;
+}
+
+#skills .skills-list.visible + h3::before {
+  transform: rotate(90deg);
+}
+
+#skills .skills-list li {
+  font-size: 1.2rem;
+  padding: 5px 30px;
+}
+
+#skills #skills-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+}
+
+#skills #skills-image img {
+  width: 100%;
+  border-radius: 10px;
+}
 
 /* Media Queries  */
 @media (max-width: 800px) {

@@ -84,7 +84,7 @@ const myProjects = document.getElementById("my-projects");
   const closePop = document.getElementById("close-pop");
   const mainContent = document.getElementById("main-content");
   const body = document.body;
-  
+
   const projects = [
     {
       title: "Product Landing Page",
@@ -186,7 +186,7 @@ const myProjects = document.getElementById("my-projects");
         <h3>${project.title}</h3>
         <img src="${project.image}" alt="${project.title}" />
         <p>${project.shortDescription}</p>
-        <button class="popup-button" onclick="showPopup(${index})">Learn More</button>
+        <button class="popup-button-more" onclick="showPopup(${index})">Learn More</button>
       </div>`
       )
       .join("");
@@ -199,8 +199,8 @@ const myProjects = document.getElementById("my-projects");
         <img src="${project.image}" alt="${project.title}" />
         <p>${project.longDescription}</p>
         <p>Technologies: ${project.technologies.join(", ")}</p>
-        <a class="popup-button" href="${project.liveLink}" target="_blank">Live Site</a>
-        <a class="popup-button" href="${project.sourceLink}" target="_blank">GitHub Repository</a>
+        <a class="popup-button" id="live" href="${project.liveLink}" target="_blank">Live Site</a>
+        <a class="popup-button" id="git" href="${project.sourceLink}" target="_blank">GitHub Repository</a>
       `;
       popUp.classList.remove("hidden");
       mainContent.classList.add("blurred");
@@ -213,34 +213,118 @@ const myProjects = document.getElementById("my-projects");
       });
     }
   }
-    
-// Skills section content initialization
-document.addEventListener("DOMContentLoaded", () => {
-  const skillsSection = document.getElementById('skills');
-  if (skillsSection) {
-    const skills = {
-      languages: ["HTML", "CSS", "JS", "Java", "WordPress", "Bootstrap"],
-      tools: ["Git", "GitHub"]
-    };
 
-    const skillsList = document.createElement('ul');
-    skillsList.className = 'skills-list';
+//Certification 
+const aboutMe = document.getElementById("certification");
+
+const skills = {
+  certificates: [
+    { name: "Responsive Web Design", image: "certificates/responsivewebdesgin.PNG", link: "#" },
+    { name: "JavaScript", image: "certificates/JS.PNG", link: "#" },
+    { name: "Introduction to Programming", image: "certificates/ITCWD.jpg", link: "#" },
+    { name: "Capacity Building", image: "certificates/CB.jpg", link: "#" },
+    { name: "Advanced HTML & CSS", image: "certificates/SOW.jpg", link: "#" }
+  ],
+};
+
+certification.innerHTML = `
+  <div id="certification-section">
+    <h2>Certificates</h2>
+    <div class="cert-list">
+      ${skills.certificates
+        .map(
+          (certificate) => `
+        <div class="cert">
+          <h3>${certificate.name}</h3>
+            <img src="${certificate.image}" alt="${certificate.name}"/>
+        </div>`
+        )
+        .join("")}
+    </div>
+  </div>
+`;
+
+
+//Skills Section
+document.addEventListener("DOMContentLoaded", () => {
+  const skills = {
+    languages: ["HTML", "CSS", "JS", "Java", "WordPress", "Bootstrap"],
+    professionalSkills: ["Team Work", "Multi Task", "Critical thinking", "Communication", "Time management", "Creativity"],
+    softSkills: ["Ideas", "Teamwork", "Clean Code", "Code Review"]
+  };
+
+  const skillsContainer = document.getElementById('skills');
+
+  if (skillsContainer) {
+    skillsContainer.innerHTML = `
+      <h2>Skills</h2>
+      <div id="skills-content">
+        <div class="list">
+          <div class="skills-category">
+            <h3 class="skills-header" data-target="#languages-list">Languages</h3>
+            <ul class="skills-list" id="languages-list"></ul>
+          </div>
+          <div class="skills-category">
+            <h3 class="skills-header" data-target="#professional-skills-list">Professional Skills</h3>
+            <ul class="skills-list" id="professional-skills-list"></ul>
+          </div>
+          <div class="skills-category">
+            <h3 class="skills-header" data-target="#soft-skills-list">Soft Skills</h3>
+            <ul class="skills-list" id="soft-skills-list"></ul>
+          </div>
+        </div>
+        <div class="image">
+          <div id="skills-image">
+            <img src="images/skills.png" alt="Skills Image">
+          </div>
+        </div>
+      </div>
+    `;
+
+    // Append list items to respective lists
+    const languagesList = document.getElementById('languages-list');
+    const professionalSkillsList = document.getElementById('professional-skills-list');
+    const softSkillsList = document.getElementById('soft-skills-list');
 
     skills.languages.forEach(language => {
       const listItem = document.createElement('li');
       listItem.textContent = language;
-      skillsList.appendChild(listItem);
+      languagesList.appendChild(listItem);
     });
 
-    skills.tools.forEach(tool => {
+    skills.professionalSkills.forEach(skill => {
       const listItem = document.createElement('li');
-      listItem.textContent = tool;
-      skillsList.appendChild(listItem);
+      listItem.textContent = skill;
+      professionalSkillsList.appendChild(listItem);
     });
 
-    skillsSection.appendChild(skillsList);
+    skills.softSkills.forEach(skill => {
+      const listItem = document.createElement('li');
+      listItem.textContent = skill;
+      softSkillsList.appendChild(listItem);
+    });
+
+    // Add click event to toggle visibility of lists
+    document.querySelectorAll('.skills-header').forEach(header => {
+      header.addEventListener('click', () => {
+        const targetList = document.querySelector(header.dataset.target);
+        
+        if (targetList.classList.contains('visible')) {
+          // If the clicked list is already visible, close it
+          targetList.classList.remove('visible');
+        } else {
+          // Close any currently open lists
+          document.querySelectorAll('.skills-list.visible').forEach(list => {
+            list.classList.remove('visible');
+          });
+          // Open the clicked list
+          targetList.classList.add('visible');
+        }
+      });
+    });
   }
 });
+
 
 // Contact form handling
 document.addEventListener("DOMContentLoaded", () => {
