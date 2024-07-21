@@ -79,11 +79,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Projects section content initialization
 const myProjects = document.getElementById("my-projects");
-const popUp = document.getElementById("pop-up");
-const popupContent = document.getElementById("popup-content");
-const closePop = document.getElementById("close-pop");
-
-if (myProjects && popUp && popupContent && closePop) {
+  const popUp = document.getElementById("pop-up");
+  const popupContent = document.getElementById("popup-content");
+  const closePop = document.getElementById("close-pop");
+  const mainContent = document.getElementById("main-content");
+  const body = document.body;
+  
   const projects = [
     {
       title: "Product Landing Page",
@@ -177,41 +178,42 @@ if (myProjects && popUp && popupContent && closePop) {
     },
   ];
 
-  myProjects.innerHTML = projects
-    .map(
-      (project, index) => `
-    <div class="proj">
-      <h3>${project.title}</h3>
-      <img src="${project.image}" alt="${project.title}" />
-      <p>${project.shortDescription}</p>
-      <button onclick="showPopup(${index})">Learn More</button>
-    </div>`
-    )
-    .join("");
+  if (myProjects && popUp && popupContent && closePop) {
+    myProjects.innerHTML = projects
+      .map(
+        (project, index) => `
+      <div class="proj">
+        <h3>${project.title}</h3>
+        <img src="${project.image}" alt="${project.title}" />
+        <p>${project.shortDescription}</p>
+        <button class="popup-button" onclick="showPopup(${index})">Learn More</button>
+      </div>`
+      )
+      .join("");
 
-  // Function to show project popup
-  function showPopup(index) {
-    const project = projects[index];
-    popupContent.innerHTML = `
-      <h3>${project.title}</h3>
-      <p>${project.longDescription}</p>
-      <p>Technologies: ${project.technologies.join(", ")}</p>
-      <a href="${project.liveLink}" target="_blank">Live Demo</a>
-      <a href="${project.sourceLink}" target="_blank">Source Link</a>
-    `;
-    popUp.classList.remove("hidden");
+    window.showPopup = function (index) {
+      const project = projects[index];
+      popupContent.innerHTML = `
+        <button id="close-pop" class="close-btn">&times;</button>
+        <h3>${project.title}</h3>
+        <img src="${project.image}" alt="${project.title}" />
+        <p>${project.longDescription}</p>
+        <p>Technologies: ${project.technologies.join(", ")}</p>
+        <a class="popup-button" href="${project.liveLink}" target="_blank">Live Site</a>
+        <a class="popup-button" href="${project.sourceLink}" target="_blank">GitHub Repository</a>
+      `;
+      popUp.classList.remove("hidden");
+      mainContent.classList.add("blurred");
+      body.classList.add("no-scroll");
+
+      document.getElementById("close-pop").addEventListener("click", () => {
+        popUp.classList.add("hidden");
+        mainContent.classList.remove("blurred");
+        body.classList.remove("no-scroll");
+      });
+    }
   }
-
-  // Event listener to close popup
-  closePop.addEventListener("click", () => {
-    popUp.classList.add("hidden");
-  });
-
-  // Attach showPopup function to global scope
-  window.showPopup = showPopup;
-}
-
-
+    
 // Skills section content initialization
 document.addEventListener("DOMContentLoaded", () => {
   const skillsSection = document.getElementById('skills');
