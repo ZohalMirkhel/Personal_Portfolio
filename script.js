@@ -78,12 +78,13 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // Projects section content initialization
-const myProjects = document.getElementById("my-projects");
-  const popUp = document.getElementById("pop-up");
-  const popupContent = document.getElementById("popup-content");
-  const closePop = document.getElementById("close-pop");
-  const mainContent = document.getElementById("main-content");
-  const body = document.body;
+    const myProjects = document.getElementById("my-projects");
+    const showMoreProjectsBtn = document.getElementById("load-more");
+    const popUp = document.getElementById("pop-up");
+    const popupContent = document.getElementById("popup-content");
+    const closePop = document.getElementById("close-pop");
+    const mainContent = document.getElementById("main-content");
+    const body = document.body;
 
   const projects = [
     {
@@ -178,71 +179,170 @@ const myProjects = document.getElementById("my-projects");
     },
   ];
 
-  if (myProjects && popUp && popupContent && closePop) {
-    myProjects.innerHTML = projects
-      .map(
-        (project, index) => `
-      <div class="proj">
-        <h3>${project.title}</h3>
-        <img src="${project.image}" alt="${project.title}" />
-        <p>${project.shortDescription}</p>
-        <button class="popup-button-more" onclick="showPopup(${index})">Learn More</button>
-      </div>`
-      )
-      .join("");
-
-    window.showPopup = function (index) {
-      const project = projects[index];
-      popupContent.innerHTML = `
-        <button id="close-pop" class="close-btn">&times;</button>
-        <h3>${project.title}</h3>
-        <img src="${project.image}" alt="${project.title}" />
-        <p>${project.longDescription}</p>
-        <p>Technologies: ${project.technologies.join(", ")}</p>
-        <a class="popup-button" id="live" href="${project.liveLink}" target="_blank">Live Site</a>
-        <a class="popup-button" id="git" href="${project.sourceLink}" target="_blank">GitHub Repository</a>
-      `;
-      popUp.classList.remove("hidden");
-      mainContent.classList.add("blurred");
-      body.classList.add("no-scroll");
-
-      document.getElementById("close-pop").addEventListener("click", () => {
-        popUp.classList.add("hidden");
-        mainContent.classList.remove("blurred");
-        body.classList.remove("no-scroll");
-      });
-    }
-  }
-
-//Certification 
-const aboutMe = document.getElementById("certification");
-
-const skills = {
-  certificates: [
-    { name: "Responsive Web Design", image: "certificates/responsivewebdesgin.PNG", link: "#" },
-    { name: "JavaScript", image: "certificates/JS.PNG", link: "#" },
-    { name: "Introduction to Programming", image: "certificates/ITCWD.jpg", link: "#" },
-    { name: "Capacity Building", image: "certificates/CB.jpg", link: "#" },
-    { name: "Advanced HTML & CSS", image: "certificates/SOW.jpg", link: "#" }
-  ],
-};
-
-certification.innerHTML = `
-  <div id="certification-section">
-    <h2>Certificates</h2>
-    <div class="cert-list">
-      ${skills.certificates
-        .map(
-          (certificate) => `
-        <div class="cert">
-          <h3>${certificate.name}</h3>
-            <img src="${certificate.image}" alt="${certificate.name}"/>
-        </div>`
-        )
-        .join("")}
+function displayProjects() {
+  myProjects.innerHTML = projects
+    .map(
+      (project, index) => `
+    <div class="proj" id="proj-${index}">
+      <h3>${project.title}</h3>
+      <img src="${project.image}" alt="${project.title}" />
+      <p id="desc">${project.shortDescription}</p>
+      <button class="popup-button-more" onclick="showPopup(${index})">Learn More</button>
     </div>
-  </div>
-`;
+    `
+    )
+    .join("");
+
+  let currentItems = 2; // Show 2 items initially
+  const boxes = document.querySelectorAll('.proj');
+
+  boxes.forEach((box, index) => {
+    if (index < currentItems) {
+      box.style.display = 'block';
+    }
+  });
+
+  showMoreProjectsBtn.onclick = () => {
+    if (showMoreProjectsBtn.innerText === "Show More") {
+      for (let i = currentItems; i < currentItems + 2; i++) {
+        if (boxes[i]) {
+          boxes[i].style.display = 'block';
+        }
+      }
+      currentItems += 2;
+      if (currentItems >= boxes.length) {
+        showMoreProjectsBtn.innerText = "Show Less";
+      }
+    } else {
+      currentItems = 2;
+      boxes.forEach((box, index) => {
+        if (index >= currentItems) {
+          box.style.display = 'none';
+        }
+      });
+      showMoreProjectsBtn.innerText = "Show More";
+      document.getElementById("project").scrollIntoView({ behavior: "smooth" });
+    }
+    console.log("Updated button text:", btnText.innerText);
+    console.log("SVG class list:", showMoreProjectsBtn.classList);
+  }
+}
+
+window.showPopup = function (index) {
+  const project = projects[index];
+  popupContent.innerHTML = `
+    <button id="close-pop" class="close-btn">&times;</button>
+    <h3>${project.title}</h3>
+    <img src="${project.image}" alt="${project.title}" />
+    <p>${project.longDescription}</p>
+    <p>Technologies: ${project.technologies.join(", ")}</p>
+    <a class="popup-button" id="live" href="${project.liveLink}" target="_blank">Live Site</a>
+    <a class="popup-button" id="git" href="${project.sourceLink}" target="_blank">GitHub Repository</a>
+  `;
+  popUp.classList.remove("hidden");
+  mainContent.classList.add("blurred");
+  body.classList.add("no-scroll");
+
+  document.getElementById("close-pop").addEventListener("click", () => {
+    popUp.classList.add("hidden");
+    mainContent.classList.remove("blurred");
+    body.classList.remove("no-scroll");
+  });
+}
+
+document.addEventListener("DOMContentLoaded", displayProjects);
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const certification = document.getElementById("certification");
+  const showMoreCertification = document.getElementById("load-more-1");
+  const moreText = document.getElementById("more-c");
+  const skills = {
+    certificates: [
+      { name: "Responsive Web Design", image: "certificates/responsivewebdesgin.PNG", link: "#" },
+      { name: "JavaScript", image: "certificates/JS.PNG", link: "#" },
+      { name: "Introduction to Programming", image: "certificates/ITCWD.jpg", link: "#" },
+      { name: "Capacity Building", image: "certificates/CB.jpg", link: "#" },
+      { name: "Advanced HTML & CSS", image: "certificates/SOW.jpg", link: "#" }
+    ],
+  };
+
+  const showMoreSVG = `
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 30" version="1.1" x="0px" y="0px">
+      <title>down-1</title>
+      <desc>Created with Sketch.</desc>
+      <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g fill="#FFFFFF" fill-rule="nonzero">
+          <path d="M1.95,12 C1.95,6.44953826 6.44953826,1.95 12,1.95 C17.5504617,1.95 22.05,6.44953826 22.05,12 C22.05,17.5504617 17.5504617,22.05 12,22.05 C6.44953826,22.05 1.95,17.5504617 1.95,12 Z M4.05,12 C4.05,16.3906638 7.60933624,19.95 12,19.95 C16.3906638,19.95 19.95,16.3906638 19.95,12 C19.95,7.60933624 16.3906638,4.05 12,4.05 C7.60933624,4.05 4.05,7.60933624 4.05,12 Z M12,12.55 L14.2075379,10.3075379 C14.6175884,9.89748737 15.2824116,9.89748737 15.6924621,10.3075379 C16.1025126,10.7175884 16.1025126,11.3824116 15.6924621,11.7924621 L12.6924621,14.7924621 C12.2824116,15.2025126 11.6175884,15.2025126 11.2075379,14.7924621 L8.20753788,11.7924621 C7.79748737,11.3824116 7.79748737,10.7175884 8.20753788,10.3075379 C8.61758839,9.89748737 9.28241161,9.89748737 9.69246212,10.3075379 L12,12.55 Z"/>
+        </g>
+      </g>
+    </svg>
+    <span id="more-c">Show More</span>
+  `;
+
+  const showLessSVG = `
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 30" version="1.1" x="0px" y="0px">
+      <title>up-1</title>
+      <desc>Created with Sketch.</desc>
+      <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g fill="#FFFFFF" fill-rule="nonzero">
+          <path d="M22.05,12 C22.05,6.44953826 17.5504617,1.95 12,1.95 C6.44953826,1.95 1.95,6.44953826 1.95,12 C1.95,17.5504617 6.44953826,22.05 12,22.05 C17.5504617,22.05 22.05,17.5504617 22.05,12 Z M19.95,12 C19.95,16.3906638 16.3906638,19.95 12,19.95 C7.60933624,19.95 4.05,16.3906638 4.05,12 C4.05,7.60933624 7.60933624,4.05 12,4.05 C16.3906638,4.05 19.95,7.60933624 19.95,12 Z M12,11.45 L9.79246212,13.6924621 C9.38241161,14.1025126 8.71758839,14.1025126 8.30753788,13.6924621 C7.89748737,13.2824116 7.89748737,12.6175884 8.30753788,12.2075379 L11.3075379,9.20753788 C11.7175884,8.79748737 12.3824116,8.79748737 12.7924621,9.20753788 L15.7924621,12.2075379 C16.2025126,12.6175884 16.2025126,13.2824116 15.7924621,13.6924621 C15.3824116,14.1025126 14.7175884,14.1025126 14.3075379,13.6924621 L12,11.45 Z"/>
+        </g>
+      </g>
+    </svg>
+    <span id="more-c">Show Less</span>
+  `;
+
+  certification.innerHTML = `
+    <div id="certification-section">
+      <h2>Certificates</h2>
+      <div class="cert-list">
+        ${skills.certificates
+          .map(
+            (certificate) => `
+          <div class="cert">
+            <h3>${certificate.name}</h3>
+            <img src="${certificate.image}" alt="${certificate.name}"/>
+          </div>`
+          )
+          .join("")}
+      </div>
+    </div>
+  `;
+
+  let currentItem = 2;
+  const certItems = document.querySelectorAll('#certification-section .cert');
+
+  certItems.forEach((item, index) => {
+    if (index >= currentItem) {
+      item.style.display = 'none';
+    }
+  });
+
+  showMoreCertification.innerHTML = showMoreSVG;
+
+  showMoreCertification.onclick = () => {
+    if (moreText.innerText === "Show More") {
+      for (let i = currentItem; i < currentItem + 2; i++) {
+        if (certItems[i]) {
+          certItems[i].style.display = 'block';
+        }
+      }
+      currentItem += 2;
+      if (currentItem >= certItems.length) {
+        showMoreCertification.innerHTML = showLessSVG;
+      }
+    } else {
+      currentItem = 2;
+      certItems.forEach((item, index) => {
+        if (index >= currentItem) {
+          item.style.display = 'none';
+        }
+      });
+      showMoreCertification.innerHTML = showMoreSVG;
+    }
+  };
+});
 
 
 //Skills Section
@@ -310,14 +410,11 @@ document.addEventListener("DOMContentLoaded", () => {
         const targetList = document.querySelector(header.dataset.target);
         
         if (targetList.classList.contains('visible')) {
-          // If the clicked list is already visible, close it
           targetList.classList.remove('visible');
         } else {
-          // Close any currently open lists
           document.querySelectorAll('.skills-list.visible').forEach(list => {
             list.classList.remove('visible');
           });
-          // Open the clicked list
           targetList.classList.add('visible');
         }
       });

@@ -326,6 +326,47 @@ body {
   margin: 10px;
   padding: 15px;
   transition: transform 0.3s, box-shadow 0.3s;
+  display: none;
+}
+
+.proj:nth-child(1),
+.proj:nth-child(2) {
+  display: inline-block;
+}
+
+#load-more {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  background-color: #000;
+  margin-top:3%;
+  margin-left:42.5%;
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+#load-more svg {
+  margin-right: 10px;
+  width: 24px;
+  height: 24px;
+  transition: transform 0.3s;
+}
+
+#load-more:hover {
+  transform: rotateY(-10px);
+}
+
+#load-more.show-less svg {
+  transform: rotate(180deg);
+}
+
+#load-more span {
+  display: inline-block;
 }
 
 .proj:hover {
@@ -496,11 +537,6 @@ body {
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
-#certification .cert:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
 #certification .cert img {
   max-width: 100%;
   border-radius: 30px;
@@ -514,11 +550,9 @@ body {
   color: #d4af37;
 }
 
-#certification .cert p {
-  font-family: 'Jockey One';
-  font-size: 1rem;
-  margin: 10px 0;
-  color: #fff;
+#certification .cert:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 #certification .cert a {
@@ -539,6 +573,41 @@ body {
 
 #certification .cert a:hover {
   background-color: #6e5a31;
+}
+
+#load-more-1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  background-color: #000;
+  margin-top:3%;
+  margin-left:42.5%;
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+#load-more-1 svg {
+  margin-right: 10px;
+  width: 24px;
+  height: 24px;
+  transition: transform 0.3s;
+}
+
+#load-more-1:hover {
+  transform: rotateY(-10px);
+}
+
+#load-more-1.show-less svg {
+  transform: rotate(180deg);
+}
+
+#load-more-1 span {
+  display: inline-block;
 }
 
 /* Skills Section */
