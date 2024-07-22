@@ -39,6 +39,18 @@ body {
   font-weight: bold;
 }
 
+#nav .sidebar a.active,
+#nav #navbar a.active {
+    color: #f2d24b;
+    text-decoration: underline;
+    text-underline-offset: 5px;
+}
+
+#nav .sidebar a:hover,
+#nav #navbar a:hover {
+    color: #f2d24b;
+}
+
 .menu-button {
   display: none;
   cursor: pointer;
@@ -185,6 +197,7 @@ body {
   color: #fff;
   height: 100vh;
   text-align: center;
+  padding-top: 2rem;
 }
 
 .about-image img {
@@ -223,6 +236,7 @@ body {
   color: #fff;
   height: 100vh;
   text-align: center;
+  padding-top: 8rem;
 }
 
 .edu-section {
@@ -292,6 +306,7 @@ body {
 #project {
   padding: 35px;
   text-align: center;
+  padding-top: 8rem;
 }
 
 #project h2 {
@@ -497,6 +512,7 @@ body {
 #certification {
   padding: 35px;
   text-align: center;
+  padding-top: 8rem;
 }
 
 #certification h2 {
@@ -620,6 +636,7 @@ body {
   text-align: center;
   padding: 35px;
   flex-direction: column;
+  padding-top: 11rem;
 }
 
 #skills h2 {
@@ -728,7 +745,8 @@ body {
   width: 100%;
   margin-top: 15%;
   margin-left: 19%;
-  margin-bottom: 5%;
+  margin-bottom: 0;
+  padding-top: 3rem;
 }
 
 .contact-container {

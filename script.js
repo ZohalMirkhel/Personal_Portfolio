@@ -12,6 +12,15 @@ function hideSidebar() {
 
 // Home page content initialization
 document.addEventListener("DOMContentLoaded", () => {
+
+  var links = document.querySelectorAll('#navbar a');
+        links.forEach(function (link) {
+            link.addEventListener('click', function () {
+                links.forEach(function (lnk) { lnk.classList.remove('active'); });
+                this.classList.add('active');
+            });
+        });
+  
   const heroText = document.querySelector('.hero-text');
   const heroImage = document.querySelector('.hero-image');
   const heroContent = document.querySelector('.hero-content');
@@ -252,7 +261,7 @@ window.showPopup = function (index) {
 
 document.addEventListener("DOMContentLoaded", displayProjects);
 
-
+//Certification Part
 document.addEventListener("DOMContentLoaded", () => {
   const certification = document.getElementById("certification");
   const showMoreCertification = document.getElementById("load-more-1");
@@ -337,13 +346,14 @@ document.addEventListener("DOMContentLoaded", () => {
       certItems.forEach((item, index) => {
         if (index >= currentItem) {
           item.style.display = 'none';
+        } else {
+          item.style.display = 'block';
         }
       });
       showMoreCertification.innerHTML = showMoreSVG;
     }
   };
 });
-
 
 //Skills Section
 document.addEventListener("DOMContentLoaded", () => {
