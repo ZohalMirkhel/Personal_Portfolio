@@ -748,9 +748,6 @@ body {
   margin-left: 19%;
   margin-bottom: 0;
   padding-top: 3rem;
-}
-
-.contact-container {
   display: flex;
   justify-content: space-between;
 }
@@ -779,7 +776,7 @@ body {
 .contact-info p {
   padding:3% 18%;
   display: flex;
-  align-items: center;
+  align-items: left;
   color: #fff;
 }
 

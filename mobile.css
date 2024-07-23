@@ -1,15 +1,24 @@
-@media (max-width: 670px) {
-  #home {
-    margin-bottom: -10%;
-  }  
-  
-  #navbar {
-    align-items: right;
-    width: 100%;
+@media (max-width: 670px), (max-width: 480px) {
+  * {
+    padding: 0;
     margin: 0;
-    justify-content: right;
+  }
+
+  body {
+    width: 100%;
+  }
+
+  #home {
+    margin-bottom: 20%;
+  }
+
+  #navbar {
+    width: 100%;
+    height: 60px;
+    margin: 0;
+    justify-content: flex-end;
     background-color: #514724;
-    padding: none;
+    padding: 0;
     border-radius: 0;
     flex-wrap: wrap;
     position: fixed;
@@ -17,17 +26,16 @@
   }
 
   .hero-image {
-    top: 0;
-    left: 0;
-    margin-left: -97%;
+    margin-top: -20%;
+    margin-left: -82%;
     margin-right: 76%;
-    max-width: 200%;
-    text-align: center;
-    height: 100vh;
+    max-width: 100%;
+    height: 90%;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat; 
     position: relative;
+    border-radius: 0;
   }
 
   .hero-content {
@@ -35,11 +43,11 @@
     align-items: center;
     width: 80%;
     position: relative;
-    height: 100vh;
+    height: 80%;
   }
 
   .hero-text {
-    max-width: 50%;
+    max-width: 100%;
     z-index: 1;
     text-align: left;
     position: relative;
@@ -52,7 +60,7 @@
     border-radius: 50%;
     position: absolute;
     left: -90px;
-    top: 74%;
+    top: 30%;
     transform: translateY(-50%) rotate(-40deg);
     z-index: -1;
   }
@@ -62,36 +70,28 @@
   .hero-text h3 {
     line-height: 1.2;
     text-align: start;
-    justify-content: flex-start;
   }
 
   .hero-text h3 {
-    font-size: 25px;
-    white-space: nowrap;
-    overflow: visible;
+    font-size: 20px;
     font-family: 'jockey one';
     color: #fff;
-    margin-top: 90%;
-    margin-left: -39%;
+    margin-top: 1%;
+    margin-left: -20%;
   }
 
   .hero-text h2 {
-    font-size: 2.8rem;
-    white-space: nowrap;
-    overflow: visible;
-    margin: 0;
+    font-size: 2rem;
     font-family: 'knewave';
     color: #d4af37;
-    margin-left: -39%;
+    margin-left: -19%;
   }
 
   .hero-text h1 {
     font-family: 'jockey one';
     font-size: 2.9rem;
     color: #fff;
-    white-space: nowrap;
-    overflow: visible;
-    margin-left: 30%;
+    margin-left: 10%;
   }
 
   .social-links {
@@ -99,10 +99,10 @@
     flex-direction: row;
     position: absolute;
     left: 0;
-    top: 65%;
+    top: 58%;
     transform: translateY(-50%);
     z-index: 2;
-    margin-left: 15%;
+    margin-left: 2%;
     margin-bottom: 40%;
     margin-top: 15%;
   }
@@ -112,21 +112,19 @@
     align-items: center;
     justify-content: center;
     margin: 0 1rem;
+    text-decoration: none;
   }
 
   .contact-btn {
     display: inline-block;
-    padding: 0.8rem 2.2rem;
+    padding: 0.8rem 3.7rem;
     background-color: #d4af37;
     color: #000;
     text-decoration: none;
     border-radius: 40px;
     position: absolute;
-    margin-top: 160%;
     z-index: 2;
-    white-space: nowrap;
-    overflow: visible;
-    top: 60%;
+    top: 110%;
     margin-left: 40%;
     font-family: 'Sansita One';
     font-weight: bolder;
@@ -147,16 +145,15 @@
   }
 
   .about-image img {
-    width: 120%;
+    width: 100%;
     display: block;
     margin: 0;
-    margin-left: -40px;
+    margin-left: -15px;
   }
 
   #about-me h2 {
     display: inline-block;
     padding: 5px 70px;
-    padding-left: 70px;
     margin: 0 auto;
     color: #fff;
     justify-content: left;
@@ -166,11 +163,10 @@
 
   #about-me p {
     margin-top: 10px;
-    margin-left: 0px;
     text-align: left;
-    display: block;
-    margin-left: 13%;
-    margin-bottom: 20%;
+    margin-left: 1%;
+    margin-right: 2%;
+    margin-bottom: 90%;
     font-size: larger;
   }
 
@@ -179,31 +175,32 @@
     display: block;
     margin: 0;
     justify-content: center;
-    margin-left: 10%;
+    margin-left: 7%;
   }
-  
+
   .edu-button {
     padding-right: 9%;
-    padding-left: 15%;
-    margin-right: 7%;
+    padding-left: 13%;
+    margin-right: 9%;
+    margin-left: 11%;
   }
 
   .edu-section {
-    max-width: 110%;
+    max-width: 100%;
     margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: left;
     flex-direction: column;
-    margin-left: 13%;
+    margin-left: 1%;
+    margin-right: 2%;
   }
 
   #my-edu h2 {
     display: block;
     margin-top: 70%;
     padding: 10px 50px;
-    padding-left: 70px;
     justify-content: left;
     margin-right: 20%;
     color: #fff;
@@ -219,93 +216,110 @@
   }
 
   #project {
-  margin-left: 13%;
+    margin-left: 1%;
+    margin-right: 2%;
   }
 
   #project h2 {
-    padding: 15px 60px;
-    margin-top: 50%;
-    margin-right: 32px;
-    margin-left: 32px;
+    padding: 10px 1px;
+    margin-top: 70%;
+    margin-right: 102px;
+    margin-left: 102px;
     text-align: center;
   }
 
   #certification {
-    margin-left: 13%;
+    margin-right: 0%;
+    margin-left: 0%;
   }
+
   #certification h2 {
-    padding: 15px 60px;
-    margin-right: 32px;
-    margin-left: 32px;
+    padding: 15px -10px;
+    margin-right: 102px;
+    margin-left: 102px;
     text-align: center;
   }
 
-#skills {
-  margin-top: -10%;
-}
+  #load-more {
+    margin-left:35.5%;
+  }
 
-#skills h2 {
-  margin-bottom: 40px;
-  font-weight: 200;
-  padding: 5px 80px;
-  margin-left: 20%;
-}
+  #load-more-1 {
+    margin-left:35.5%;
+  }
 
-#skills #skills-content {
-  flex-direction: column;
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-  align-items: flex-start;
-}
+  #skills {
+    margin-top: 30%;
+    margin-right: 0%;
+    margin-left: 0%;
+  }
 
-.list {
-  width: 85%;
-  margin-top: 10%;
-  margin-left: 18%;
-  order: 2;
-}
+  #skills h2 {
+    margin-bottom: 40px;
+    font-weight: 200;
+    padding: -1px 60px;
+    margin-right: 102px;
+    margin-left: 102px;
+  }
 
-.image {
-  width: 100%;
-  display: block;
-  text-align: center;
-}
+  #skills #skills-content {
+    flex-direction: column;
+    display: flex;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: 0%;
+  }
 
-#skills #skills-image {
-  order: 1;
-  width: 100%;
-}
+  .list {
+    width: 85%;
+    margin-top: 10%;
+    margin-left: 22%;
+    order: 2;
+  }
 
-#skills #skills-image img {
-  width: 120%;
-  border-radius: 10px;
-  margin-left: 25%;
-}
+  .image {
+    width: 100%;
+    display: block;
+    text-align: center;
+  }
 
-.contact-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin-right: 9%;
-  margin-top: 9%;
-  margin-bottom: 12%;
-}
+  #skills #skills-image {
+    order: 1;
+    width: 80%;
+  }
 
-.contact-form {
-  width: 90%;
-  order: 2;
-}
+  #skills #skills-image img {
+    width: 120%;
+    border-radius: 10px;
+    margin-left: 25%;
+  }
 
-.contact-info {
-  width: 90%;
-  justify-content: center;
-  margin-bottom: 5%;
-  order: 1;
- }
- .contact-form h2 {
-  margin-left: 33%;
-}
+  #contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    margin-top: 40%;
+    margin-left: 5%;
+  }
+  
+  .contact-form, .contact-info {
+    width: 80%;
+    margin-bottom: 5%;
+    text-align: left;
+  }
+  
+  .contact-form {
+    order: 2;
+  }
+  
+  .contact-info {
+    order: 1;
+  }
+  
+  .contact-form h2 {
+    text-align: center;
+  }
 }
 
 @media (max-width: 480px) {
@@ -318,7 +332,7 @@
   }
 
   .circle {
-    top: 80%
+    top: 80%;
   }
 
   .hero-text h3 {
@@ -355,16 +369,17 @@
     text-align: center;
   }
 
-  .contact-container {
-    margin-right: 20%;
+  #contact {
+    margin-right: 0;
   }
+
   .contact-form {
-    width: 100%;
+    width: 80%;
   }
-  
+
   .contact-info {
-    width: 100%;
+    width: 80%;
     justify-content: center;
     margin-bottom: 5%;
-   }
+  }
 }
