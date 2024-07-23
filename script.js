@@ -202,7 +202,7 @@ function displayProjects() {
     )
     .join("");
 
-  let currentItems = 2; // Show 2 items initially
+  let currentItems = 2;
   const boxes = document.querySelectorAll('.proj');
 
   boxes.forEach((box, index) => {
@@ -369,6 +369,11 @@ document.addEventListener("DOMContentLoaded", () => {
     skillsContainer.innerHTML = `
       <h2>Skills</h2>
       <div id="skills-content">
+        <div class="image">
+          <div id="skills-image">
+            <img src="images/skills.png" alt="Skills Image">
+          </div>
+        </div>
         <div class="list">
           <div class="skills-category">
             <h3 class="skills-header" data-target="#languages-list">Languages</h3>
@@ -381,11 +386,6 @@ document.addEventListener("DOMContentLoaded", () => {
           <div class="skills-category">
             <h3 class="skills-header" data-target="#soft-skills-list">Soft Skills</h3>
             <ul class="skills-list" id="soft-skills-list"></ul>
-          </div>
-        </div>
-        <div class="image">
-          <div id="skills-image">
-            <img src="images/skills.png" alt="Skills Image">
           </div>
         </div>
       </div>

@@ -1,6 +1,6 @@
 @media (max-width: 670px) {
   #home {
-    margin-bottom: -40%;
+    margin-bottom: -10%;
   }  
   
   #navbar {
@@ -128,7 +128,7 @@
     text-decoration: none;
     border-radius: 40px;
     position: absolute;
-    margin-top: 120%;
+    margin-top: 160%;
     z-index: 2;
     white-space: nowrap;
     overflow: visible;
@@ -153,8 +153,7 @@
 
   #about-me {
     max-width: 90%;
-    margin-top: -60%;
-    margin-bottom: -90%;
+    margin-top: 55%;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -174,8 +173,11 @@
   #about-me p {
     margin-top: 10px;
     margin-left: 0px;
-    text-align: center;
+    text-align: left;
     display: block;
+    margin-left: 13%;
+    margin-bottom: 20%;
+    font-size: larger;
   }
 
   .edu-image img {
@@ -183,20 +185,29 @@
     display: block;
     margin: 0;
     justify-content: center;
+    margin-left: 10%;
+  }
+  
+  .edu-button {
+    padding-right: 9%;
+    padding-left: 15%;
+    margin-right: 7%;
   }
 
   .edu-section {
     max-width: 100%;
-    margin-top: -90%;
     margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: left;
     flex-direction: column;
+    margin-left: 13%;
   }
 
   #my-edu h2 {
     display: block;
+    margin-top: 70%;
     padding: 10px 50px;
     padding-left: 70px;
     justify-content: left;
@@ -205,25 +216,96 @@
   }
 
   #my-edu p {
-    margin-top: 10px;
+    margin-top: 60px;
     margin-left: 30px;
-    text-align: center;
+    text-align: left;
     display: block;
+    font-size: larger;
+    margin-bottom: 10%;
+  }
+
+  #project {
+  margin-left: 13%;
   }
 
   #project h2 {
     padding: 15px 60px;
+    margin-top: 50%;
     margin-right: 32px;
     margin-left: 32px;
     text-align: center;
   }
 
+  #certification {
+    margin-left: 13%;
+  }
   #certification h2 {
     padding: 15px 60px;
     margin-right: 32px;
     margin-left: 32px;
     text-align: center;
   }
+
+#skills {
+  margin-top: -10%;
+}
+
+#skills h2 {
+  margin-bottom: 40px;
+  font-weight: 200;
+  padding: 5px 80px;
+  margin-left: 20%;
+}
+
+#skills #skills-content {
+  display: block;
+  width: 100%;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.list {
+  width: 85%;
+  margin-top: 10%;
+  margin-left: 18%;
+}
+
+.image {
+  width: 100%;
+  display: block;
+  text-align: center;
+}
+
+#skills #skills-image {
+  width: 100%;
+}
+
+#skills #skills-image img {
+  width: 120%;
+  border-radius: 10px;
+  margin-left: 25%;
+}
+
+.contact-container {
+  display: block;
+  justify-content: center;
+  margin-right: 9%;
+  margin-top: 4%;
+  margin-bottom: 7%;
+}
+
+.contact-form {
+  width: 90%;
+}
+
+.contact-info {
+  width: 90%;
+  justify-content: center;
+  margin-bottom: 5%;
+ }
+ .contact-form h2 {
+  margin-left: 33%;
+}
 }
 
 @media (max-width: 480px) {
@@ -241,4 +323,13 @@
     margin-left: -2px;
     text-align: center;
   }
+  .contact-form {
+    width: 100%;
+  }
+  
+  .contact-info {
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 5%;
+   }
 }
