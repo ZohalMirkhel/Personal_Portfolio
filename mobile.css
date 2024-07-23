@@ -17,10 +17,9 @@
   }
 
   .hero-image {
-    position: absolute;
     top: 0;
     left: 0;
-    margin-left: -85%;
+    margin-left: -97%;
     margin-right: 76%;
     max-width: 200%;
     text-align: center;
@@ -115,11 +114,6 @@
     margin: 0 1rem;
   }
 
-  .social-links img {
-    width: 40px;
-    height: 40px;
-  }
-
   .contact-btn {
     display: inline-block;
     padding: 0.8rem 2.2rem;
@@ -144,19 +138,19 @@
     margin: 0;
   }
 
+  #about-me {
+    max-width: 100%;
+    margin-top: 55%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
   .about-image img {
     width: 120%;
     display: block;
     margin: 0;
     margin-left: -40px;
-  }
-
-  #about-me {
-    max-width: 90%;
-    margin-top: 55%;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
   }
 
   #about-me h2 {
@@ -195,7 +189,7 @@
   }
 
   .edu-section {
-    max-width: 100%;
+    max-width: 110%;
     margin: 0;
     display: flex;
     justify-content: center;
@@ -258,7 +252,8 @@
 }
 
 #skills #skills-content {
-  display: block;
+  flex-direction: column;
+  display: flex;
   width: 100%;
   justify-content: space-between;
   align-items: flex-start;
@@ -268,6 +263,7 @@
   width: 85%;
   margin-top: 10%;
   margin-left: 18%;
+  order: 2;
 }
 
 .image {
@@ -277,6 +273,7 @@
 }
 
 #skills #skills-image {
+  order: 1;
   width: 100%;
 }
 
@@ -287,21 +284,24 @@
 }
 
 .contact-container {
-  display: block;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   margin-right: 9%;
-  margin-top: 4%;
-  margin-bottom: 7%;
+  margin-top: 9%;
+  margin-bottom: 12%;
 }
 
 .contact-form {
   width: 90%;
+  order: 2;
 }
 
 .contact-info {
   width: 90%;
   justify-content: center;
   margin-bottom: 5%;
+  order: 1;
  }
  .contact-form h2 {
   margin-left: 33%;
@@ -314,7 +314,38 @@
   }
 
   .hero-image {
-    margin-right: 66%;
+    margin-right: 75.5%;
+  }
+
+  .circle {
+    top: 80%
+  }
+
+  .hero-text h3 {
+    margin-top: 380%;
+    margin-left: -20%;
+  }
+
+  .hero-text h2 {
+    font-size: 70px;
+  }
+
+  .hero-text h1 {
+    font-size: 70px;
+  }
+
+  .social-links {
+    top: 88%;
+  }
+
+  .contact-btn {
+    top: 75%;
+    font-weight: bolder;
+  }
+
+  #about-me {
+    max-width: 140%;
+    margin-top: 79%;
   }
 
   #project h2 {
@@ -322,6 +353,10 @@
     margin-right: -12px;
     margin-left: -2px;
     text-align: center;
+  }
+
+  .contact-container {
+    margin-right: 20%;
   }
   .contact-form {
     width: 100%;
