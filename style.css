@@ -79,7 +79,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 4rem;
+  padding: 3rem;
   background-color: black;
   position: relative;
 }
@@ -820,7 +820,7 @@ body {
 }
 
 /* Media Queries  */
-@media (max-width: 800px) {
+@media (max-width: 950px) {
   .hide {
     display: none;
   }
