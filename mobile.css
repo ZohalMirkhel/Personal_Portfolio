@@ -456,13 +456,13 @@
   }
 
   #certification h2 {
-    padding: 15px 35px 15px 35px;
+    padding: 15px 35px;
     margin-right: 80px;
     margin-left: 80px;
   }
 
   #contact {
-    margin-left: 5%;
+    margin-left: 0;
   }
 
   .contact-form {
