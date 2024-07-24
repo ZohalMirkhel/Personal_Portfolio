@@ -73,17 +73,6 @@ body {
   display: none;
 }
 
-#pop-up {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: white;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  padding: 20px;
-  backdrop-filter: blur(20px);
-}
-
 /* home part */
 .hero {
   display: flex;
@@ -451,7 +440,9 @@ body {
   max-width: 600px;
   border-radius: 10px;
 }
-
+#popup-content h3{
+    font-family: 'Jockey One'; 
+  }
 #popup-content {
   position: relative;
   text-align: center;
@@ -474,6 +465,9 @@ body {
   cursor: pointer;
 }
 
+.mobile-close-pop {
+  display: none;
+}
 .no-scroll {
   overflow: hidden;
 }

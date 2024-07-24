@@ -228,6 +228,51 @@
     text-align: center;
   }
 
+  #popup-content img {
+    display: none;
+  }
+
+  .popup-button {
+    display: inline;
+    padding: 0;
+    margin: 0;
+    background: none;
+    font-family: inherit;
+    color: #0000ee;
+    text-decoration: underline;
+    border-radius: 0;
+    transition: none;
+  }
+
+  .close-btn {
+    display: none;
+  }
+
+  #pop-up {
+    margin: 0 auto;
+  }
+
+  .popup-button {
+    display: inline-block;
+    padding: 10px 10px;
+    margin: 10px 20px;
+    margin-bottom: 60px;
+  }
+
+  .close-btn-mobile {
+    position: absolute;
+    top: 125%;
+    right: 10px;
+    background: black;
+    color: #d1b44b;
+    border: none;
+    margin: 10px 30px;
+    padding: 10px 30px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 30px;
+  }
+
   #certification {
     margin-right: 0%;
     margin-left: 0%;

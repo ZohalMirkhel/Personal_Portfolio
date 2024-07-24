@@ -302,6 +302,7 @@ window.showPopup = function (index) {
     <p>Technologies: ${project.technologies.join(", ")}</p>
     <a class="popup-button" id="live" href="${project.liveLink}" target="_blank">Live Site</a>
     <a class="popup-button" id="git" href="${project.sourceLink}" target="_blank">GitHub Repository</a>
+    <button id="mobile-close-pop" class="close-btn-mobile">Close</button>
   `;
   popUp.classList.remove("hidden");
   mainContent.classList.add("blurred");
@@ -312,7 +313,13 @@ window.showPopup = function (index) {
     mainContent.classList.remove("blurred");
     body.classList.remove("no-scroll");
   });
+  document.getElementById("mobile-close-pop").addEventListener("click", () => {
+    popUp.classList.add("hidden");
+    mainContent.classList.remove("blurred");
+    body.classList.remove("no-scroll");
+  });
 }
+
 
 document.addEventListener("DOMContentLoaded", displayProjects);
 
