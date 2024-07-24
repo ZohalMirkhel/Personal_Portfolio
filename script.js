@@ -14,12 +14,67 @@ function hideSidebar() {
 document.addEventListener("DOMContentLoaded", () => {
 
   var links = document.querySelectorAll('#navbar a');
-        links.forEach(function (link) {
-            link.addEventListener('click', function () {
-                links.forEach(function (lnk) { lnk.classList.remove('active'); });
-                this.classList.add('active');
-            });
+  var sections = document.querySelectorAll('section');
+  
+  // Function to update the active link
+  function updateActiveLink() {
+      var currentSection = null;
+      
+      sections.forEach(function (section) {
+          var rect = section.getBoundingClientRect();
+          if (rect.top >= 0 && rect.top <= window.innerHeight / 2) {
+              currentSection = section;
+          }
+      });
+
+      if (currentSection) {
+          var id = currentSection.getAttribute('id');
+          links.forEach(function (link) {
+              link.classList.remove('active');
+              if (link.getAttribute('href').substring(1) === id) {
+                  link.classList.add('active');
+              }
+          });
+      }
+  }
+
+  // Observe sections using Intersection Observer
+  var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+              updateActiveLink();
+          }
+      });
+  }, {
+      threshold: 0.5
+  });
+
+  sections.forEach(function (section) {
+      observer.observe(section);
+  });
+
+  // Update active link on page load and on scroll
+  updateActiveLink();
+  window.addEventListener('scroll', updateActiveLink);
+
+    // Observe sections using Intersection Observer
+    var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+                updateActiveLink();
+            }
         });
+    }, {
+        threshold: 0.5
+    });
+
+    sections.forEach(function (section) {
+        observer.observe(section);
+    });
+
+    // Update active link on page load and on scroll
+    updateActiveLink();
+    window.addEventListener('scroll', updateActiveLink);
   
   const heroText = document.querySelector('.hero-text');
   const heroImage = document.querySelector('.hero-image');
