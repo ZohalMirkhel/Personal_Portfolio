@@ -116,7 +116,7 @@
     z-index: 2;
     margin-left: 21%;
     margin-bottom: 40%;
-    margin-top: 10%;
+    margin-top: 3%;
   }
 
   .social-links a {
@@ -150,8 +150,8 @@
 
   #about-me {
     max-width: 100%;
-    margin-top: 55%;
-    margin-bottom: 60%;
+    margin-top: 15%;
+    margin-bottom: 5%;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -200,6 +200,7 @@
 
   .edu-section {
     max-width: 100%;
+    margin-top: 5%;
     margin: 0;
     display: flex;
     justify-content: center;
@@ -229,7 +230,7 @@
   }
 
   #project {
-    padding-top: 10rem;
+    padding-top: 2rem;
     margin-left: 4%;
     margin-right: 0%;
   }
@@ -288,6 +289,7 @@
   }
 
   #certification {
+    margin-top: 10%;
     margin-right: 0%;
     margin-left: 4%;
   }
@@ -381,7 +383,7 @@
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 500px) {
   .contact-btn {
     margin-top: 60%;
   }
@@ -479,8 +481,6 @@
   }
 
   .contact-info {
-    width: 95%;
-    justify-content: center;
-    margin-bottom: 5%;
+    width: 100%;
   }
 }
