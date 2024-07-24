@@ -1,4 +1,4 @@
-@media (max-width: 950px) {
+@media (max-width: 1000px) {
   * {
     padding: 0;
     margin: 0;
@@ -6,6 +6,10 @@
 
   #home {
     margin-bottom: 10%;
+  }
+
+  body {
+    overflow-x: hidden;
   }
 
   #navbar {
@@ -112,7 +116,7 @@
     z-index: 2;
     margin-left: 21%;
     margin-bottom: 40%;
-    margin-top: 5%;
+    margin-top: 10%;
   }
 
   .social-links a {
@@ -147,6 +151,7 @@
   #about-me {
     max-width: 100%;
     margin-top: 55%;
+    margin-bottom: 60%;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -224,7 +229,7 @@
   }
 
   #project {
-    padding-top: 3rem;
+    padding-top: 10rem;
     margin-left: 4%;
     margin-right: 0%;
   }
@@ -354,7 +359,7 @@
     align-items: center;
     width: 90%;
     margin-top: 30%;
-    margin-left: 11%;
+    margin-left: 4%;
   }
   
   .contact-form, .contact-info {
