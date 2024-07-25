@@ -19,6 +19,14 @@
     padding: 4%;
   }
 
+  .social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 1rem;
+    text-decoration: none;
+  }
+
   .sidebar li a {
     color: #000;
     font-weight: 600;
@@ -41,7 +49,7 @@
   }
 
   .hero {
-    padding: 0px;
+    padding: 0;
   }
 
   .hero-content {
@@ -53,7 +61,7 @@
   .hero-image {
     margin: 0;
     max-width: 130%;
-    width: 110%; 
+    width: 110%;
     height: 90vh;
     background-size: cover;
     background-position: center;
@@ -63,14 +71,17 @@
     margin-top: -6%;
     margin-right: -100%;
     margin-left: -100%;
-}
+  }
 
-.hero-image img {
+  .hero-image img {
     width: 100%;
     height: 100%;
     display: block;
     object-fit: cover;
-}
+    max-width: 300%;
+    border-radius: 0;
+    margin: 0;
+  }
 
   .hero-text {
     max-width: 100%;
@@ -134,14 +145,6 @@
     margin-top: 3%;
   }
 
-  .social-links a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 1rem;
-    text-decoration: none;
-  }
-
   .contact-btn {
     display: inline-block;
     padding: 0.8rem 3rem;
@@ -155,12 +158,6 @@
     margin-left: 22%;
     font-family: 'Sansita One';
     font-weight: bolder;
-  }
-
-  .hero-image img {
-    max-width: 300%;
-    border-radius: 0;
-    margin: 0;
   }
 
   #about-me {
@@ -212,8 +209,8 @@
 
   .edu-section {
     max-width: 100%;
+    margin: 0;
     margin-top: 5%;
-    margin: 0px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -257,14 +254,16 @@
 
   .popup-button {
     display: inline;
-    padding: 0;
-    margin: 0;
     background: none;
     font-family: inherit;
-    color: #0000ee;
+    color: #00e;
     text-decoration: underline;
     border-radius: 0;
     transition: none;
+    display: inline-block;
+    padding: 10px 10px;
+    margin: 10px 20px;
+    margin-bottom: 60px;
   }
 
   .close-btn {
@@ -273,13 +272,6 @@
 
   #pop-up {
     margin: 0 auto;
-  }
-
-  .popup-button {
-    display: inline-block;
-    padding: 10px 10px;
-    margin: 10px 20px;
-    margin-bottom: 60px;
   }
 
   .close-btn-mobile {
