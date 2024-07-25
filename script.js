@@ -163,7 +163,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // Projects section content initialization
-    const myProjects = document.getElementById("my-projects");
+const myProjects = document.getElementById("my-projects");
     const showMoreProjectsBtn = document.getElementById("load-more");
     const popUp = document.getElementById("pop-up");
     const popupContent = document.getElementById("popup-content");
