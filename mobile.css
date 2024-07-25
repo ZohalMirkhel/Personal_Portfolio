@@ -83,7 +83,7 @@
   .circle {
     width: 270px;
     height: 270px;
-    background: linear-gradient(to bottom, #958340 0%, #5E532D 20%, #433A1A 35%, black 100%);
+    background: linear-gradient(to bottom, rgba(149, 131, 64, 0.8) 0%, rgba(94, 83, 45, 0.8) 20%, rgba(67, 58, 26, 0.8) 35%, rgba(0, 0, 0, 0.8) 100%);
     border-radius: 50%;
     position: absolute;
     left: 30px;
