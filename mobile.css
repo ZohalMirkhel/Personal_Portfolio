@@ -14,14 +14,17 @@
 
   .sidebar {
     background: linear-gradient(to bottom, rgba(149, 131, 64, 0.8) 0%, rgba(94, 83, 45, 0.8) 20%, rgba(67, 58, 26, 0.8) 35%, rgba(0, 0, 0, 0.8) 100%);
-    text-decoration: none;
     list-style: none;
     width: 40%;
+    padding: 4%;
   }
 
-  .sidebar li {
+  .sidebar li a {
     color: #000;
     font-weight: 600;
+    font-size: larger;
+    text-decoration: none;
+    line-height: 2;
   }
 
   #navbar {
