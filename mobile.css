@@ -207,10 +207,7 @@
   }
 
   .edu-button {
-    padding-right: 9%;
-    padding-left: 13%;
-    margin-right: 9%;
-    margin-left: 11%;
+    margin-right: -7px;
   }
 
   .edu-section {
@@ -372,11 +369,11 @@
     align-items: center;
     width: 90%;
     margin-top: 30%;
-    margin-left: 10%;
+    margin-left: 15%;
   }
   
   .contact-form, .contact-info {
-    width: 80%;
+    width: 100%;
     margin-bottom: 5%;
     text-align: left;
   }
@@ -406,7 +403,7 @@
   .hero-image {
     width: 100%;
     margin-left: -100%;
-    margin-top: -100%;
+    margin-top: -80%;
     height: 50vh;
   }
 
@@ -500,14 +497,14 @@
   }
 
   #contact {
-    margin-left: 5%;
+    margin-left: 16%;
   }
 
   .contact-form {
-    width: 100%;
+    width: 130%;
   }
 
   .contact-info {
-    width: 100%;
+    width: 130%;
   }
 }
