@@ -1,22 +1,47 @@
-// Function to show the sidebar
-function showSidebar() {
-  const sidebar = document.querySelector('.sidebar');
-  sidebar.style.display = 'flex';
-}
+document.addEventListener('DOMContentLoaded', function() {
+  const sidebar = document.getElementById('sidebar');
+  const toggleButton = document.getElementById('toggleSidebar');
+  const closeSidebarButton = document.getElementById('closeSidebar');
 
-// Function to hide the sidebar
-function hideSidebar() {
-  const sidebar = document.querySelector('.sidebar');
-  sidebar.style.display = 'none';
-}
+  function showSidebar() {
+    sidebar.style.display = 'flex';
+  }
+
+  function hideSidebar(event) {
+    event.preventDefault();
+    sidebar.style.display = 'none';
+  }
+
+  function toggleSidebar(event) {
+    event.preventDefault();
+    if (sidebar.style.display === 'flex') {
+      hideSidebar(event);
+    } else {
+      showSidebar();
+    }
+  }
+
+  function navigateTo(event, sectionId) {
+    event.preventDefault();
+    document.querySelector(sectionId).scrollIntoView({ behavior: 'smooth' });
+    hideSidebar(event);
+  }
+
+  toggleButton.addEventListener('click', toggleSidebar);
+
+  closeSidebarButton.addEventListener('click', hideSidebar);
+
+  window.navigateTo = navigateTo;
+  window.hideSidebar = hideSidebar;
+});
+
 
 // Home page content initialization
 document.addEventListener("DOMContentLoaded", () => {
 
   var links = document.querySelectorAll('#navbar a');
   var sections = document.querySelectorAll('section');
-  
-  // Function to update the active link
+
   function updateActiveLink() {
       var currentSection = null;
       
@@ -38,7 +63,6 @@ document.addEventListener("DOMContentLoaded", () => {
       }
   }
 
-  // Observe sections using Intersection Observer
   var observer = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
           if (entry.isIntersecting) {
@@ -53,11 +77,9 @@ document.addEventListener("DOMContentLoaded", () => {
       observer.observe(section);
   });
 
-  // Update active link on page load and on scroll
   updateActiveLink();
   window.addEventListener('scroll', updateActiveLink);
 
-    // Observe sections using Intersection Observer
     var observer = new IntersectionObserver(function (entries) {
         entries.forEach(function (entry) {
             if (entry.isIntersecting) {
@@ -72,7 +94,6 @@ document.addEventListener("DOMContentLoaded", () => {
         observer.observe(section);
     });
 
-    // Update active link on page load and on scroll
     updateActiveLink();
     window.addEventListener('scroll', updateActiveLink);
   
