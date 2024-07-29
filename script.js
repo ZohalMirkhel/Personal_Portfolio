@@ -162,9 +162,10 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-// Projects section content initialization
-const myProjects = document.getElementById("my-projects");
-    const showMoreProjectsBtn = document.getElementById("load-more");
+// Projects section content initialization\
+document.addEventListener("DOMContentLoaded", () => {
+    const myProjects = document.getElementById('my-projects');
+    const showMoreProjectsBtn = document.getElementById('load-more');
     const popUp = document.getElementById("pop-up");
     const popupContent = document.getElementById("popup-content");
     const closePop = document.getElementById("close-pop");
@@ -174,7 +175,7 @@ const myProjects = document.getElementById("my-projects");
   const projects = [
     {
       title: "Product Landing Page",
-      shortDescription: "This project is an e-commerce website dedicated to showcasing and selling traditional Afghan clothing and accessories. It features a responsive design, easy-to-use navigation, product listings, an email subscription form, and a search bar.",
+      shortDescription: "An e-commerce website dedicated to showcasing and selling traditional Afghan clothing and accessories. It features a responsive design, easy-to-use navigation, product listings, an email subscription form, and a search bar.",
       longDescription: "This project is an e-commerce website designed to showcase and sell traditional Afghan clothing and accessories. The website emphasizes user experience, responsiveness, and aesthetics. Key features include a dynamic banner slider, a user-friendly navigation bar, and detailed product listings with images, prices, and descriptions. It also includes an email subscription form for updates and promotions, a search bar for easy product searches, and a rich history section that provides cultural context for Afghan clothing. Additionally, the services section highlights key offerings such as fast shipping, easy returns, 24/7 support, and affordable prices. The contact information section provides multiple ways for users to reach out for support or inquiries. The entire site is built using HTML and CSS, ensuring a fully responsive and seamless experience across all devices.",
       image: "images/Product_Landing_Page.png",
       technologies: ["HTML", "CSS", "Git", "GitHub"],
@@ -264,8 +265,33 @@ const myProjects = document.getElementById("my-projects");
     },
   ];
 
-function displayProjects() {
-  myProjects.innerHTML = projects
+  const showMoreSVG = `
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 30" version="1.1" x="0px" y="0px">
+    <title>down-1</title>
+    <desc>Created with Sketch.</desc>
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+      <g fill="#FFFFFF" fill-rule="nonzero">
+        <path d="M1.95,12 C1.95,6.44953826 6.44953826,1.95 12,1.95 C17.5504617,1.95 22.05,6.44953826 22.05,12 C22.05,17.5504617 17.5504617,22.05 12,22.05 C6.44953826,22.05 1.95,17.5504617 1.95,12 Z M4.05,12 C4.05,16.3906638 7.60933624,19.95 12,19.95 C16.3906638,19.95 19.95,16.3906638 19.95,12 C19.95,7.60933624 16.3906638,4.05 12,4.05 C7.60933624,4.05 4.05,7.60933624 4.05,12 Z M12,12.55 L14.2075379,10.3075379 C14.6175884,9.89748737 15.2824116,9.89748737 15.6924621,10.3075379 C16.1025126,10.7175884 16.1025126,11.3824116 15.6924621,11.7924621 L12.6924621,14.7924621 C12.2824116,15.2025126 11.6175884,15.2025126 11.2075379,14.7924621 L8.20753788,11.7924621 C7.79748737,11.3824116 7.79748737,10.7175884 8.20753788,10.3075379 C8.61758839,9.89748737 9.28241161,9.89748737 9.69246212,10.3075379 L12,12.55 Z"/>
+      </g>
+    </g>
+  </svg>
+  <span id="more-c">Show More</span>
+`;
+
+const showLessSVG = `
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 30" version="1.1" x="0px" y="0px">
+    <title>up-1</title>
+    <desc>Created with Sketch.</desc>
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+      <g fill="#FFFFFF" fill-rule="nonzero">
+        <path d="M22.05,12 C22.05,6.44953826 17.5504617,1.95 12,1.95 C6.44953826,1.95 1.95,6.44953826 1.95,12 C1.95,17.5504617 6.44953826,22.05 12,22.05 C17.5504617,22.05 22.05,17.5504617 22.05,12 Z M19.95,12 C19.95,16.3906638 16.3906638,19.95 12,19.95 C7.60933624,19.95 4.05,16.3906638 4.05,12 C4.05,7.60933624 7.60933624,4.05 12,4.05 C16.3906638,4.05 19.95,7.60933624 19.95,12 Z M12,11.45 L9.79246212,13.6924621 C9.38241161,14.1025126 8.71758839,14.1025126 8.30753788,13.6924621 C7.89748737,13.2824116 7.89748737,12.6175884 8.30753788,12.2075379 L11.3075379,9.20753788 C11.7175884,8.79748737 12.3824116,8.79748737 12.7924621,9.20753788 L15.7924621,12.2075379 C16.2025126,12.6175884 16.2025126,13.2824116 15.7924621,13.6924621 C15.3824116,14.1025126 14.7175884,14.1025126 14.3075379,13.6924621 L12,11.45 Z"/>
+      </g>
+    </g>
+  </svg>
+  <span id="more-c">Show Less</span>
+`;
+
+myProjects.innerHTML = projects
     .map(
       (project, index) => `
     <div class="proj" id="proj-${index}">
@@ -284,11 +310,17 @@ function displayProjects() {
   boxes.forEach((box, index) => {
     if (index < currentItems) {
       box.style.display = 'block';
+    } else {
+      box.style.display = 'none';
     }
   });
 
+  showMoreProjectsBtn.innerHTML = showMoreSVG;
+
   showMoreProjectsBtn.onclick = () => {
-    if (showMoreProjectsBtn.innerText === "Show More") {
+    const moreText = showMoreProjectsBtn.querySelector('#more-c');
+    
+    if (moreText.innerText === "Show More") {
       for (let i = currentItems; i < currentItems + 2; i++) {
         if (boxes[i]) {
           boxes[i].style.display = 'block';
@@ -296,22 +328,23 @@ function displayProjects() {
       }
       currentItems += 2;
       if (currentItems >= boxes.length) {
-        showMoreProjectsBtn.innerText = "Show Less";
+        moreText.innerText = "Show Less";
+        showMoreProjectsBtn.innerHTML = showLessSVG;
       }
     } else {
       currentItems = 2;
       boxes.forEach((box, index) => {
         if (index >= currentItems) {
           box.style.display = 'none';
+        } else {
+          box.style.display = 'block';
         }
       });
-      showMoreProjectsBtn.innerText = "Show More";
+      moreText.innerText = "Show More";
       document.getElementById("project").scrollIntoView({ behavior: "smooth" });
+      showMoreProjectsBtn.innerHTML = showMoreSVG;
     }
-    console.log("Updated button text:", btnText.innerText);
-    console.log("SVG class list:", showMoreProjectsBtn.classList);
   }
-}
 
 window.showPopup = function (index) {
   const project = projects[index];
@@ -341,13 +374,13 @@ window.showPopup = function (index) {
   });
 }
 
-
 document.addEventListener("DOMContentLoaded", displayProjects);
+});
 
 //Certification Part
 document.addEventListener("DOMContentLoaded", () => {
-  const certification = document.getElementById("certification");
-  const showMoreProjectsBtn = document.getElementById("load-more");
+  const certificationSection = document.getElementById("certification-section");
+  const showMoreCertificatesBtn = document.getElementById("load-more-1");
   const moreText = document.getElementById("more-c");
   const skills = {
     certificates: [
@@ -385,7 +418,7 @@ document.addEventListener("DOMContentLoaded", () => {
     <span id="more-c">Show Less</span>
   `;
 
-  certification.innerHTML = `
+  certificationSection.innerHTML = `
     <div id="certification-section">
       <h2>Certificates</h2>
       <div class="cert-list">
@@ -411,9 +444,9 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  showMoreCertification.innerHTML = showMoreSVG;
+  showMoreCertificatesBtn.innerHTML = showMoreSVG;
 
-  showMoreCertification.onclick = () => {
+  showMoreCertificatesBtn.onclick = () => {
     if (moreText.innerText === "Show More") {
       for (let i = currentItem; i < currentItem + 2; i++) {
         if (certItems[i]) {
@@ -422,7 +455,8 @@ document.addEventListener("DOMContentLoaded", () => {
       }
       currentItem += 2;
       if (currentItem >= certItems.length) {
-        showMoreCertification.innerHTML = showLessSVG;
+        moreText.innerText = "Show Less";
+        showMoreCertificatesBtn.innerHTML = showLessSVG;
       }
     } else {
       currentItem = 2;
@@ -433,7 +467,9 @@ document.addEventListener("DOMContentLoaded", () => {
           item.style.display = 'block';
         }
       });
-      showMoreCertification.innerHTML = showMoreSVG;
+      document.getElementById("certification").scrollIntoView({ behavior: "smooth" });
+      moreText.innerText = "Show More";
+      showMoreCertificatesBtn.innerHTML = showMoreSVG;
     }
   };
 });
