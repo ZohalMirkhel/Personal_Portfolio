@@ -213,36 +213,8 @@
     margin-left: 25%;
   }
 
-  .popup-button {
-    display: inline;
-    background: none;
-    font-family: inherit;
-    color: #00e;
-    text-decoration: underline;
-    border-radius: 0;
-    transition: none;
-    display: inline-block;
-    padding: 10px 10px;
-    margin: 10px 20px;
-    margin-bottom: 60px;
-  }
-
   #pop-up {
     margin: 0 auto;
-  }
-
-  .close-btn-mobile {
-    position: absolute;
-    top: 125%;
-    right: 10px;
-    background: black;
-    color: #d1b44b;
-    border: none;
-    margin: 10px 30px;
-    padding: 10px 30px;
-    font-size: 20px;
-    cursor: pointer;
-    border-radius: 30px;
   }
 
   #certification {
@@ -328,7 +300,8 @@
 
 @media (max-width: 500px) {
   .sidebar {
-    width: 100%;
+    width: 80%;
+    background: linear-gradient(to bottom, rgba(149, 131, 64, 0.9) 0%, rgba(94, 83, 45, 0.9) 20%, rgba(67, 58, 26, 0.9) 35%, rgba(0, 0, 0, 0.9) 100%);
   }
 
   .contact-btn {
@@ -374,6 +347,35 @@
 
   .close-btn {
     display: none;
+  }
+
+  .close-btn-mobile {
+    display: block;
+    position: absolute;
+    top: 110%;
+    right: 10px;
+    background: black;
+    color: #d1b44b;
+    border: none;
+    margin: 10px 20px;
+    padding: 10px 30px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 30px;
+  }
+
+  .popup-button {
+    display: inline;
+    background: none;
+    font-family: inherit;
+    color: #00e;
+    text-decoration: underline;
+    border-radius: 0;
+    transition: none;
+    display: inline-block;
+    padding: 10px 10px;
+    margin: 10px 20px;
+    margin-bottom: 60px;
   }
 
   .contact-btn {
@@ -425,11 +427,11 @@
   }
 
   #contact {
-    margin-left: 16%;
+    margin: 0 auto;
   }
 
   .contact-form,
   .contact-info {
-    width: 140%;
+    width: 100%;
   }
 }

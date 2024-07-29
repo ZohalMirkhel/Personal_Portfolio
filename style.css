@@ -351,6 +351,7 @@ body {
   width: 24px;
   height: 24px;
   transition: transform 0.3s;
+  display: block;
 }
 
 #load-more:hover {
@@ -362,7 +363,7 @@ body {
 }
 
 #load-more span {
-  display: inline-block;
+  display: block;
 }
 
 .proj:hover {
@@ -460,6 +461,7 @@ body {
 .mobile-close-pop {
   display: none;
 }
+
 .no-scroll {
   overflow: hidden;
 }
@@ -550,67 +552,6 @@ body {
   font-size: 1.4rem;
   margin: 10px 0;
   color: #d4af37;
-}
-
-#certification .cert:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-#certification .cert a {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 15px 60px;
-  margin-right: 7px;
-  background-color: #d4af37;
-  color: #000;
-  border: none;
-  font-family: 'Sansita One';
-  text-align: center;
-  border-radius: 30px;
-  cursor: pointer;
-  text-decoration: none;
-  width: auto;
-}
-
-#certification .cert a:hover {
-  background-color: #6e5a31;
-}
-
-#load-more-1 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px 20px;
-  background-color: #000;
-  margin-top:3%;
-  margin-left:42.5%;
-  color: #fff;
-  border: none;
-  border-radius: 50px;
-  cursor: pointer;
-  font-size: 16px;
-  transition: background-color 0.3s;
-}
-
-#load-more-1 svg {
-  margin-right: 10px;
-  width: 24px;
-  height: 24px;
-  transition: transform 0.3s;
-  display: block;
-}
-
-#load-more-1:hover {
-  transform: rotateY(-10px);
-}
-
-#load-more-1.show-less svg {
-  transform: rotate(180deg);
-}
-
-#load-more-1 span {
-  display: block;
 }
 
 /* Skills Section */
@@ -823,7 +764,6 @@ body {
 
   .menu-button {
     display: block;
-    color: #fff;
   }
 
   .slider {
@@ -834,6 +774,5 @@ body {
 @media (max-width: 600px) {
   .menu-button {
     display: block;
-    color: #fff;
   }
 }

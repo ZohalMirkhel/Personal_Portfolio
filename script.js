@@ -347,7 +347,7 @@ document.addEventListener("DOMContentLoaded", displayProjects);
 //Certification Part
 document.addEventListener("DOMContentLoaded", () => {
   const certification = document.getElementById("certification");
-  const showMoreCertification = document.getElementById("load-more-1");
+  const showMoreProjectsBtn = document.getElementById("load-more");
   const moreText = document.getElementById("more-c");
   const skills = {
     certificates: [
