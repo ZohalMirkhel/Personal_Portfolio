@@ -433,11 +433,6 @@ body {
   max-width: 600px;
 }
 
-#slider-container {
-  text-align: center;
-  transition: 1s;
-}
-
 #popup-content h3{
   font-family: 'Jockey One'; 
 }

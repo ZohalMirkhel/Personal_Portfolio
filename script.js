@@ -367,10 +367,11 @@ function displayProjects() {
 
 window.showPopup = function (index) {
   const project = projects[index];
+  
   popupContent.innerHTML = `
     <button id="close-pop" class="close-btn">&times;</button>
     <h3>${project.title}</h3>
-    <div class="pop-project-images">
+    <div id="#popup-content" class="pop-project-images">
           ${Array.isArray(project.image) ? project.image.map(image => `<img src="${image}" alt="${project.title}" />`).join("") : `<img src="${project.image}" alt="${project.title}" />`}
       </div>
     <p>${project.longDescription}</p>

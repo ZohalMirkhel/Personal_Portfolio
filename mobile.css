@@ -416,10 +416,15 @@
     display: none;
   }
 
+  #popup-content {
+    height: 80vh;
+    overflow-y: hidden;
+  }
+
   .close-btn-mobile {
     display: block;
     position: absolute;
-    top: 110%;
+    top: 90%;
     right: 10px;
     background: black;
     color: #d1b44b;
@@ -443,5 +448,17 @@
     padding: 10px 10px;
     margin: 10px 20px;
     margin-bottom: 60px;
+  }
+
+  .pop-project-images img {
+    display: none
+  }
+
+  .pop-project-images img:first-child {
+    border-radius: 30px;
+    display: block;
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
   }
 }
