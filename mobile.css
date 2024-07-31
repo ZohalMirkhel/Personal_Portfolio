@@ -169,7 +169,7 @@
   }
 
   .edu-button {
-    margin-right: -7px;
+    margin-right: -9%;
   }
 
   .edu-section {
@@ -408,6 +408,10 @@
 }
 
 @media (max-width:570px) {
+  .mobile-close-pop {
+    display: block;
+  }
+
   .close-btn {
     display: none;
   }

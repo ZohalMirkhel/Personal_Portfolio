@@ -164,20 +164,26 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Projects section content initialization\
 document.addEventListener("DOMContentLoaded", () => {
-    const myProjects = document.getElementById('my-projects');
-    const showMoreProjectsBtn = document.getElementById('load-more');
-    const popUp = document.getElementById("pop-up");
-    const popupContent = document.getElementById("popup-content");
-    const closePop = document.getElementById("close-pop");
-    const mainContent = document.getElementById("main-content");
-    const body = document.body;
+  const myProjects = document.getElementById('my-projects');
+  const showMoreProjectsBtn = document.getElementById('load-more');
+  const popUp = document.getElementById("pop-up");
+  const popupContent = document.getElementById("popup-content");
+  const closePop = document.getElementById("close-pop");
+  const mainContent = document.getElementById("main-content");
+  const body = document.body;
 
   const projects = [
     {
       title: "Product Landing Page",
       shortDescription: "An e-commerce website dedicated to showcasing and selling traditional Afghan clothing and accessories. It features a responsive design, easy-to-use navigation, product listings, an email subscription form, and a search bar.",
       longDescription: "This project is an e-commerce website designed to showcase and sell traditional Afghan clothing and accessories. The website emphasizes user experience, responsiveness, and aesthetics. Key features include a dynamic banner slider, a user-friendly navigation bar, and detailed product listings with images, prices, and descriptions. It also includes an email subscription form for updates and promotions, a search bar for easy product searches, and a rich history section that provides cultural context for Afghan clothing. Additionally, the services section highlights key offerings such as fast shipping, easy returns, 24/7 support, and affordable prices. The contact information section provides multiple ways for users to reach out for support or inquiries. The entire site is built using HTML and CSS, ensuring a fully responsive and seamless experience across all devices.",
-      image: "images/Product_Landing_Page.png",
+      image: [
+        "images/Product_Landing_Page.png",
+        "images/PL1.png",
+        "images/Pl2.png",
+        "images/PL3.png",
+        "images/PL4.png",
+      ],
       technologies: ["HTML", "CSS", "Git", "GitHub"],
       liveLink: "https://zohalmirkhel.github.io/product-landing-page/",
       sourceLink: "https://github.com/ZohalMirkhel/product-landing-page",
@@ -213,7 +219,12 @@ document.addEventListener("DOMContentLoaded", () => {
       title: "Portfolio Project",
       shortDescription: "This project is a portfolio website designed to showcase various web development projects. The website employs a sleek, dark-themed design with a focus on simplicity and modern aesthetics.",
       longDescription: "This portfolio website is designed to showcase various web development projects. It features a modern, minimalist design with a dark theme, providing a sleek and professional look. The website includes a navigation bar with links to Home, About, Work, and Contact sections, allowing easy access to different parts of the site. The website is fully responsive, ensuring that it provides a seamless user experience across various devices and screen sizes.",
-      image: "images/Portfolio.png",
+      image: [
+        "images/Portfolio.png",
+        "images/portfolio2.png",
+        "images/portfolio3.png",
+        "images/portfolio4.png",
+      ],
       technologies: ["HTML", "CSS", "Git", "GitHub"],
       liveLink: "https://zohalmirkhel.github.io/portfolio_project/",
       sourceLink: "https://github.com/ZohalMirkhel/portfolio_project",
@@ -231,7 +242,15 @@ document.addEventListener("DOMContentLoaded", () => {
       title: "Documentation Page",
       shortDescription: "This is a documentation page about space, covering various topics such as astronomy, the universe, stars, black holes, and galaxies. It serves as an educational resource for understanding the vast expanse beyond Earth's atmosphere.",
       longDescription: "The Space Documentation page is an extensive educational resource designed to provide comprehensive information about the vast expanse beyond Earth's atmosphere. Overall, the Space Documentation page is a meticulously organized and informative resource, designed to educate readers about the wonders of space. It combines historical context, scientific explanations, and engaging content to foster a deeper understanding of the universe and its myriad components.",
-      image: "images/DemoPic.png",
+      image: [
+        "images/DemoPic.png",
+        "images/SD1.png",
+        "images/SP2.png",
+        "images/SD3.png",
+        "images/SP4.png",
+        "images/SP5.png",
+        "images/PS6.png",
+      ],
       technologies: ["HTML", "CSS", "Git", "GitHub"],
       liveLink: "https://zohalmirkhel.github.io/technical_documentation_page/",
       sourceLink: "https://github.com/ZohalMirkhel/technical_documentation_page",
@@ -296,7 +315,7 @@ myProjects.innerHTML = projects
       (project, index) => `
     <div class="proj" id="proj-${index}">
       <h3>${project.title}</h3>
-      <img src="${project.image}" alt="${project.title}" />
+      <img src="${Array.isArray(project.image) ? project.image[0] : project.image}" alt="${project.title}" />
       <p id="desc">${project.shortDescription}</p>
       <button class="popup-button-more" onclick="showPopup(${index})">Learn More</button>
     </div>
@@ -346,33 +365,76 @@ myProjects.innerHTML = projects
     }
   }
 
-window.showPopup = function (index) {
-  const project = projects[index];
-  popupContent.innerHTML = `
-    <button id="close-pop" class="close-btn">&times;</button>
-    <h3>${project.title}</h3>
-    <img src="${project.image}" alt="${project.title}" />
-    <p>${project.longDescription}</p>
-    <p>Technologies: ${project.technologies.join(", ")}</p>
-    <a class="popup-button" id="live" href="${project.liveLink}" target="_blank">Live Site</a>
-    <a class="popup-button" id="git" href="${project.sourceLink}" target="_blank">GitHub Repository</a>
-    <button id="mobile-close-pop" class="close-btn-mobile">Close</button>
-  `;
-  popUp.classList.remove("hidden");
-  mainContent.classList.add("blurred");
-  body.classList.add("no-scroll");
+  window.showPopup = function (index) {
+    const project = projects[index];
 
-  document.getElementById("close-pop").addEventListener("click", () => {
-    popUp.classList.add("hidden");
-    mainContent.classList.remove("blurred");
-    body.classList.remove("no-scroll");
-  });
-  document.getElementById("mobile-close-pop").addEventListener("click", () => {
-    popUp.classList.add("hidden");
-    mainContent.classList.remove("blurred");
-    body.classList.remove("no-scroll");
-  });
-}
+    popupContent.innerHTML = `
+      <button id="close-pop" class="close-btn">&times;</button>
+      <div id="slider-container">
+        <button class="prev-slide">&lt;</button>
+        <div id="slides"></div>
+        <button class="next-slide">&gt;</button>
+      </div>
+      <div id="popup-info">
+        <h2>${project.title}</h2>
+        <p>${project.longDescription}</p>
+        <p>Technologies: ${project.technologies.join(", ")}</p>
+        <a class="popup-button" href="${project.liveLink}" target="_blank">Live Site</a>
+        <a class="popup-button" href="${project.sourceLink}" target="_blank">GitHub Repository</a>
+        <button id="mobile-close-pop" class="close-btn-mobile">Close</button>
+      </div>
+    `;
+
+    const slidesContainer = document.getElementById('slides');
+    slidesContainer.innerHTML = "";
+    const images = Array.isArray(project.image) ? project.image : [project.image];
+
+    images.forEach(imageSrc => {
+        const slide = document.createElement('div');
+        slide.classList.add('slide');
+        slide.innerHTML = `<img src="${imageSrc}" alt="Project Image">`;
+        slidesContainer.appendChild(slide);
+    });
+
+    const slides = document.querySelectorAll('.slide');
+    let counter = 0;
+
+    slides.forEach((slide, index) => {
+        slide.style.left = `${index * 100}%`;
+    });
+
+    const goPrev = () => {
+        counter--;
+        slideImage();
+    };
+
+    const goNext = () => {
+        counter++;
+        slideImage();
+    };
+
+    const slideImage = () => {
+        slides.forEach((slide) => {
+            slide.style.transform = `translateX(-${counter * 100}%)`;
+        });
+    };
+
+    document.querySelector('.prev-slide').addEventListener('click', goPrev);
+    document.querySelector('.next-slide').addEventListener('click', goNext);
+
+    popUp.classList.remove('hidden');
+    mainContent.classList.add('blurred');
+    body.classList.add('no-scroll');
+
+    // Use event delegation for the close buttons
+    document.body.addEventListener("click", (e) => {
+      if (e.target.id === "close-pop" || e.target.id === "mobile-close-pop") {
+        popUp.classList.add("hidden");
+        mainContent.classList.remove("blurred");
+        body.classList.remove("no-scroll");
+      }
+    });
+  }
 
 document.addEventListener("DOMContentLoaded", displayProjects);
 });
