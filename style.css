@@ -16,7 +16,6 @@ body {
   justify-content: center;
   background-color: #514724;
   width: calc(100% - 24rem);
-  position: fixed;
   top: 0;
   padding: 1.4rem 2rem;
   border-radius: 40px;
@@ -30,6 +29,11 @@ body {
   margin: 0 1rem;
 }
 
+.social-links a {
+  margin: 0.5rem 0;
+  color: #fff;
+}
+
 #navbar li a {
   text-decoration: none;
   color: #fff;
@@ -38,9 +42,9 @@ body {
 
 #nav .sidebar a.active,
 #nav #navbar a.active {
-    color: #f2d24b;
-    text-decoration: underline;
-    text-underline-offset: 5px;
+  color: #f2d24b;
+  text-decoration: underline;
+  text-underline-offset: 5px;
 }
 
 #nav .sidebar a:hover,
@@ -99,7 +103,7 @@ body {
 .circle {
   width: 270px;
   height: 270px;
-  background: linear-gradient(to bottom, #958340 0%, #5E532D 20%, #433A1A 35%, black 100%);
+  background: linear-gradient(to bottom, #958340 0%, #5e532d 20%, #433a1a 35%, black 100%);
   border-radius: 50%;
   position: absolute;
   left: -80px;
@@ -117,18 +121,24 @@ body {
 }
 
 .hero-text h3 {
-  font-family: 'jockey one';
+  font-family:
+    'jockey one',
+    sans-serif;
   color: #fff;
 }
 
 .hero-text h2 {
   font-size: 2.1rem;
-  font-family: 'knewave';
+  font-family:
+    'knewave',
+    sans-serif;
   color: #d4af37;
 }
 
 .hero-text h1 {
-  font-family: 'jockey one';
+  font-family:
+    'jockey one',
+    sans-serif;
   font-size: 3.8rem;
   color: #fff;
 }
@@ -165,11 +175,6 @@ body {
   transform: translateY(-50%);
 }
 
-.social-links a {
-  margin: 0.5rem 0;
-  color: #fff;
-}
-
 /* About Me */
 .about-content {
   display: flex;
@@ -183,7 +188,7 @@ body {
 
 .about-image img {
   width: 50%;
-  float: left; 
+  float: left;
   margin-top: 30px;
 }
 
@@ -194,7 +199,9 @@ body {
 
 #about-me h2 {
   color: #fff;
-  font-family: 'Jockey One';
+  font-family:
+    'Jockey One',
+    sans-serif;
   background-color: #cdad3c;
   clip-path: polygon(0% 0, 80% 0, 100% 100%, 20% 100%);
   display: inline-block;
@@ -245,7 +252,9 @@ body {
 
 #my-edu h2 {
   color: #fff;
-  font-family: 'Jockey One';
+  font-family:
+    'Jockey One',
+    sans-serif;
   background-color: #cdad3c;
   clip-path: polygon(0% 0, 80% 0, 100% 100%, 20% 100%);
   display: inline-block;
@@ -267,7 +276,9 @@ body {
   background-color: #514724;
   color: #000;
   border: none;
-  font-family: 'Sansita One';
+  font-family:
+    'Sansita One',
+    sans-serif;
   text-decoration: underline;
   border-radius: 30px;
   cursor: pointer;
@@ -333,8 +344,8 @@ body {
   justify-content: center;
   padding: 10px 20px;
   background-color: #000;
-  margin-top:3%;
-  margin-left:42.5%;
+  margin-top: 3%;
+  margin-left: 42.5%;
   color: #fff;
   border: none;
   border-radius: 50px;
@@ -378,7 +389,9 @@ body {
 }
 
 .proj h3 {
-  font-family: 'Jockey One';
+  font-family:
+    'Jockey One',
+    sans-serif;
   font-size: 1.4rem;
   margin: 10px 0;
   color: #d4af37;

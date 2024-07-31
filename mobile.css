@@ -289,7 +289,8 @@
     margin-left: 15%;
   }
 
-  .contact-form, .contact-info {
+  .contact-form,
+  .contact-info {
     width: 100%;
     margin-bottom: 5%;
     text-align: left;
@@ -311,7 +312,7 @@
   }
 
   .contact-btn {
-    top: 55%;
+    margin-top: 55%;
     margin-left: 30%;
     font-weight: bolder;
   }
