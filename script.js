@@ -190,7 +190,7 @@ const projects = [
   {
     title: "Number Validator",
     shortDescription: "The Telephone Number Validator is a web application that allows users to validate and format phone numbers based on the selected country. The application then displays the validation result and the formatted number.",
-    longDescription: "The Telephone Number Validator is an intuitive web application designed to validate and format phone numbers according to the standards of different countries. It provides a simple interface where users can enter a phone number into the input field and select the appropriate country code from a dropdown menu. By clicking the (Check) button, the application processes the input to validate its correctness and format it according to the selected country's phone number conventions.",
+    longDescription: "The Telephone Number Validator is an intuitive web application designed to validate and format phone numbers of different countries. It provides a simple interface where users can enter a phone number into the input field, select country, and by clicking the (Check) button, the application processes the input to validate its correctness according to the selected country's phone number conventions.",
     image: "images/PhoneNumberValidator.png",
     technologies: ["HTML", "CSS", "JavaScript", "Git", "GitHub"],
     liveLink: "https://zohalmirkhel.github.io/Telephone-Number-Validator/",
@@ -208,7 +208,7 @@ const projects = [
   {
     title: "Pokémon Search App",
     shortDescription: "The Pokémon Search App is a web application designed to allow users to search for Pokémon by their name or ID. It provides detailed information and a sprite image of the searched Pokémon.",
-    longDescription: "The Pokémon Search App is a comprehensive web application that enables users to search for Pokémon by entering either the name or ID of the Pokémon they wish to find. Upon initiating the search, the app displays an array of detailed information about the Pokémon, including its name, ID, weight, height, types, and various stats. Additionally, the app shows a sprite image of the Pokémon, giving users a visual representation. The user-friendly interface, adorned with a colorful Pokémon-themed banner, enhances the overall experience, making it easy and enjoyable to look up any Pokémon.",
+    longDescription: "The Pokémon Search App is a web application that enables users to search for Pokémon by entering either the name or ID of the Pokémon they wish to find. Upon initiating the search, the app displays information about the Pokémon. Additionally, the app shows a sprite image of the Pokémon. The user-friendly interface, adorned with a colorful Pokémon-themed banner, enhances the overall experience, making it easy and enjoyable to look up any Pokémon.",
     image: "images/PSA.png",
     technologies: ["HTML", "CSS", "JavaScript", "Git", "GitHub", "Spilne"],
     liveLink: "https://zohalmirkhel.github.io/Pok-mon-Search-App/",
@@ -263,7 +263,7 @@ const projects = [
   {
     title: "Palindrome",
     shortDescription: "This web application determines if a given text is a palindrome. It features an input field to enter text, a button to initiate the check, and a display area for the result. The design is responsive, ensuring usability across various devices.",
-    longDescription: "This web application simplifies the process of identifying palindromes by automating the comparison. When a user enters text into the input field and clicks the (Check) button, the application removes any non-alphanumeric characters and converts the text to a uniform case (usually lowercase) to ensure accurate comparison. It then reverses the cleaned text and compares it to the original cleaned version. If the two match, the text is declared a palindrome. The application’s design prioritizes user experience. Its responsive nature ensures that it functions well across various devices, while the clear and concise interface makes it accessible to users of all ages and technical backgrounds.",
+    longDescription: "This web application automates palindrome detection. Users input text and click the (Check) button, which removes non-alphanumeric characters, converts the text to lowercase, and compares it to its reverse. If they match, the text is a palindrome. The app is designed for a great user experience, with a responsive, easy-to-use interface suitable for all ages and devices.",
     image: "images/Palindrome.png",
     technologies: ["HTML", "CSS", "JavaScript", "Git", "GitHub"],
     liveLink: "https://zohalmirkhel.github.io/palindrome/",
@@ -272,7 +272,7 @@ const projects = [
   {
     title: "Survey Form",
     shortDescription: "This web form collects user feedback to improve the freeCodeCamp platform. It asks for the user's name, email, age, current role, recommendation likelihood, favorite features, improvement suggestions, and additional comments.",
-    longDescription: "This survey form is designed to collect detailed user feedback to improve the freeCodeCamp platform. With a modern and responsive design, the form ensures an optimal user experience across various devices. It includes several fields to capture comprehensive user input. The form concludes with a submit button for users to send their responses. This comprehensive survey aims to collect valuable insights from the user community to drive continuous improvement of the freeCodeCamp platform, enhancing its user-friendliness and effectiveness.",
+    longDescription: "This survey form collects user feedback to improve the freeCodeCamp platform. It features a modern, responsive design for optimal use across devices. The form includes various fields for comprehensive input and ends with a submit button. The aim is to gather valuable insights to enhance freeCodeCamp's user-friendliness and effectiveness.",
     image: "images/sf.png",
     technologies: ["HTML", "CSS", "Git", "GitHub"],
     liveLink: "https://github.com/ZohalMirkhel/survey-form",
@@ -367,19 +367,21 @@ function displayProjects() {
 
 window.showPopup = function (index) {
   const project = projects[index];
-  
+  const imagesToShow = Array.isArray(project.image) ? project.image : [project.image];
+
   popupContent.innerHTML = `
     <button id="close-pop" class="close-btn">&times;</button>
     <h3>${project.title}</h3>
-    <div id="#popup-content" class="pop-project-images">
-          ${Array.isArray(project.image) ? project.image.map(image => `<img src="${image}" alt="${project.title}" />`).join("") : `<img src="${project.image}" alt="${project.title}" />`}
-      </div>
+    <div class="pop-project-images ${imagesToShow.length === 1 ? 'single-image' : ''}">
+      ${imagesToShow.map(image => `<img src="${image}" alt="${project.title}" />`).join('')}
+    </div>
     <p>${project.longDescription}</p>
     <p>Technologies: ${project.technologies.join(", ")}</p>
     <a class="popup-button" id="live" href="${project.liveLink}" target="_blank">Live Site</a>
     <a class="popup-button" id="git" href="${project.sourceLink}" target="_blank">GitHub Repository</a>
     <button id="mobile-close-pop" class="close-btn-mobile">Close</button>
   `;
+  
   popUp.classList.remove("hidden");
   mainContent.classList.add("blurred");
   body.classList.add("no-scroll");
