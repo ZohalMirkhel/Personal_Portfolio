@@ -555,18 +555,34 @@ document.addEventListener("DOMContentLoaded", () => {
 // Contact form handling
 document.addEventListener("DOMContentLoaded", () => {
   const contactForm = document.getElementById("contact-form");
-  const errorMessage = document.getElementById("error-message");
 
-  if (contactForm && errorMessage) {
-    contactForm.addEventListener("submit", (event) => {
-      const email = document.getElementById("email").value;
-      if (email !== email.toLowerCase()) {
-        event.preventDefault();
-        errorMessage.classList.remove("hidden");
-      } else {
-        errorMessage.classList.add("hidden");
-      }
-    });
+  emailjs.init("K2brMF3hp-e0iQwyI");
+
+  if (contactForm) {
+        contactForm.addEventListener("submit", (event) => {
+          event.preventDefault();
+          const email = document.getElementById("email").value;
+          const name = document.getElementById("name").value;
+          const message = document.getElementById("message").value;
+
+          if (email !== email.toLowerCase()) {
+            alert("Email must be in lower case", "error");
+          } else {
+            emailjs.send("service_dg7cbvb", "template_c6y2nbj", {
+              from_name: name,
+              from_email: email,
+              message: message,
+            })
+            .then((response) => {
+              console.log('SUCCESS!', response.status, response.text);
+              alert("Your Message Has Been Sent Successfully!");
+            }, (err) => {
+              console.error('FAILED...', err);
+              alert("Can't Send Your Message at the Moment, Please Try Again!");
+            });
+            contactForm.reset();
+          }
+        });
 
     const formFields = ["name", "email", "message"];
     formFields.forEach((field) => {
@@ -578,5 +594,16 @@ document.addEventListener("DOMContentLoaded", () => {
         });
       }
     });
+  }
+  function showCustomMessage(message, type) {
+    const existingMessage = document.querySelector('.custom-message');
+    if (existingMessage) {
+      existingMessage.remove();
+    }
+
+    const messageContainer = document.createElement("p");
+    messageContainer.textContent = message;
+    messageContainer.className = `custom-message ${type === "success" ? "success-message" : "error-message"}`;
+    contactForm.appendChild(messageContainer);
   }
 });
