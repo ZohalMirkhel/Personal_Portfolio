@@ -176,8 +176,13 @@ const projects = [
   {
     title: "Product Landing Page",
     shortDescription: "An e-commerce website dedicated to showcasing and selling traditional Afghan clothing and accessories. It features a responsive design, easy-to-use navigation, product listings, an email subscription form, and a search bar.",
-    longDescription: "This project is an e-commerce website designed to showcase and sell traditional Afghan clothing and accessories. The website emphasizes user experience, responsiveness, and aesthetics. Key features include a dynamic banner slider, a user-friendly navigation bar, and detailed product listings with images, prices, and descriptions. It also includes an email subscription form for updates and promotions, a search bar for easy product searches, and a rich history section that provides cultural context for Afghan clothing. Additionally, the services section highlights key offerings such as fast shipping, easy returns, 24/7 support, and affordable prices. The contact information section provides multiple ways for users to reach out for support or inquiries. The entire site is built using HTML and CSS, ensuring a fully responsive and seamless experience across all devices.",
-    image: "images/Product_Landing_Page.png",
+    longDescription: "This e-commerce website showcases and sells traditional Afghan clothing and accessories, focusing on user experience, responsiveness, and aesthetics. Key features include a dynamic banner slider, a user-friendly navigation bar, detailed product listings, an email subscription form, and a search bar. It also highlights the cultural context of Afghan clothing and offers services like fast shipping, easy returns, and 24/7 support. Built with HTML and CSS, the site ensures a fully responsive experience across all devices.",
+    image: [
+      "images/Product_Landing_Page.png",
+      "images/PL1.png",
+      "images/Pl2.png",
+      "images/PL3.png",
+    ],
     technologies: ["HTML", "CSS", "Git", "GitHub"],
     liveLink: "https://zohalmirkhel.github.io/product-landing-page/",
     sourceLink: "https://github.com/ZohalMirkhel/product-landing-page",
@@ -193,7 +198,7 @@ const projects = [
   },
   {
     title: "Cash Register",
-    shortDescription: "The Cash Register web application is a robust tool for managing transactions and cash flow in a retail setting. It facilitates the calculation of change and the real-time updating of the cash drawer based on the amount of cash provided by the customer.",
+    shortDescription: "Cash Register is a tool for managing transactions and cash flow in a retail setting. It facilitates the calculation of change and the real-time updating of the cash drawer based on the amount of cash provided by customers.",
     longDescription: "The Cash Register is a web application designed to calculate change and update the cash drawer based on the amount received from the customer. It features an input field for the received amount, a dropdown menu for selecting the payment method, and a button to process the transaction and display the change due. This application is designed to streamline the checkout process, ensuring accurate and efficient handling of cash transactions, reducing errors, and improving customer service.",
     image: "images/register.png",
     technologies: ["HTML", "CSS", "JavaScript", "Git", "GitHub"],
@@ -213,7 +218,12 @@ const projects = [
     title: "Portfolio Project",
     shortDescription: "This project is a portfolio website designed to showcase various web development projects. The website employs a sleek, dark-themed design with a focus on simplicity and modern aesthetics.",
     longDescription: "This portfolio website is designed to showcase various web development projects. It features a modern, minimalist design with a dark theme, providing a sleek and professional look. The website includes a navigation bar with links to Home, About, Work, and Contact sections, allowing easy access to different parts of the site. The website is fully responsive, ensuring that it provides a seamless user experience across various devices and screen sizes.",
-    image: "images/Portfolio.png",
+    image: [
+      "images/Portfolio.png",
+      "images/portfolio2.png",
+      "images/portfolio3.png",
+      "images/portfolio4.png",
+    ],
     technologies: ["HTML", "CSS", "Git", "GitHub"],
     liveLink: "https://zohalmirkhel.github.io/portfolio_project/",
     sourceLink: "https://github.com/ZohalMirkhel/portfolio_project",
@@ -231,7 +241,12 @@ const projects = [
     title: "Documentation Page",
     shortDescription: "This is a documentation page about space, covering various topics such as astronomy, the universe, stars, black holes, and galaxies. It serves as an educational resource for understanding the vast expanse beyond Earth's atmosphere.",
     longDescription: "The Space Documentation page is an extensive educational resource designed to provide comprehensive information about the vast expanse beyond Earth's atmosphere. Overall, the Space Documentation page is a meticulously organized and informative resource, designed to educate readers about the wonders of space. It combines historical context, scientific explanations, and engaging content to foster a deeper understanding of the universe and its myriad components.",
-    image: "images/DemoPic.png",
+    image: [
+      "images/DemoPic.png",
+      "images/SD1.png",
+      "images/SP5.png",
+      "images/PS6.png",
+    ],
     technologies: ["HTML", "CSS", "Git", "GitHub"],
     liveLink: "https://zohalmirkhel.github.io/technical_documentation_page/",
     sourceLink: "https://github.com/ZohalMirkhel/technical_documentation_page",
@@ -256,7 +271,7 @@ const projects = [
   },
   {
     title: "Survey Form",
-    shortDescription: "This web form collects user feedback to improve the freeCodeCamp platform. It asks for the user's name, email, age (optional), current role, recommendation likelihood, favorite features, improvement suggestions, and additional comments. Users are prompted to submit the form after completion.",
+    shortDescription: "This web form collects user feedback to improve the freeCodeCamp platform. It asks for the user's name, email, age, current role, recommendation likelihood, favorite features, improvement suggestions, and additional comments.",
     longDescription: "This survey form is designed to collect detailed user feedback to improve the freeCodeCamp platform. With a modern and responsive design, the form ensures an optimal user experience across various devices. It includes several fields to capture comprehensive user input. The form concludes with a submit button for users to send their responses. This comprehensive survey aims to collect valuable insights from the user community to drive continuous improvement of the freeCodeCamp platform, enhancing its user-friendliness and effectiveness.",
     image: "images/sf.png",
     technologies: ["HTML", "CSS", "Git", "GitHub"],
@@ -291,90 +306,94 @@ const showLessSVG = `
 <span id="more-c">Show Less</span>
 `;
 
-myProjects.innerHTML = projects
-  .map(
-    (project, index) => `
-  <div class="proj" id="proj-${index}">
-    <h3>${project.title}</h3>
-    <img src="${project.image}" alt="${project.title}" />
-    <p id="desc">${project.shortDescription}</p>
-    <button class="popup-button-more" onclick="showPopup(${index})">Learn More</button>
-  </div>
-  `
-  )
-  .join("");
+function displayProjects() {
+  myProjects.innerHTML = projects
+    .map(
+      (project, index) => `
+    <div class="proj" id="proj-${index}">
+      <h3>${project.title}</h3>
+      <div class="project-images">
+          ${Array.isArray(project.image) ? `<img src="${project.image[0]}" alt="${project.title}" />` : `<img src="${project.image}" alt="${project.title}" />`}
+      </div>
+      <p id="desc">${project.shortDescription}</p>
+      <button class="popup-button-more" onclick="showPopup(${index})">Learn More</button>
+    </div>
+    `
+    )
+    .join("");
 
-let currentItems = 2;
-const boxes = document.querySelectorAll('.proj');
+  let currentItems = 2;
+  const boxes = document.querySelectorAll('.proj');
 
-boxes.forEach((box, index) => {
-  if (index < currentItems) {
-    box.style.display = 'block';
-  } else {
-    box.style.display = 'none';
-  }
-});
-
-showMoreProjectsBtn.innerHTML = showMoreSVG;
-
-showMoreProjectsBtn.onclick = () => {
-  const moreText = showMoreProjectsBtn.querySelector('#more-c');
-  
-  if (moreText.innerText === "Show More") {
-    for (let i = currentItems; i < currentItems + 2; i++) {
-      if (boxes[i]) {
-        boxes[i].style.display = 'block';
-      }
+  boxes.forEach((box, index) => {
+    if (index < currentItems) {
+      box.style.display = 'block';
+    } else {
+      box.style.display = 'none';
     }
-    currentItems += 2;
-    if (currentItems >= boxes.length) {
-      moreText.innerText = "Show Less";
-      showMoreProjectsBtn.innerHTML = showLessSVG;
-    }
-  } else {
-    currentItems = 2;
-    boxes.forEach((box, index) => {
-      if (index >= currentItems) {
-        box.style.display = 'none';
-      } else {
-        box.style.display = 'block';
+  });
+
+  showMoreProjectsBtn.innerHTML = showMoreSVG;
+
+  showMoreProjectsBtn.onclick = () => {
+    const moreText = showMoreProjectsBtn.querySelector('#more-c');
+    
+    if (moreText.innerText === "Show More") {
+      for (let i = currentItems; i < currentItems + 2; i++) {
+        if (boxes[i]) {
+          boxes[i].style.display = 'block';
+        }
       }
-    });
-    moreText.innerText = "Show More";
-    document.getElementById("project").scrollIntoView({ behavior: "smooth" });
-    showMoreProjectsBtn.innerHTML = showMoreSVG;
+      currentItems += 2;
+      if (currentItems >= boxes.length) {
+        moreText.innerText = "Show Less";
+        showMoreProjectsBtn.innerHTML = showLessSVG;
+      }
+    } else {
+      currentItems = 2;
+      boxes.forEach((box, index) => {
+        if (index >= currentItems) {
+          box.style.display = 'none';
+        } else {
+          box.style.display = 'block';
+        }
+      });
+      moreText.innerText = "Show More";
+      document.getElementById("project").scrollIntoView({ behavior: "smooth" });
+      showMoreProjectsBtn.innerHTML = showMoreSVG;
+    }
   }
 }
 
 window.showPopup = function (index) {
-const project = projects[index];
-popupContent.innerHTML = `
-  <button id="close-pop" class="close-btn">&times;</button>
-  <h3>${project.title}</h3>
-  <img src="${project.image}" alt="${project.title}" />
-  <p>${project.longDescription}</p>
-  <p>Technologies: ${project.technologies.join(", ")}</p>
-  <a class="popup-button" id="live" href="${project.liveLink}" target="_blank">Live Site</a>
-  <a class="popup-button" id="git" href="${project.sourceLink}" target="_blank">GitHub Repository</a>
-  <button id="mobile-close-pop" class="close-btn-mobile">Close</button>
-`;
-popUp.classList.remove("hidden");
-mainContent.classList.add("blurred");
-body.classList.add("no-scroll");
+  const project = projects[index];
+  popupContent.innerHTML = `
+    <button id="close-pop" class="close-btn">&times;</button>
+    <h3>${project.title}</h3>
+    <div class="pop-project-images">
+          ${Array.isArray(project.image) ? project.image.map(image => `<img src="${image}" alt="${project.title}" />`).join("") : `<img src="${project.image}" alt="${project.title}" />`}
+      </div>
+    <p>${project.longDescription}</p>
+    <p>Technologies: ${project.technologies.join(", ")}</p>
+    <a class="popup-button" id="live" href="${project.liveLink}" target="_blank">Live Site</a>
+    <a class="popup-button" id="git" href="${project.sourceLink}" target="_blank">GitHub Repository</a>
+    <button id="mobile-close-pop" class="close-btn-mobile">Close</button>
+  `;
+  popUp.classList.remove("hidden");
+  mainContent.classList.add("blurred");
+  body.classList.add("no-scroll");
 
-document.getElementById("close-pop").addEventListener("click", () => {
-  popUp.classList.add("hidden");
-  mainContent.classList.remove("blurred");
-  body.classList.remove("no-scroll");
-});
-document.getElementById("mobile-close-pop").addEventListener("click", () => {
-  popUp.classList.add("hidden");
-  mainContent.classList.remove("blurred");
-  body.classList.remove("no-scroll");
-});
+  document.getElementById("close-pop").addEventListener("click", closePopup);
+  document.getElementById("mobile-close-pop").addEventListener("click", closePopup);
 }
 
-document.addEventListener("DOMContentLoaded", displayProjects);
+function closePopup() {
+  popUp.classList.add("hidden");
+  mainContent.classList.remove("blurred");
+  body.classList.remove("no-scroll");
+}
+
+displayProjects();
 });
 
 //Certification Part
