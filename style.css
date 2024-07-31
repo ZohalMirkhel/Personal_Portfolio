@@ -49,7 +49,7 @@ body {
 
 #nav .sidebar a:hover,
 #nav #navbar a:hover {
-    color: #f2d24b;
+  color: #f2d24b;
 }
 
 .menu-button {
@@ -197,6 +197,10 @@ body {
   margin-left: 20px;
 }
 
+.contact-info h2 {
+  padding: 6%;
+}
+
 #about-me h2 {
   color: #fff;
   font-family:
@@ -207,6 +211,28 @@ body {
   display: inline-block;
   padding: 5px 40px;
   padding-left: 60px;
+}
+
+.proj p {
+  font-family:
+    'Jockey One',
+    sans-serif;
+  font-size: 1rem;
+  margin: 10px 0;
+  color: #fff;
+}
+
+.contact-info p {
+  padding:3% 18%;
+  display: flex;
+  align-items: left;
+  color: #fff;
+}
+
+.contact-form p {
+  color: #fff;
+  margin-bottom: 1em;
+  padding: 7% 0;
 }
 
 #about-me p {
@@ -397,13 +423,6 @@ body {
   color: #d4af37;
 }
 
-.proj p {
-  font-family: 'Jockey One';
-  font-size: 1rem;
-  margin: 10px 0;
-  color: #fff;
-}
-
 .proj button {
   margin-top: 20px;
   padding: 15px 60px;
@@ -411,7 +430,9 @@ body {
   background-color: #d4af37;
   color: #000;
   border: none;
-  font-family: 'Sansita One';
+  font-family:
+    'Sansita One',
+    sans-serif;
   text-align: center;
   border-radius: 30px;
   cursor: pointer;
@@ -419,14 +440,21 @@ body {
   width: auto;
 }
 
+.contact-form button {
+  background-color: #b09638;
+  color: #272727;
+  border: none;
+  padding: 0.7em 2.2em;
+  margin-left: 38%;
+  border-radius: 30px;
+  font-weight: bolder;
+  cursor: pointer;
+}
 .proj button:hover {
   background-color: #6e5a31;
 }
 
 /* Basic styling for the popup */
-.hidden {
-  display: none;
-}
 
 .blurred {
   filter: blur(5px);
@@ -446,8 +474,10 @@ body {
   max-width: 600px;
 }
 
-#popup-content h3{
-  font-family: 'Jockey One'; 
+#popup-content h3 {
+  font-family:
+    'Jockey One',
+    sans-serif;
 }
 
 #popup-content {
@@ -490,7 +520,9 @@ body {
   padding: 10px 20px;
   margin: 40px 60px;
   background: #000;
-  font-family: 'Sansita One';
+  font-family:
+    'Sansita One',
+    sans-serif;
   color: #d1b44b;
   text-decoration: none;
   border-radius: 30px;
@@ -533,7 +565,6 @@ body {
   object-fit: cover;
 }
 
-
 /* Certification */
 #certification {
   padding: 35px;
@@ -564,7 +595,6 @@ body {
 }
 
 #certification .cert {
-  display: flex;
   flex-direction: column;
   align-items: center;
   border-radius: 8px;
@@ -588,7 +618,9 @@ body {
 }
 
 #certification .cert h3 {
-  font-family: 'Jockey One';
+  font-family:
+    'Jockey One',
+    sans-serif;
   font-size: 1.4rem;
   margin: 10px 0;
   color: #d4af37;
@@ -610,7 +642,9 @@ body {
 #skills h2 {
   font-size: 2rem;
   margin-bottom: 30px;
-  font-family: 'Jockey One';
+  font-family:
+    'Jockey One',
+    sans-serif;
   font-weight: 100;
   border: solid 2px #000;
   color: #fff;
@@ -704,7 +738,6 @@ body {
 
 /* Contact Page */
 #contact {
-  justify-content: center;
   align-items: center;
   padding: 2em;
   border-radius: 10px;
@@ -729,28 +762,13 @@ body {
   height: 420px;
 }
 
-.contact-info h2 {
-  padding: 6%;
-}
-
 .contact-form h2,
 .contact-info h2 {
   color: #fff;
   margin-bottom: 1em;
-  font-family: 'Sansita One';
-}
-
-.contact-info p {
-  padding:3% 18%;
-  display: flex;
-  align-items: left;
-  color: #fff;
-}
-
-.contact-form p {
-  color: #fff;
-  margin-bottom: 1em;
-  padding: 7% 0;
+  font-family:
+    'Sansita One',
+    sans-serif;
 }
 
 .contact-form input,
@@ -770,17 +788,6 @@ body {
 .contact-form input::placeholder,
 .contact-form textarea::placeholder {
   color: #000;
-}
-
-.contact-form button {
-  background-color: #b09638;
-  color: #272727;
-  border: none;
-  padding: 0.7em 2.2em;
-  margin-left: 38%;
-  border-radius: 30px;
-  font-weight: bolder;
-  cursor: pointer;
 }
 
 .contact-form button:hover {
