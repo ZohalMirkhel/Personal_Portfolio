@@ -186,10 +186,11 @@
   }
 
   #my-edu h2 {
-    display: block;
+    display: inline-block;
+    padding: 10px 70px;
     margin-top: 30%;
-    margin-right: 30%;
-    margin-right: 30%;
+    margin-left: 35%;
+    margin-right: 35%;
   }
 
   #my-edu p {
@@ -494,8 +495,9 @@
   }
 
   .hero-image {
-    margin-left: -99%;
-    margin-top: -150%;
+    width: 120%;
+    margin-left: -100%;
+    margin-top: -110%;
     height: 60vh;
   }
 }
