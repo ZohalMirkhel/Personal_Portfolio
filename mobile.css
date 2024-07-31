@@ -169,7 +169,7 @@
   }
 
   .edu-button {
-    margin-right: -9%;
+    margin-right: -4%;
   }
 
   .edu-section {
@@ -417,14 +417,14 @@
   }
 
   #popup-content {
-    height: 80vh;
+    height: auto;
     overflow-y: hidden;
   }
 
   .close-btn-mobile {
     display: block;
     position: absolute;
-    top: 90%;
+    top: 87%;
     right: 10px;
     background: black;
     color: #d1b44b;
@@ -451,14 +451,51 @@
   }
 
   .pop-project-images img {
-    display: none
+    display: none;
+    width: 100%;
+    max-width: 220%;
+    margin: 0 auto;
   }
 
   .pop-project-images img:first-child {
     border-radius: 30px;
-    display: block;
-    width: 300px;
-    height: 300px;
+    display: inline-block;
+    width: 250%;
+    height: 200px;
     object-fit: cover;
+  }
+}
+
+@media (max-width: 480) {
+  .pop-project-images img {
+    max-width: 100% !important;
+  }
+}
+
+@media (max-width: 377px) {
+  .popup-button {
+    display: block;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 !important;
+  }
+
+  .close-btn-mobile {
+    top: 85%;
+  }
+
+  #popup-content {
+    height: 70vh;
+    overflow: scroll;
+  }
+
+  .contact-info p {
+    word-wrap: break-word;
+  }
+
+  .hero-image {
+    margin-left: -99%;
+    margin-top: -150%;
+    height: 60vh;
   }
 }
