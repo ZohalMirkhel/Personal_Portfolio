@@ -53,11 +53,11 @@ To set up this project locally, follow these steps:
 
 1. **Clone the repository**:
    ```bash
-   git clone git@github.com:ZohalMirkhel/Telephone-Number-Validator.git
+   git clone git@github.com:ZohalMirkhel/Personal_Portfolio.git
    ```
 2. **Navigate to the project directory**:
    ```bash
-   cd Telephone-Number-Validator
+   cd portfolio
    ```
 
 3. **Open the `index.html` file in your browser**:
@@ -77,9 +77,14 @@ If you want to explore the source code, open the project in your preferred code 
 * HTML
 * CSS
 * JavaScript
+* EmailJS
 
 Note: No additional installations or dependencies are required for the JavaScript to work properly. The code runs directly in the browser.
 
+## Contribution
+1. **Hadisa Zahirzai**.
+2. **Zabeena Sherzoie**.
+3. **Safia Iqbal**.
 
 ## Contributing
 
@@ -105,3 +110,4 @@ If you encounter any issues with the application, please refer to the following:
 For any questions, feedback, or support, please contact me at:
 - Email: [zohalmirkhel@gmail.com](mailto:zohalmirkhel@gmail.com)
 - GitHub: [Zohal Mirkhel](https://github.com/ZohalMirkhel)
+- LinkedIn: [Zohal Mirkhel](https://www.linkedin.com/in/zohal-mirkhel-840a7530a/)
