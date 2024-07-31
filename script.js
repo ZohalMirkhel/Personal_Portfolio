@@ -172,269 +172,207 @@ document.addEventListener("DOMContentLoaded", () => {
   const mainContent = document.getElementById("main-content");
   const body = document.body;
 
-  const projects = [
-    {
-      title: "Product Landing Page",
-      shortDescription: "An e-commerce website dedicated to showcasing and selling traditional Afghan clothing and accessories. It features a responsive design, easy-to-use navigation, product listings, an email subscription form, and a search bar.",
-      longDescription: "This project is an e-commerce website designed to showcase and sell traditional Afghan clothing and accessories. The website emphasizes user experience, responsiveness, and aesthetics. Key features include a dynamic banner slider, a user-friendly navigation bar, and detailed product listings with images, prices, and descriptions. It also includes an email subscription form for updates and promotions, a search bar for easy product searches, and a rich history section that provides cultural context for Afghan clothing. Additionally, the services section highlights key offerings such as fast shipping, easy returns, 24/7 support, and affordable prices. The contact information section provides multiple ways for users to reach out for support or inquiries. The entire site is built using HTML and CSS, ensuring a fully responsive and seamless experience across all devices.",
-      image: [
-        "images/Product_Landing_Page.png",
-        "images/PL1.png",
-        "images/Pl2.png",
-        "images/PL3.png",
-        "images/PL4.png",
-      ],
-      technologies: ["HTML", "CSS", "Git", "GitHub"],
-      liveLink: "https://zohalmirkhel.github.io/product-landing-page/",
-      sourceLink: "https://github.com/ZohalMirkhel/product-landing-page",
-    },
-    {
-      title: "Number Validator",
-      shortDescription: "The Telephone Number Validator is a web application that allows users to validate and format phone numbers based on the selected country. The application then displays the validation result and the formatted number.",
-      longDescription: "The Telephone Number Validator is an intuitive web application designed to validate and format phone numbers according to the standards of different countries. It provides a simple interface where users can enter a phone number into the input field and select the appropriate country code from a dropdown menu. By clicking the (Check) button, the application processes the input to validate its correctness and format it according to the selected country's phone number conventions.",
-      image: "images/PhoneNumberValidator.png",
-      technologies: ["HTML", "CSS", "JavaScript", "Git", "GitHub"],
-      liveLink: "https://zohalmirkhel.github.io/Telephone-Number-Validator/",
-      sourceLink: "https://github.com/ZohalMirkhel/Telephone-Number-Validator",
-    },
-    {
-      title: "Cash Register",
-      shortDescription: "The Cash Register web application is a robust tool for managing transactions and cash flow in a retail setting. It facilitates the calculation of change and the real-time updating of the cash drawer based on the amount of cash provided by the customer.",
-      longDescription: "The Cash Register is a web application designed to calculate change and update the cash drawer based on the amount received from the customer. It features an input field for the received amount, a dropdown menu for selecting the payment method, and a button to process the transaction and display the change due. This application is designed to streamline the checkout process, ensuring accurate and efficient handling of cash transactions, reducing errors, and improving customer service.",
-      image: "images/register.png",
-      technologies: ["HTML", "CSS", "JavaScript", "Git", "GitHub"],
-      liveLink: "https://github.com/ZohalMirkhel/Build-a-Cash-Register",
-      sourceLink: "https://zohalmirkhel.github.io/Build-a-Cash-Register/",
-    },
-    {
-      title: "Pokémon Search App",
-      shortDescription: "The Pokémon Search App is a web application designed to allow users to search for Pokémon by their name or ID. It provides detailed information and a sprite image of the searched Pokémon.",
-      longDescription: "The Pokémon Search App is a comprehensive web application that enables users to search for Pokémon by entering either the name or ID of the Pokémon they wish to find. Upon initiating the search, the app displays an array of detailed information about the Pokémon, including its name, ID, weight, height, types, and various stats. Additionally, the app shows a sprite image of the Pokémon, giving users a visual representation. The user-friendly interface, adorned with a colorful Pokémon-themed banner, enhances the overall experience, making it easy and enjoyable to look up any Pokémon.",
-      image: "images/PSA.png",
-      technologies: ["HTML", "CSS", "JavaScript", "Git", "GitHub", "Spilne"],
-      liveLink: "https://zohalmirkhel.github.io/Pok-mon-Search-App/",
-      sourceLink: "https://github.com/ZohalMirkhel/Pok-mon-Search-App",
-    },
-    {
-      title: "Portfolio Project",
-      shortDescription: "This project is a portfolio website designed to showcase various web development projects. The website employs a sleek, dark-themed design with a focus on simplicity and modern aesthetics.",
-      longDescription: "This portfolio website is designed to showcase various web development projects. It features a modern, minimalist design with a dark theme, providing a sleek and professional look. The website includes a navigation bar with links to Home, About, Work, and Contact sections, allowing easy access to different parts of the site. The website is fully responsive, ensuring that it provides a seamless user experience across various devices and screen sizes.",
-      image: [
-        "images/Portfolio.png",
-        "images/portfolio2.png",
-        "images/portfolio3.png",
-        "images/portfolio4.png",
-      ],
-      technologies: ["HTML", "CSS", "Git", "GitHub"],
-      liveLink: "https://zohalmirkhel.github.io/portfolio_project/",
-      sourceLink: "https://github.com/ZohalMirkhel/portfolio_project",
-    },
-    {
-      title: "Tribute Page",
-      shortDescription: "This project is a Tribute Page created to showcase a fictional web developer's skills and projects. It demonstrates the use of HTML and CSS to build a responsive and visually appealing website.",
-      longDescription: "This project is a tribute page honoring Dr. Norman Borlaug, the man who saved a billion lives through his contributions to agriculture and the Green Revolution. The main features include a header with Dr. Borlaug's name and a tagline. The tribute page demonstrates the web developer's proficiency in creating a structured and engaging layout. It effectively uses HTML for content organization and CSS for styling and responsiveness, ensuring a seamless user experience across various devices.",
-      image: "images/tp1.png",
-      technologies: ["HTML", "CSS", "Git", "GitHub"],
-      liveLink: "https://zohalmirkhel.github.io/tribute-page/",
-      sourceLink: "https://github.com/ZohalMirkhel/tribute-page",
-    },
-    {
-      title: "Documentation Page",
-      shortDescription: "This is a documentation page about space, covering various topics such as astronomy, the universe, stars, black holes, and galaxies. It serves as an educational resource for understanding the vast expanse beyond Earth's atmosphere.",
-      longDescription: "The Space Documentation page is an extensive educational resource designed to provide comprehensive information about the vast expanse beyond Earth's atmosphere. Overall, the Space Documentation page is a meticulously organized and informative resource, designed to educate readers about the wonders of space. It combines historical context, scientific explanations, and engaging content to foster a deeper understanding of the universe and its myriad components.",
-      image: [
-        "images/DemoPic.png",
-        "images/SD1.png",
-        "images/SP2.png",
-        "images/SD3.png",
-        "images/SP4.png",
-        "images/SP5.png",
-        "images/PS6.png",
-      ],
-      technologies: ["HTML", "CSS", "Git", "GitHub"],
-      liveLink: "https://zohalmirkhel.github.io/technical_documentation_page/",
-      sourceLink: "https://github.com/ZohalMirkhel/technical_documentation_page",
-    },
-    {
-      title: "Roman Number Converter",
-      shortDescription: "The Roman Number Converter is a web application that allows users to convert Arabic numbers to Roman numerals. Simply enter a number in the input field and click the (Convert) button to see the Roman numeral equivalent. ",
-      longDescription: "The Roman Number Converter is a user-friendly web application that simplifies the process of converting Arabic numbers to Roman numerals. The interface features a single input field where users can enter any Arabic number they wish to convert. By clicking the (Convert) button, the application quickly processes the input and displays the equivalent Roman numeral. The application thus not only provides a practical tool but also helps users learn about the historical numeral system.",
-      image: "images/RNC.png",
-      technologies: ["HTML", "CSS", "JavaScript", "Git", "GitHub"],
-      liveLink: "https://zohalmirkhel.github.io/Roman-Numeral-Converter/",
-      sourceLink: "https://github.com/ZohalMirkhel/Roman-Numeral-Converter",
-    },
-    {
-      title: "Palindrome",
-      shortDescription: "This web application determines if a given text is a palindrome. It features an input field to enter text, a button to initiate the check, and a display area for the result. The design is responsive, ensuring usability across various devices.",
-      longDescription: "This web application simplifies the process of identifying palindromes by automating the comparison. When a user enters text into the input field and clicks the (Check) button, the application removes any non-alphanumeric characters and converts the text to a uniform case (usually lowercase) to ensure accurate comparison. It then reverses the cleaned text and compares it to the original cleaned version. If the two match, the text is declared a palindrome. The application’s design prioritizes user experience. Its responsive nature ensures that it functions well across various devices, while the clear and concise interface makes it accessible to users of all ages and technical backgrounds.",
-      image: "images/Palindrome.png",
-      technologies: ["HTML", "CSS", "JavaScript", "Git", "GitHub"],
-      liveLink: "https://zohalmirkhel.github.io/palindrome/",
-      sourceLink: " https://github.com/ZohalMirkhel/palindrome",
-    },
-    {
-      title: "Survey Form",
-      shortDescription: "This web form collects user feedback to improve the freeCodeCamp platform. It asks for the user's name, email, age (optional), current role, recommendation likelihood, favorite features, improvement suggestions, and additional comments. Users are prompted to submit the form after completion.",
-      longDescription: "This survey form is designed to collect detailed user feedback to improve the freeCodeCamp platform. With a modern and responsive design, the form ensures an optimal user experience across various devices. It includes several fields to capture comprehensive user input. The form concludes with a submit button for users to send their responses. This comprehensive survey aims to collect valuable insights from the user community to drive continuous improvement of the freeCodeCamp platform, enhancing its user-friendliness and effectiveness.",
-      image: "images/sf.png",
-      technologies: ["HTML", "CSS", "Git", "GitHub"],
-      liveLink: "https://github.com/ZohalMirkhel/survey-form",
-      sourceLink: "https://github.com/ZohalMirkhel/survey-form",
-    },
-  ];
+const projects = [
+  {
+    title: "Product Landing Page",
+    shortDescription: "An e-commerce website dedicated to showcasing and selling traditional Afghan clothing and accessories. It features a responsive design, easy-to-use navigation, product listings, an email subscription form, and a search bar.",
+    longDescription: "This project is an e-commerce website designed to showcase and sell traditional Afghan clothing and accessories. The website emphasizes user experience, responsiveness, and aesthetics. Key features include a dynamic banner slider, a user-friendly navigation bar, and detailed product listings with images, prices, and descriptions. It also includes an email subscription form for updates and promotions, a search bar for easy product searches, and a rich history section that provides cultural context for Afghan clothing. Additionally, the services section highlights key offerings such as fast shipping, easy returns, 24/7 support, and affordable prices. The contact information section provides multiple ways for users to reach out for support or inquiries. The entire site is built using HTML and CSS, ensuring a fully responsive and seamless experience across all devices.",
+    image: "images/Product_Landing_Page.png",
+    technologies: ["HTML", "CSS", "Git", "GitHub"],
+    liveLink: "https://zohalmirkhel.github.io/product-landing-page/",
+    sourceLink: "https://github.com/ZohalMirkhel/product-landing-page",
+  },
+  {
+    title: "Number Validator",
+    shortDescription: "The Telephone Number Validator is a web application that allows users to validate and format phone numbers based on the selected country. The application then displays the validation result and the formatted number.",
+    longDescription: "The Telephone Number Validator is an intuitive web application designed to validate and format phone numbers according to the standards of different countries. It provides a simple interface where users can enter a phone number into the input field and select the appropriate country code from a dropdown menu. By clicking the (Check) button, the application processes the input to validate its correctness and format it according to the selected country's phone number conventions.",
+    image: "images/PhoneNumberValidator.png",
+    technologies: ["HTML", "CSS", "JavaScript", "Git", "GitHub"],
+    liveLink: "https://zohalmirkhel.github.io/Telephone-Number-Validator/",
+    sourceLink: "https://github.com/ZohalMirkhel/Telephone-Number-Validator",
+  },
+  {
+    title: "Cash Register",
+    shortDescription: "The Cash Register web application is a robust tool for managing transactions and cash flow in a retail setting. It facilitates the calculation of change and the real-time updating of the cash drawer based on the amount of cash provided by the customer.",
+    longDescription: "The Cash Register is a web application designed to calculate change and update the cash drawer based on the amount received from the customer. It features an input field for the received amount, a dropdown menu for selecting the payment method, and a button to process the transaction and display the change due. This application is designed to streamline the checkout process, ensuring accurate and efficient handling of cash transactions, reducing errors, and improving customer service.",
+    image: "images/register.png",
+    technologies: ["HTML", "CSS", "JavaScript", "Git", "GitHub"],
+    liveLink: "https://github.com/ZohalMirkhel/Build-a-Cash-Register",
+    sourceLink: "https://zohalmirkhel.github.io/Build-a-Cash-Register/",
+  },
+  {
+    title: "Pokémon Search App",
+    shortDescription: "The Pokémon Search App is a web application designed to allow users to search for Pokémon by their name or ID. It provides detailed information and a sprite image of the searched Pokémon.",
+    longDescription: "The Pokémon Search App is a comprehensive web application that enables users to search for Pokémon by entering either the name or ID of the Pokémon they wish to find. Upon initiating the search, the app displays an array of detailed information about the Pokémon, including its name, ID, weight, height, types, and various stats. Additionally, the app shows a sprite image of the Pokémon, giving users a visual representation. The user-friendly interface, adorned with a colorful Pokémon-themed banner, enhances the overall experience, making it easy and enjoyable to look up any Pokémon.",
+    image: "images/PSA.png",
+    technologies: ["HTML", "CSS", "JavaScript", "Git", "GitHub", "Spilne"],
+    liveLink: "https://zohalmirkhel.github.io/Pok-mon-Search-App/",
+    sourceLink: "https://github.com/ZohalMirkhel/Pok-mon-Search-App",
+  },
+  {
+    title: "Portfolio Project",
+    shortDescription: "This project is a portfolio website designed to showcase various web development projects. The website employs a sleek, dark-themed design with a focus on simplicity and modern aesthetics.",
+    longDescription: "This portfolio website is designed to showcase various web development projects. It features a modern, minimalist design with a dark theme, providing a sleek and professional look. The website includes a navigation bar with links to Home, About, Work, and Contact sections, allowing easy access to different parts of the site. The website is fully responsive, ensuring that it provides a seamless user experience across various devices and screen sizes.",
+    image: "images/Portfolio.png",
+    technologies: ["HTML", "CSS", "Git", "GitHub"],
+    liveLink: "https://zohalmirkhel.github.io/portfolio_project/",
+    sourceLink: "https://github.com/ZohalMirkhel/portfolio_project",
+  },
+  {
+    title: "Tribute Page",
+    shortDescription: "This project is a Tribute Page created to showcase a fictional web developer's skills and projects. It demonstrates the use of HTML and CSS to build a responsive and visually appealing website.",
+    longDescription: "This project is a tribute page honoring Dr. Norman Borlaug, the man who saved a billion lives through his contributions to agriculture and the Green Revolution. The main features include a header with Dr. Borlaug's name and a tagline. The tribute page demonstrates the web developer's proficiency in creating a structured and engaging layout. It effectively uses HTML for content organization and CSS for styling and responsiveness, ensuring a seamless user experience across various devices.",
+    image: "images/tp1.png",
+    technologies: ["HTML", "CSS", "Git", "GitHub"],
+    liveLink: "https://zohalmirkhel.github.io/tribute-page/",
+    sourceLink: "https://github.com/ZohalMirkhel/tribute-page",
+  },
+  {
+    title: "Documentation Page",
+    shortDescription: "This is a documentation page about space, covering various topics such as astronomy, the universe, stars, black holes, and galaxies. It serves as an educational resource for understanding the vast expanse beyond Earth's atmosphere.",
+    longDescription: "The Space Documentation page is an extensive educational resource designed to provide comprehensive information about the vast expanse beyond Earth's atmosphere. Overall, the Space Documentation page is a meticulously organized and informative resource, designed to educate readers about the wonders of space. It combines historical context, scientific explanations, and engaging content to foster a deeper understanding of the universe and its myriad components.",
+    image: "images/DemoPic.png",
+    technologies: ["HTML", "CSS", "Git", "GitHub"],
+    liveLink: "https://zohalmirkhel.github.io/technical_documentation_page/",
+    sourceLink: "https://github.com/ZohalMirkhel/technical_documentation_page",
+  },
+  {
+    title: "Roman Number Converter",
+    shortDescription: "The Roman Number Converter is a web application that allows users to convert Arabic numbers to Roman numerals. Simply enter a number in the input field and click the (Convert) button to see the Roman numeral equivalent. ",
+    longDescription: "The Roman Number Converter is a user-friendly web application that simplifies the process of converting Arabic numbers to Roman numerals. The interface features a single input field where users can enter any Arabic number they wish to convert. By clicking the (Convert) button, the application quickly processes the input and displays the equivalent Roman numeral. The application thus not only provides a practical tool but also helps users learn about the historical numeral system.",
+    image: "images/RNC.png",
+    technologies: ["HTML", "CSS", "JavaScript", "Git", "GitHub"],
+    liveLink: "https://zohalmirkhel.github.io/Roman-Numeral-Converter/",
+    sourceLink: "https://github.com/ZohalMirkhel/Roman-Numeral-Converter",
+  },
+  {
+    title: "Palindrome",
+    shortDescription: "This web application determines if a given text is a palindrome. It features an input field to enter text, a button to initiate the check, and a display area for the result. The design is responsive, ensuring usability across various devices.",
+    longDescription: "This web application simplifies the process of identifying palindromes by automating the comparison. When a user enters text into the input field and clicks the (Check) button, the application removes any non-alphanumeric characters and converts the text to a uniform case (usually lowercase) to ensure accurate comparison. It then reverses the cleaned text and compares it to the original cleaned version. If the two match, the text is declared a palindrome. The application’s design prioritizes user experience. Its responsive nature ensures that it functions well across various devices, while the clear and concise interface makes it accessible to users of all ages and technical backgrounds.",
+    image: "images/Palindrome.png",
+    technologies: ["HTML", "CSS", "JavaScript", "Git", "GitHub"],
+    liveLink: "https://zohalmirkhel.github.io/palindrome/",
+    sourceLink: " https://github.com/ZohalMirkhel/palindrome",
+  },
+  {
+    title: "Survey Form",
+    shortDescription: "This web form collects user feedback to improve the freeCodeCamp platform. It asks for the user's name, email, age (optional), current role, recommendation likelihood, favorite features, improvement suggestions, and additional comments. Users are prompted to submit the form after completion.",
+    longDescription: "This survey form is designed to collect detailed user feedback to improve the freeCodeCamp platform. With a modern and responsive design, the form ensures an optimal user experience across various devices. It includes several fields to capture comprehensive user input. The form concludes with a submit button for users to send their responses. This comprehensive survey aims to collect valuable insights from the user community to drive continuous improvement of the freeCodeCamp platform, enhancing its user-friendliness and effectiveness.",
+    image: "images/sf.png",
+    technologies: ["HTML", "CSS", "Git", "GitHub"],
+    liveLink: "https://github.com/ZohalMirkhel/survey-form",
+    sourceLink: "https://github.com/ZohalMirkhel/survey-form",
+  },
+];
 
-  const showMoreSVG = `
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 30" version="1.1" x="0px" y="0px">
-    <title>down-1</title>
-    <desc>Created with Sketch.</desc>
-    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-      <g fill="#FFFFFF" fill-rule="nonzero">
-        <path d="M1.95,12 C1.95,6.44953826 6.44953826,1.95 12,1.95 C17.5504617,1.95 22.05,6.44953826 22.05,12 C22.05,17.5504617 17.5504617,22.05 12,22.05 C6.44953826,22.05 1.95,17.5504617 1.95,12 Z M4.05,12 C4.05,16.3906638 7.60933624,19.95 12,19.95 C16.3906638,19.95 19.95,16.3906638 19.95,12 C19.95,7.60933624 16.3906638,4.05 12,4.05 C7.60933624,4.05 4.05,7.60933624 4.05,12 Z M12,12.55 L14.2075379,10.3075379 C14.6175884,9.89748737 15.2824116,9.89748737 15.6924621,10.3075379 C16.1025126,10.7175884 16.1025126,11.3824116 15.6924621,11.7924621 L12.6924621,14.7924621 C12.2824116,15.2025126 11.6175884,15.2025126 11.2075379,14.7924621 L8.20753788,11.7924621 C7.79748737,11.3824116 7.79748737,10.7175884 8.20753788,10.3075379 C8.61758839,9.89748737 9.28241161,9.89748737 9.69246212,10.3075379 L12,12.55 Z"/>
-      </g>
+const showMoreSVG = `
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 30" version="1.1" x="0px" y="0px">
+  <title>down-1</title>
+  <desc>Created with Sketch.</desc>
+  <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+    <g fill="#FFFFFF" fill-rule="nonzero">
+      <path d="M1.95,12 C1.95,6.44953826 6.44953826,1.95 12,1.95 C17.5504617,1.95 22.05,6.44953826 22.05,12 C22.05,17.5504617 17.5504617,22.05 12,22.05 C6.44953826,22.05 1.95,17.5504617 1.95,12 Z M4.05,12 C4.05,16.3906638 7.60933624,19.95 12,19.95 C16.3906638,19.95 19.95,16.3906638 19.95,12 C19.95,7.60933624 16.3906638,4.05 12,4.05 C7.60933624,4.05 4.05,7.60933624 4.05,12 Z M12,12.55 L14.2075379,10.3075379 C14.6175884,9.89748737 15.2824116,9.89748737 15.6924621,10.3075379 C16.1025126,10.7175884 16.1025126,11.3824116 15.6924621,11.7924621 L12.6924621,14.7924621 C12.2824116,15.2025126 11.6175884,15.2025126 11.2075379,14.7924621 L8.20753788,11.7924621 C7.79748737,11.3824116 7.79748737,10.7175884 8.20753788,10.3075379 C8.61758839,9.89748737 9.28241161,9.89748737 9.69246212,10.3075379 L12,12.55 Z"/>
     </g>
-  </svg>
-  <span id="more-c">Show More</span>
+  </g>
+</svg>
+<span id="more-c">Show More</span>
 `;
 
 const showLessSVG = `
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 30" version="1.1" x="0px" y="0px">
-    <title>up-1</title>
-    <desc>Created with Sketch.</desc>
-    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-      <g fill="#FFFFFF" fill-rule="nonzero">
-        <path d="M22.05,12 C22.05,6.44953826 17.5504617,1.95 12,1.95 C6.44953826,1.95 1.95,6.44953826 1.95,12 C1.95,17.5504617 6.44953826,22.05 12,22.05 C17.5504617,22.05 22.05,17.5504617 22.05,12 Z M19.95,12 C19.95,16.3906638 16.3906638,19.95 12,19.95 C7.60933624,19.95 4.05,16.3906638 4.05,12 C4.05,7.60933624 7.60933624,4.05 12,4.05 C16.3906638,4.05 19.95,7.60933624 19.95,12 Z M12,11.45 L9.79246212,13.6924621 C9.38241161,14.1025126 8.71758839,14.1025126 8.30753788,13.6924621 C7.89748737,13.2824116 7.89748737,12.6175884 8.30753788,12.2075379 L11.3075379,9.20753788 C11.7175884,8.79748737 12.3824116,8.79748737 12.7924621,9.20753788 L15.7924621,12.2075379 C16.2025126,12.6175884 16.2025126,13.2824116 15.7924621,13.6924621 C15.3824116,14.1025126 14.7175884,14.1025126 14.3075379,13.6924621 L12,11.45 Z"/>
-      </g>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 30" version="1.1" x="0px" y="0px">
+  <title>up-1</title>
+  <desc>Created with Sketch.</desc>
+  <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+    <g fill="#FFFFFF" fill-rule="nonzero">
+      <path d="M22.05,12 C22.05,6.44953826 17.5504617,1.95 12,1.95 C6.44953826,1.95 1.95,6.44953826 1.95,12 C1.95,17.5504617 6.44953826,22.05 12,22.05 C17.5504617,22.05 22.05,17.5504617 22.05,12 Z M19.95,12 C19.95,16.3906638 16.3906638,19.95 12,19.95 C7.60933624,19.95 4.05,16.3906638 4.05,12 C4.05,7.60933624 7.60933624,4.05 12,4.05 C16.3906638,4.05 19.95,7.60933624 19.95,12 Z M12,11.45 L9.79246212,13.6924621 C9.38241161,14.1025126 8.71758839,14.1025126 8.30753788,13.6924621 C7.89748737,13.2824116 7.89748737,12.6175884 8.30753788,12.2075379 L11.3075379,9.20753788 C11.7175884,8.79748737 12.3824116,8.79748737 12.7924621,9.20753788 L15.7924621,12.2075379 C16.2025126,12.6175884 16.2025126,13.2824116 15.7924621,13.6924621 C15.3824116,14.1025126 14.7175884,14.1025126 14.3075379,13.6924621 L12,11.45 Z"/>
     </g>
-  </svg>
-  <span id="more-c">Show Less</span>
+  </g>
+</svg>
+<span id="more-c">Show Less</span>
 `;
 
 myProjects.innerHTML = projects
-    .map(
-      (project, index) => `
-    <div class="proj" id="proj-${index}">
-      <h3>${project.title}</h3>
-      <img src="${Array.isArray(project.image) ? project.image[0] : project.image}" alt="${project.title}" />
-      <p id="desc">${project.shortDescription}</p>
-      <button class="popup-button-more" onclick="showPopup(${index})">Learn More</button>
-    </div>
-    `
-    )
-    .join("");
+  .map(
+    (project, index) => `
+  <div class="proj" id="proj-${index}">
+    <h3>${project.title}</h3>
+    <img src="${project.image}" alt="${project.title}" />
+    <p id="desc">${project.shortDescription}</p>
+    <button class="popup-button-more" onclick="showPopup(${index})">Learn More</button>
+  </div>
+  `
+  )
+  .join("");
 
-  let currentItems = 2;
-  const boxes = document.querySelectorAll('.proj');
+let currentItems = 2;
+const boxes = document.querySelectorAll('.proj');
 
-  boxes.forEach((box, index) => {
-    if (index < currentItems) {
-      box.style.display = 'block';
-    } else {
-      box.style.display = 'none';
-    }
-  });
-
-  showMoreProjectsBtn.innerHTML = showMoreSVG;
-
-  showMoreProjectsBtn.onclick = () => {
-    const moreText = showMoreProjectsBtn.querySelector('#more-c');
-    
-    if (moreText.innerText === "Show More") {
-      for (let i = currentItems; i < currentItems + 2; i++) {
-        if (boxes[i]) {
-          boxes[i].style.display = 'block';
-        }
-      }
-      currentItems += 2;
-      if (currentItems >= boxes.length) {
-        moreText.innerText = "Show Less";
-        showMoreProjectsBtn.innerHTML = showLessSVG;
-      }
-    } else {
-      currentItems = 2;
-      boxes.forEach((box, index) => {
-        if (index >= currentItems) {
-          box.style.display = 'none';
-        } else {
-          box.style.display = 'block';
-        }
-      });
-      moreText.innerText = "Show More";
-      document.getElementById("project").scrollIntoView({ behavior: "smooth" });
-      showMoreProjectsBtn.innerHTML = showMoreSVG;
-    }
+boxes.forEach((box, index) => {
+  if (index < currentItems) {
+    box.style.display = 'block';
+  } else {
+    box.style.display = 'none';
   }
+});
 
-  window.showPopup = function (index) {
-    const project = projects[index];
+showMoreProjectsBtn.innerHTML = showMoreSVG;
 
-    popupContent.innerHTML = `
-      <button id="close-pop" class="close-btn">&times;</button>
-      <div id="slider-container">
-        <button class="prev-slide">&lt;</button>
-        <div id="slides"></div>
-        <button class="next-slide">&gt;</button>
-      </div>
-      <div id="popup-info">
-        <h2>${project.title}</h2>
-        <p>${project.longDescription}</p>
-        <p>Technologies: ${project.technologies.join(", ")}</p>
-        <a class="popup-button" href="${project.liveLink}" target="_blank">Live Site</a>
-        <a class="popup-button" href="${project.sourceLink}" target="_blank">GitHub Repository</a>
-        <button id="mobile-close-pop" class="close-btn-mobile">Close</button>
-      </div>
-    `;
-
-    const slidesContainer = document.getElementById('slides');
-    slidesContainer.innerHTML = "";
-    const images = Array.isArray(project.image) ? project.image : [project.image];
-
-    images.forEach(imageSrc => {
-        const slide = document.createElement('div');
-        slide.classList.add('slide');
-        slide.innerHTML = `<img src="${imageSrc}" alt="Project Image">`;
-        slidesContainer.appendChild(slide);
-    });
-
-    const slides = document.querySelectorAll('.slide');
-    let counter = 0;
-
-    slides.forEach((slide, index) => {
-        slide.style.left = `${index * 100}%`;
-    });
-
-    const goPrev = () => {
-        counter--;
-        slideImage();
-    };
-
-    const goNext = () => {
-        counter++;
-        slideImage();
-    };
-
-    const slideImage = () => {
-        slides.forEach((slide) => {
-            slide.style.transform = `translateX(-${counter * 100}%)`;
-        });
-    };
-
-    document.querySelector('.prev-slide').addEventListener('click', goPrev);
-    document.querySelector('.next-slide').addEventListener('click', goNext);
-
-    popUp.classList.remove('hidden');
-    mainContent.classList.add('blurred');
-    body.classList.add('no-scroll');
-
-    // Use event delegation for the close buttons
-    document.body.addEventListener("click", (e) => {
-      if (e.target.id === "close-pop" || e.target.id === "mobile-close-pop") {
-        popUp.classList.add("hidden");
-        mainContent.classList.remove("blurred");
-        body.classList.remove("no-scroll");
+showMoreProjectsBtn.onclick = () => {
+  const moreText = showMoreProjectsBtn.querySelector('#more-c');
+  
+  if (moreText.innerText === "Show More") {
+    for (let i = currentItems; i < currentItems + 2; i++) {
+      if (boxes[i]) {
+        boxes[i].style.display = 'block';
+      }
+    }
+    currentItems += 2;
+    if (currentItems >= boxes.length) {
+      moreText.innerText = "Show Less";
+      showMoreProjectsBtn.innerHTML = showLessSVG;
+    }
+  } else {
+    currentItems = 2;
+    boxes.forEach((box, index) => {
+      if (index >= currentItems) {
+        box.style.display = 'none';
+      } else {
+        box.style.display = 'block';
       }
     });
+    moreText.innerText = "Show More";
+    document.getElementById("project").scrollIntoView({ behavior: "smooth" });
+    showMoreProjectsBtn.innerHTML = showMoreSVG;
   }
+}
+
+window.showPopup = function (index) {
+const project = projects[index];
+popupContent.innerHTML = `
+  <button id="close-pop" class="close-btn">&times;</button>
+  <h3>${project.title}</h3>
+  <img src="${project.image}" alt="${project.title}" />
+  <p>${project.longDescription}</p>
+  <p>Technologies: ${project.technologies.join(", ")}</p>
+  <a class="popup-button" id="live" href="${project.liveLink}" target="_blank">Live Site</a>
+  <a class="popup-button" id="git" href="${project.sourceLink}" target="_blank">GitHub Repository</a>
+  <button id="mobile-close-pop" class="close-btn-mobile">Close</button>
+`;
+popUp.classList.remove("hidden");
+mainContent.classList.add("blurred");
+body.classList.add("no-scroll");
+
+document.getElementById("close-pop").addEventListener("click", () => {
+  popUp.classList.add("hidden");
+  mainContent.classList.remove("blurred");
+  body.classList.remove("no-scroll");
+});
+document.getElementById("mobile-close-pop").addEventListener("click", () => {
+  popUp.classList.add("hidden");
+  mainContent.classList.remove("blurred");
+  body.classList.remove("no-scroll");
+});
+}
 
 document.addEventListener("DOMContentLoaded", displayProjects);
 });
