@@ -629,3 +629,8 @@ document.addEventListener("DOMContentLoaded", () => {
     contactForm.appendChild(messageContainer);
   }
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+  var footer = document.getElementById("footer");
+  footer.innerHTML = "Developed by Zohal Mirkhel";
+});
