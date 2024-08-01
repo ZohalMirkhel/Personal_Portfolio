@@ -33,11 +33,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
   window.navigateTo = navigateTo;
   window.hideSidebar = hideSidebar;
-});
 
 
 // Home page content initialization
-document.addEventListener("DOMContentLoaded", () => {
 
   var links = document.querySelectorAll('#navbar a');
   var sections = document.querySelectorAll('section');
@@ -123,10 +121,8 @@ document.addEventListener("DOMContentLoaded", () => {
   `;
 
   heroContent.appendChild(socialLinks);
-});
 
 // About page content initialization
-document.addEventListener("DOMContentLoaded", () => {
   const aboutMe = document.getElementById('about-me');
   if (aboutMe) {
     aboutMe.innerHTML = `
@@ -141,10 +137,8 @@ document.addEventListener("DOMContentLoaded", () => {
       </div>
     `;
   }
-});
 
 //Education
-document.addEventListener("DOMContentLoaded", () => {
   const myEdu = document.getElementById('my-edu');
   if (myEdu) {
     myEdu.innerHTML = `
@@ -160,10 +154,8 @@ document.addEventListener("DOMContentLoaded", () => {
       </div>
     `;
   }
-});
 
 // Projects section content initialization\
-document.addEventListener("DOMContentLoaded", () => {
   const myProjects = document.getElementById('my-projects');
   const showMoreProjectsBtn = document.getElementById('load-more');
   const popUp = document.getElementById("pop-up");
@@ -365,7 +357,7 @@ function displayProjects() {
   }
 }
 
-window.showPopup = function (index) {
+  window.showPopup = function (index) {
   const project = projects[index];
   const imagesToShow = Array.isArray(project.image) ? project.image : [project.image];
 
@@ -397,14 +389,12 @@ function closePopup() {
 }
 
 displayProjects();
-});
 
 //Certification Part
-document.addEventListener("DOMContentLoaded", () => {
   const certificationSection = document.getElementById("certification-section");
   const showMoreCertificatesBtn = document.getElementById("load-more-1");
   const moreText = document.getElementById("more-c");
-  const skills = {
+  const certificate = {
     certificates: [
       { name: "Responsive Web Design", image: "certificates/responsivewebdesgin.PNG", link: "#" },
       { name: "JavaScript", image: "certificates/JS.PNG", link: "#" },
@@ -414,37 +404,11 @@ document.addEventListener("DOMContentLoaded", () => {
     ],
   };
 
-  const showMoreSVG = `
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 30" version="1.1" x="0px" y="0px">
-      <title>down-1</title>
-      <desc>Created with Sketch.</desc>
-      <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g fill="#FFFFFF" fill-rule="nonzero">
-          <path d="M1.95,12 C1.95,6.44953826 6.44953826,1.95 12,1.95 C17.5504617,1.95 22.05,6.44953826 22.05,12 C22.05,17.5504617 17.5504617,22.05 12,22.05 C6.44953826,22.05 1.95,17.5504617 1.95,12 Z M4.05,12 C4.05,16.3906638 7.60933624,19.95 12,19.95 C16.3906638,19.95 19.95,16.3906638 19.95,12 C19.95,7.60933624 16.3906638,4.05 12,4.05 C7.60933624,4.05 4.05,7.60933624 4.05,12 Z M12,12.55 L14.2075379,10.3075379 C14.6175884,9.89748737 15.2824116,9.89748737 15.6924621,10.3075379 C16.1025126,10.7175884 16.1025126,11.3824116 15.6924621,11.7924621 L12.6924621,14.7924621 C12.2824116,15.2025126 11.6175884,15.2025126 11.2075379,14.7924621 L8.20753788,11.7924621 C7.79748737,11.3824116 7.79748737,10.7175884 8.20753788,10.3075379 C8.61758839,9.89748737 9.28241161,9.89748737 9.69246212,10.3075379 L12,12.55 Z"/>
-        </g>
-      </g>
-    </svg>
-    <span id="more-c">Show More</span>
-  `;
-
-  const showLessSVG = `
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 30" version="1.1" x="0px" y="0px">
-      <title>up-1</title>
-      <desc>Created with Sketch.</desc>
-      <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g fill="#FFFFFF" fill-rule="nonzero">
-          <path d="M22.05,12 C22.05,6.44953826 17.5504617,1.95 12,1.95 C6.44953826,1.95 1.95,6.44953826 1.95,12 C1.95,17.5504617 6.44953826,22.05 12,22.05 C17.5504617,22.05 22.05,17.5504617 22.05,12 Z M19.95,12 C19.95,16.3906638 16.3906638,19.95 12,19.95 C7.60933624,19.95 4.05,16.3906638 4.05,12 C4.05,7.60933624 7.60933624,4.05 12,4.05 C16.3906638,4.05 19.95,7.60933624 19.95,12 Z M12,11.45 L9.79246212,13.6924621 C9.38241161,14.1025126 8.71758839,14.1025126 8.30753788,13.6924621 C7.89748737,13.2824116 7.89748737,12.6175884 8.30753788,12.2075379 L11.3075379,9.20753788 C11.7175884,8.79748737 12.3824116,8.79748737 12.7924621,9.20753788 L15.7924621,12.2075379 C16.2025126,12.6175884 16.2025126,13.2824116 15.7924621,13.6924621 C15.3824116,14.1025126 14.7175884,14.1025126 14.3075379,13.6924621 L12,11.45 Z"/>
-        </g>
-      </g>
-    </svg>
-    <span id="more-c">Show Less</span>
-  `;
-
   certificationSection.innerHTML = `
     <div id="certification-section">
       <h2>Certificates</h2>
       <div class="cert-list">
-        ${skills.certificates
+        ${certificate.certificates
           .map(
             (certificate) => `
           <div class="cert">
@@ -494,10 +458,7 @@ document.addEventListener("DOMContentLoaded", () => {
       showMoreCertificatesBtn.innerHTML = showMoreSVG;
     }
   };
-});
-
 //Skills Section
-document.addEventListener("DOMContentLoaded", () => {
   const skills = {
     languages: ["HTML", "CSS", "JS", "Java", "WordPress", "Bootstrap"],
     professionalSkills: ["Team Work", "Multi Task", "Critical thinking", "Communication", "Time management", "Creativity"],
@@ -571,11 +532,7 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
   }
-});
-
-
 // Contact form handling
-document.addEventListener("DOMContentLoaded", () => {
   const contactForm = document.getElementById("contact-form");
 
   emailjs.init("K2brMF3hp-e0iQwyI");
@@ -628,9 +585,7 @@ document.addEventListener("DOMContentLoaded", () => {
     messageContainer.className = `custom-message ${type === "success" ? "success-message" : "error-message"}`;
     contactForm.appendChild(messageContainer);
   }
-});
 
-document.addEventListener("DOMContentLoaded", function() {
   var footer = document.getElementById("footer");
   footer.innerHTML = "Developed by Zohal Mirkhel";
 });

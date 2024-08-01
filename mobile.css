@@ -199,7 +199,7 @@
     display: inline-block;
     padding: 10px 70px;
     margin-top: 30%;
-    margin-left: 25%;
+    margin-left: 30%;
   }
 
   #my-edu p {
@@ -368,6 +368,17 @@
     margin-top: 30%;
     margin-right: 0%;
     margin-left: 2%;
+  }
+
+  .proj button {
+    margin-top: 20px;
+    padding: 10px 60px;
+    float: right;
+  }
+
+  #my-edu h2 {
+    margin-left: 16%;
+    margin-right: 3%;
   }
 
   #project h2 {
