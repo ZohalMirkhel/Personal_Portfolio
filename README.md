@@ -43,7 +43,7 @@ Welcome to my portfolio! This website highlights my journey as a web developer, 
 ## Live Demo
 
 ![alt text](images/image.png)
-You can view a live demo of the project [here](https://zohalmirkhel.github.io/Telephone-Number-Validator/)
+You can view a live demo of the project [here](https://zohalmirkhel.github.io/Personal_Portfolio/)
 
 
 ## Installation
