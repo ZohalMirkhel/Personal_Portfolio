@@ -37,6 +37,7 @@ Welcome to my portfolio! This website highlights my journey as a web developer, 
 - **JavaScript**: Interactive elements and form validation.
 - **FontAwesome**: Icons used throughout the site.
 - **EmailJS**: For contact form integration.
+- **Formspree**: For contact form integration.
 
 
 
