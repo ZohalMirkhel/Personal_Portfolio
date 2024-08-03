@@ -370,11 +370,6 @@ body {
   display: none;
 }
 
-.proj:nth-child(1),
-.proj:nth-child(2) {
-  display: inline-block;
-}
-
 #load-more,
 #load-more-1 {
   display: flex;
@@ -479,8 +474,8 @@ body {
   transform: translate(-50%, -50%);
   background: #d1b44b;
   padding: 20px;
-  justify-content: center;
-  align-items: center;
+  justify-content: left;
+  align-items: left;
   z-index: 1000;
   width: 80%;
   max-width: 600px;
@@ -490,11 +485,12 @@ body {
   font-family:
     'Jockey One',
     sans-serif;
+  text-align: center;
 }
 
 #popup-content {
   position: relative;
-  text-align: center;
+  text-align: left;
   max-height: 90vh;
   overflow-y: auto;
 }
@@ -629,13 +625,10 @@ body {
   height: 280px;
 }
 
-#certification .cert h3 {
-  font-family:
-    'Jockey One',
-    sans-serif;
-  font-size: 1.4rem;
+#certification .cert h5 {
   margin: 10px 0;
-  color: #d4af37;
+  font-weight: lighter;
+  color: #fff;
 }
 
 /* Skills Section */

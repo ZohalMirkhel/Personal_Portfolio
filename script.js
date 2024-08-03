@@ -412,8 +412,8 @@ displayProjects();
           .map(
             (certificate) => `
           <div class="cert">
-            <h3>${certificate.name}</h3>
             <img src="${certificate.image}" alt="${certificate.name}"/>
+            <h5>${certificate.name}</h5>
           </div>`
           )
           .join("")}

@@ -199,7 +199,7 @@
     display: inline-block;
     padding: 10px 70px;
     margin-top: 30%;
-    margin-left: 30%;
+    margin-left: 34%;
   }
 
   #my-edu p {
@@ -322,7 +322,7 @@
   }
 
   .hero-image {
-    width: 110%;
+    width: 100%;
     margin-left: -100%;
     margin-top: -90%;
     height: 60vh;
@@ -367,17 +367,17 @@
   #project {
     margin-top: 30%;
     margin-right: 0%;
-    margin-left: 2%;
+    margin-left: 0%;
   }
 
   .proj button {
     margin-top: 20px;
-    padding: 10px 60px;
+    padding: 10px 25px;
     float: right;
   }
 
   #my-edu h2 {
-    margin-left: 16%;
+    margin-left: 18%;
     margin-right: 3%;
   }
 
@@ -398,8 +398,7 @@
   }
 
   #certification {
-    margin-right: 0%;
-    margin-left: 2%;
+    margin: 0%;
   }
 
   #certification h2 {
@@ -418,6 +417,10 @@
 
   .contact-form,
   .contact-info {
+    width: 100%;
+  }
+
+  #footer {
     width: 100%;
   }
 }
