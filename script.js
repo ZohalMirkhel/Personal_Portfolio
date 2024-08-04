@@ -36,63 +36,31 @@ document.addEventListener('DOMContentLoaded', function() {
   window.hideSidebar = hideSidebar;
 
   // Home page content initialization
-  const links = document.querySelectorAll('#navbar a');
   const sections = document.querySelectorAll('section');
+  const links = document.querySelectorAll('#nav #navbar a');
 
-  function updateActiveLink() {
-    var currentSection = null;
-    
-    sections.forEach(function (section) {
-        var rect = section.getBoundingClientRect();
-        if (rect.top >= 0 && rect.top <= window.innerHeight / 2) {
-            currentSection = section;
-        }
+  window.addEventListener('scroll', () => {
+    let currentSectionId = '';
+
+    sections.forEach(sec => {
+      let top = window.scrollY;
+      let offset = sec.offsetTop - 150;
+      let height = sec.offsetHeight;
+      let id = sec.getAttribute('id');
+
+      if (top >= offset && top < offset + height) {
+        currentSectionId = id;
+      }
     });
 
-    if (currentSection) {
-        var id = currentSection.getAttribute('id');
-        links.forEach(function (link) {
-            link.classList.remove('active');
-            if (link.getAttribute('href').substring(1) === id) {
-                link.classList.add('active');
-            }
-        });
-    }
-}
-
-var observer = new IntersectionObserver(function (entries) {
-    entries.forEach(function (entry) {
-        if (entry.isIntersecting) {
-            updateActiveLink();
-        }
+    links.forEach(link => {
+      link.classList.remove('active');
+      if (link.getAttribute('href').includes(currentSectionId)) {
+        link.classList.add('active');
+      }
     });
-}, {
-    threshold: 0.5
-});
-
-sections.forEach(function (section) {
-    observer.observe(section);
-});
-
-updateActiveLink();
-window.addEventListener('scroll', updateActiveLink);
-
-  var observer = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-          if (entry.isIntersecting) {
-              updateActiveLink();
-          }
-      });
-  }, {
-      threshold: 0.5
   });
 
-  sections.forEach(function (section) {
-      observer.observe(section);
-  });
-
-  updateActiveLink();
-  window.addEventListener('scroll', updateActiveLink);
 
   const heroText = document.querySelector('.hero-text');
   const heroImage = document.querySelector('.hero-image');
@@ -593,17 +561,90 @@ displayProjects();
       footer.innerHTML = "Developed by Zohal Mirkhel";
     }
   };
-
+  
+  // Initialize EmailJS
+  emailjs.init("K2brMF3hp-e0iQwyI");
+  
+  // Function to show custom messages
+  function showCustomMessage(message, type) {
+    const existingMessage = document.querySelector('.custom-message');
+    if (existingMessage) {
+      existingMessage.remove();
+    }
+  
+    const messageContainer = document.createElement("p");
+    messageContainer.textContent = message;
+    messageContainer.className = `custom-message ${type === "success" ? "success-message" : "error-message"}`;
+    const formContainer = document.querySelector('#popup-contact-form') || document.querySelector('#contact-form');
+    if (formContainer) {
+      formContainer.appendChild(messageContainer);
+    }
+  }
+  
+  // Function to open contact popup
+  function openContactPopup(event) {
+    event.preventDefault();
+    const popup = document.getElementById('contact-popup');
+    const mainContent = document.getElementById('main-content');
+    const body = document.body;
+  
+    popup.classList.remove('hidden');
+    mainContent.classList.add('blur-background');
+    body.classList.add('no-scroll');
+  }
+  
+  // Function to close contact popup
+  function closeContactPopup() {
+    const popup = document.getElementById('contact-popup');
+    const mainContent = document.getElementById('main-content');
+    const body = document.body;
+  
+    popup.classList.add('hidden');
+    mainContent.classList.remove('blur-background');
+    body.classList.remove('no-scroll');
+  }
+  
+  // Event listener for popup contact form submission
+  const popupContactForm = document.getElementById('popup-contact-form');
+  if (popupContactForm) {
+    popupContactForm.addEventListener('submit', (event) => {
+      event.preventDefault();
+      const email = document.getElementById('popup-email').value;
+      const name = document.getElementById('popup-name').value;
+      const message = document.getElementById('popup-message').value;
+  
+      if (email !== email.toLowerCase()) {
+        alert("Email must be in lower case", "error");
+      } else {
+        emailjs.send("service_dg7cbvb", "template_c6y2nbj", {
+          from_name: name,
+          from_email: email,
+          message: message,
+        })
+        .then((response) => {
+          console.log('SUCCESS!', response.status, response.text);
+          alert("Your Message Has Been Sent Successfully!", "success");
+        }, (err) => {
+          console.error('FAILED...', err);
+          alert("Can't Send Your Message at the Moment, Please Try Again!", "error");
+        });
+        popupContactForm.reset();
+      }
+    });
+  }
+  
+  // Set footer content on page load
   var footerMobile = document.getElementById("footer-mobile");
-  footerMobile.innerHTML = "Developed by Zohal Mirkhel";
-
-
-  // Contact Page Pop Up
+  if (footerMobile) {
+    footerMobile.innerHTML = "Developed by Zohal Mirkhel";
+  }
+  
+  // Function to toggle contact popup
   function toggleContactPopup(event) {
     event.preventDefault();
     const popup = document.getElementById('contact-popup');
     const mainContent = document.getElementById('main-content');
-  
+    
     if (popup.style.display === 'block') {
       popup.style.display = 'none';
       document.body.classList.remove('no-scroll');
@@ -612,7 +653,8 @@ displayProjects();
       document.body.classList.add('no-scroll');
     }
   }
-
+  
+  // Event listeners for opening and closing the contact popup
   document.querySelectorAll('#navbar a[href="#contact-popup"]').forEach(element => {
     element.addEventListener('click', function(event) {
       if (window.innerWidth >= 500) {
@@ -621,7 +663,7 @@ displayProjects();
       }
     });
   });
-
+  
   document.querySelectorAll('a.contact-btn[href="#contact-popup"]').forEach(element => {
     element.addEventListener('click', function(event) {
       if (window.innerWidth >= 500) {
@@ -630,15 +672,14 @@ displayProjects();
       }
     });
   });
-
+  
   document.getElementById('contact-form').addEventListener('submit', function(event) {
     event.preventDefault();
     toggleContactPopup(event);
   });
-
+  
   document.getElementById('close-popup').addEventListener('click', function(event) {
     event.preventDefault();
     toggleContactPopup(event);
   });
-  
 });
