@@ -1,9 +1,5 @@
 # Zohal Mirkhel's Portfolio
 
-This portfolio showcases the projects and skills of me (Zohal Mirkhel), a web developer specializing in HTML, CSS, JavaScript, Java, SQL, WordPress, and Bootstrap. The portfolio is designed with a modern, minimalist aesthetic and features a dark theme.
-
-# Zohal Mirkhel's Portfolio
-
 This portfolio showcases the projects and skills of Zohal Mirkhel, a web developer specializing in HTML, CSS, JavaScript, Java, SQL, WordPress, and Bootstrap. The portfolio is designed with a modern, minimalist aesthetic and features a dark theme.
 
 ## Table of Contents
@@ -14,7 +10,6 @@ This portfolio showcases the projects and skills of Zohal Mirkhel, a web develop
 - [Installation](#installation)
 - [Usage](#usage)
 - [Contact](#contact)
-- [License](#license)
 
 ## Introduction
 
