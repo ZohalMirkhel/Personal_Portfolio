@@ -803,11 +803,14 @@ body {
   padding: 15px 0;
   background: linear-gradient(to bottom, rgba(149, 131, 64, 0.7) 0%, rgba(94, 83, 45, 0.7) 20%, rgba(67, 58, 26, 0.7) 35%);
   position: relative;
+  font-family:
+    'jockey one',
+    sans-serif;
+  color: #fff;
   bottom: 0;
   width: 100%;
   font-size: 17px;
   font-weight: bold;
-  color: #000;
 }
 
 /* Media Queries  */
