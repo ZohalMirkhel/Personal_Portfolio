@@ -279,34 +279,6 @@
     width: 120%;
     margin-left: 25%;
   }
-
-  #contact {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 90%;
-    margin-top: 30%;
-    margin-left: 15%;
-  }
-
-  .contact-form,
-  .contact-info {
-    width: 100%;
-    margin-bottom: 5%;
-    text-align: left;
-  }
-
-  .contact-form {
-    order: 2;
-  }
-
-  .contact-info {
-    order: 1;
-  }
-
-  #footer {
-    width: 110%;
-  }
 }
 
 @media (max-width: 500px) {
@@ -315,10 +287,22 @@
     background: linear-gradient(to bottom, rgba(149, 131, 64, 0.9) 0%, rgba(94, 83, 45, 0.9) 20%, rgba(67, 58, 26, 0.9) 35%, rgba(0, 0, 0, 0.9) 100%);
   }
 
-  .contact-btn {
+  .contact-btn-mobile {
+    position: absolute;
+    top: 130%;
+    display: block;
+    padding: 0.8rem 2.2rem;
+    background-color: #d4af37;
+    color: #000;
+    text-decoration: none;
+    border-radius: 40px;
     margin-top: 5%;
     margin-left: 30%;
     font-weight: bolder;
+  }
+
+  .contact-btn {
+    display: none;
   }
 
   .hero-image {
@@ -412,16 +396,93 @@
   }
 
   #contact {
+    align-items: center;
+    border-radius: 10px;
+    width: 100%;
+    padding-bottom: 15px;
     margin: 0 auto;
+    padding-top: 3rem;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .contact-form {
+    width: 90%;
+    order: 2;
+  }
+  
+  .contact-info {
+    width: 85%;
+    background-color: #5e532d;
+    height: 420px;
+    order: 1;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    padding: 0.5em;
+    margin-bottom: 2em;
+    border: none;
+    background-color: #cdad3c;
+    color: #f1f1f1;
+  }
+  
+  .contact-form textarea {
+    height: 70px;
+  }
+  
+  .contact-form input::placeholder,
+  .contact-form textarea::placeholder {
+    color: #000;
+  }
+  
+  .contact-form button:hover {
+    background-color: #e2b007;
+  }
+  
+  .contact-info i {
+    margin-right: 1em;
+    color: #000;
+  }
+  
+  .close-btn-mobile {
+    display: block;
+    position: absolute;
+    top: 87%;
+    right: 10px;
+    background: black;
+    color: #d1b44b;
+    border: none;
+    margin: 10px 20px;
+    padding: 10px 30px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 30px;
   }
 
-  .contact-form,
-  .contact-info {
-    width: 100%;
+  #contact-popup {
+    display: none;
   }
 
   #footer {
+    display: none;
+  }
+
+  #footer-mobile {
+    display: block;
+    text-align: center;
+    padding: 15px 0;
+    background: linear-gradient(to bottom, rgba(149, 131, 64, 0.7) 0%, rgba(94, 83, 45, 0.7) 20%, rgba(67, 58, 26, 0.7) 35%);
+    position: relative;
+    font-family:
+      'jockey one',
+      sans-serif;
+    color: #fff;
+    bottom: 0;
     width: 100%;
+    font-size: 17px;
+    font-weight: bold;
   }
 }
 

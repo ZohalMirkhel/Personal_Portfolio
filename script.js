@@ -27,39 +27,55 @@ document.addEventListener('DOMContentLoaded', function() {
     hideSidebar(event);
   }
 
-  toggleButton.addEventListener('click', toggleSidebar);
-
-  closeSidebarButton.addEventListener('click', hideSidebar);
+  if (toggleButton && closeSidebarButton) {
+    toggleButton.addEventListener('click', toggleSidebar);
+    closeSidebarButton.addEventListener('click', hideSidebar);
+  }
 
   window.navigateTo = navigateTo;
   window.hideSidebar = hideSidebar;
 
-
-// Home page content initialization
-
-  var links = document.querySelectorAll('#navbar a');
-  var sections = document.querySelectorAll('section');
+  // Home page content initialization
+  const links = document.querySelectorAll('#navbar a');
+  const sections = document.querySelectorAll('section');
 
   function updateActiveLink() {
-      var currentSection = null;
-      
-      sections.forEach(function (section) {
-          var rect = section.getBoundingClientRect();
-          if (rect.top >= 0 && rect.top <= window.innerHeight / 2) {
-              currentSection = section;
-          }
-      });
+    var currentSection = null;
+    
+    sections.forEach(function (section) {
+        var rect = section.getBoundingClientRect();
+        if (rect.top >= 0 && rect.top <= window.innerHeight / 2) {
+            currentSection = section;
+        }
+    });
 
-      if (currentSection) {
-          var id = currentSection.getAttribute('id');
-          links.forEach(function (link) {
-              link.classList.remove('active');
-              if (link.getAttribute('href').substring(1) === id) {
-                  link.classList.add('active');
-              }
-          });
-      }
-  }
+    if (currentSection) {
+        var id = currentSection.getAttribute('id');
+        links.forEach(function (link) {
+            link.classList.remove('active');
+            if (link.getAttribute('href').substring(1) === id) {
+                link.classList.add('active');
+            }
+        });
+    }
+}
+
+var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+            updateActiveLink();
+        }
+    });
+}, {
+    threshold: 0.5
+});
+
+sections.forEach(function (section) {
+    observer.observe(section);
+});
+
+updateActiveLink();
+window.addEventListener('scroll', updateActiveLink);
 
   var observer = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
@@ -78,51 +94,36 @@ document.addEventListener('DOMContentLoaded', function() {
   updateActiveLink();
   window.addEventListener('scroll', updateActiveLink);
 
-    var observer = new IntersectionObserver(function (entries) {
-        entries.forEach(function (entry) {
-            if (entry.isIntersecting) {
-                updateActiveLink();
-            }
-        });
-    }, {
-        threshold: 0.5
-    });
-
-    sections.forEach(function (section) {
-        observer.observe(section);
-    });
-
-    updateActiveLink();
-    window.addEventListener('scroll', updateActiveLink);
-  
   const heroText = document.querySelector('.hero-text');
   const heroImage = document.querySelector('.hero-image');
   const heroContent = document.querySelector('.hero-content');
 
-  heroText.innerHTML = `
+  if (heroText && heroImage && heroContent) {
+    heroText.innerHTML = `
       <div class="circle"></div>
       <h3>Hello, My Name is</h3>
       <h2>Zohal Mirkhel</h2>
       <h1>Web Developer</h1>
-      <a href="#contact" class="contact-btn">Contact Me</a>
-      
-  `;
+      <a href="#contact-popup" class="contact-btn" onclick="toggleContactPopup()">Contact Me</a>
+      <a href="#contact" class="contact-btn-mobile">Contact Me</a>
+    `;
 
-  heroImage.innerHTML = `
+    heroImage.innerHTML = `
       <img src="images/home.jpeg">
-  `;
+    `;
 
-  const socialLinks = document.createElement('div');
-  socialLinks.className = 'social-links';
-  socialLinks.innerHTML = `
+    const socialLinks = document.createElement('div');
+    socialLinks.className = 'social-links';
+    socialLinks.innerHTML = `
       <a href="https://github.com/ZohalMirkhel"><i class="fab fa-github"></i></a>
       <a href="https://www.facebook.com/profile.php?id=61559887775140"><i class="fa-brands fa-facebook"></i></a>
       <a href="https://www.linkedin.com/in/zohal-mirkhel-840a7530a/"><i class="fa-brands fa-linkedin"></i></a>
-  `;
+    `;
 
-  heroContent.appendChild(socialLinks);
+    heroContent.appendChild(socialLinks);
+  }
 
-// About page content initialization
+  // About page content initialization
   const aboutMe = document.getElementById('about-me');
   if (aboutMe) {
     aboutMe.innerHTML = `
@@ -138,7 +139,7 @@ document.addEventListener('DOMContentLoaded', function() {
     `;
   }
 
-//Education
+  // Education section content initialization
   const myEdu = document.getElementById('my-edu');
   if (myEdu) {
     myEdu.innerHTML = `
@@ -155,7 +156,7 @@ document.addEventListener('DOMContentLoaded', function() {
     `;
   }
 
-// Projects section content initialization\
+  // Projects section content initialization
   const myProjects = document.getElementById('my-projects');
   const showMoreProjectsBtn = document.getElementById('load-more');
   const popUp = document.getElementById("pop-up");
@@ -586,6 +587,58 @@ displayProjects();
     contactForm.appendChild(messageContainer);
   }
 
-  var footer = document.getElementById("footer");
-  footer.innerHTML = "Developed by Zohal Mirkhel";
+  window.onload = function() {
+    var footer = document.getElementById("footer");
+    if (footer) {
+      footer.innerHTML = "Developed by Zohal Mirkhel";
+    }
+  };
+
+  var footerMobile = document.getElementById("footer-mobile");
+  footerMobile.innerHTML = "Developed by Zohal Mirkhel";
+
+
+  // Contact Page Pop Up
+  function toggleContactPopup(event) {
+    event.preventDefault();
+    const popup = document.getElementById('contact-popup');
+    const mainContent = document.getElementById('main-content');
+  
+    if (popup.style.display === 'block') {
+      popup.style.display = 'none';
+      document.body.classList.remove('no-scroll');
+    } else {
+      popup.style.display = 'block';
+      document.body.classList.add('no-scroll');
+    }
+  }
+
+  document.querySelectorAll('#navbar a[href="#contact-popup"]').forEach(element => {
+    element.addEventListener('click', function(event) {
+      if (window.innerWidth >= 500) {
+        event.preventDefault();
+        toggleContactPopup(event);
+      }
+    });
+  });
+
+  document.querySelectorAll('a.contact-btn[href="#contact-popup"]').forEach(element => {
+    element.addEventListener('click', function(event) {
+      if (window.innerWidth >= 500) {
+        event.preventDefault();
+        toggleContactPopup(event);
+      }
+    });
+  });
+
+  document.getElementById('contact-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    toggleContactPopup(event);
+  });
+
+  document.getElementById('close-popup').addEventListener('click', function(event) {
+    event.preventDefault();
+    toggleContactPopup(event);
+  });
+  
 });
