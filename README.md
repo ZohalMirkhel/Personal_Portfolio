@@ -82,6 +82,9 @@ Note: No additional installations or dependencies are required for the JavaScrip
 2. **Zabeena Sherzoie**.
 3. **Safia Iqbal**.
 
+## Design
+Click here to see the Figma design [here](https://www.figma.com/design/n2sJXMUcTX7VmMfxjVnrxQ/Untitled?node-id=0-1&t=yYaXrHKepHBA5ZH9-0)
+
 ## Contributing
 
 We welcome contributions to improve the Roman Number Converter. If you have ideas for enhancements, notice any issues, or want to work on this project, please follow these steps:
