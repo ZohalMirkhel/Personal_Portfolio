@@ -83,7 +83,7 @@ Note: No additional installations or dependencies are required for the JavaScrip
 3. **Safia Iqbal**.
 
 ## Design
-Click here to see the Figma design [here](https://www.figma.com/design/n2sJXMUcTX7VmMfxjVnrxQ/Untitled?node-id=0-1&t=yYaXrHKepHBA5ZH9-0)
+Click [here](https://www.figma.com/design/n2sJXMUcTX7VmMfxjVnrxQ/Untitled?node-id=0-1&t=yYaXrHKepHBA5ZH9-0) to see the Figma design
 
 ## Contributing
 
