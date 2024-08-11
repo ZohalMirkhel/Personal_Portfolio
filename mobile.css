@@ -283,11 +283,18 @@
     width: 120%;
     margin-left: 25%;
   }
+
+  #contact {
+    max-width: 800px;
+    margin-left: 13%;
+    margin-right: 13%;
+  }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 850px) {
   #contact {
     margin-left: 5%;
+    margin-right: 5%;
   }
 }
 

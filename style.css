@@ -790,13 +790,11 @@ body {
 #contact {
   justify-content: center;
   align-items: center;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  max-width: 800px;
+  max-width: 1000px;
   width: 100%;
   margin: auto;
   margin-top: 15%;
-  margin-bottom: 5%;
+  bottom: 5%;
 }
 
 .contact-form {
@@ -860,6 +858,7 @@ body {
   border: none;
   padding: 0.7em 2.2em;
   margin-left: 38%;
+  margin-bottom: 10%;
   border-radius: 30px;
   font-weight: bolder;
   cursor: pointer;
