@@ -39,27 +39,65 @@ document.addEventListener('DOMContentLoaded', function() {
   const sections = document.querySelectorAll('section');
   const links = document.querySelectorAll('#nav #navbar a');
 
-  window.addEventListener('scroll', () => {
-    let currentSectionId = '';
+  // Function to update the active link
+  function updateActiveLink() {
+      var currentSection = null;
 
-    sections.forEach(sec => {
-      let top = window.scrollY;
-      let offset = sec.offsetTop - 150;
-      let height = sec.offsetHeight;
-      let id = sec.getAttribute('id');
+      sections.forEach(function (section) {
+          var rect = section.getBoundingClientRect();
+          if (rect.top >= 0 && rect.top <= window.innerHeight / 2) {
+              currentSection = section;
+          }
+      });
 
-      if (top >= offset && top < offset + height) {
-        currentSectionId = id;
+      if (currentSection) {
+          var id = currentSection.getAttribute('id');
+          links.forEach(function (link) {
+              link.classList.remove('active');
+              if (link.getAttribute('href').substring(1) === id) {
+                  link.classList.add('active');
+              }
+          });
       }
-    });
+  }
 
-    links.forEach(link => {
-      link.classList.remove('active');
-      if (link.getAttribute('href').includes(currentSectionId)) {
-        link.classList.add('active');
-      }
-    });
+  // Observe sections using Intersection Observer
+  var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+              updateActiveLink();
+          }
+      });
+  }, {
+      threshold: 0.5
   });
+
+  sections.forEach(function (section) {
+      observer.observe(section);
+  });
+
+  // Update active link on page load and on scroll
+  updateActiveLink();
+  window.addEventListener('scroll', updateActiveLink);
+
+    // Observe sections using Intersection Observer
+    var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+                updateActiveLink();
+            }
+        });
+    }, {
+        threshold: 0.5
+    });
+
+    sections.forEach(function (section) {
+        observer.observe(section);
+    });
+
+    // Update active link on page load and on scroll
+    updateActiveLink();
+    window.addEventListener('scroll', updateActiveLink);
 
 
   const heroText = document.querySelector('.hero-text');
@@ -135,7 +173,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 const projects = [
   {
-    title: "Product Landing Page",
+    title: "Afghani Clothes Website",
     shortDescription: "An e-commerce website dedicated to showcasing and selling traditional Afghan clothing and accessories. It features a responsive design, easy-to-use navigation, product listings, an email subscription form, and a search bar.",
     longDescription: "This e-commerce website showcases and sells traditional Afghan clothing and accessories, focusing on user experience, responsiveness, and aesthetics. Key features include a dynamic banner slider, a user-friendly navigation bar, detailed product listings, an email subscription form, and a search bar. It also highlights the cultural context of Afghan clothing and offers services like fast shipping, easy returns, and 24/7 support. Built with HTML and CSS, the site ensures a fully responsive experience across all devices.",
     image: [
@@ -149,7 +187,7 @@ const projects = [
     sourceLink: "https://github.com/ZohalMirkhel/product-landing-page",
   },
   {
-    title: "Number Validator",
+    title: "Telephone Number Validator",
     shortDescription: "The Telephone Number Validator is a web application that allows users to validate and format phone numbers based on the selected country. The application then displays the validation result and the formatted number.",
     longDescription: "The Telephone Number Validator is an intuitive web application designed to validate and format phone numbers of different countries. It provides a simple interface where users can enter a phone number into the input field, select country, and by clicking the (Check) button, the application processes the input to validate its correctness according to the selected country's phone number conventions.",
     image: "images/PhoneNumberValidator.png",
@@ -555,131 +593,4 @@ displayProjects();
     contactForm.appendChild(messageContainer);
   }
 
-  window.onload = function() {
-    var footer = document.getElementById("footer");
-    if (footer) {
-      footer.innerHTML = "Developed by Zohal Mirkhel";
-    }
-  };
-  
-  // Initialize EmailJS
-  emailjs.init("K2brMF3hp-e0iQwyI");
-  
-  // Function to show custom messages
-  function showCustomMessage(message, type) {
-    const existingMessage = document.querySelector('.custom-message');
-    if (existingMessage) {
-      existingMessage.remove();
-    }
-  
-    const messageContainer = document.createElement("p");
-    messageContainer.textContent = message;
-    messageContainer.className = `custom-message ${type === "success" ? "success-message" : "error-message"}`;
-    const formContainer = document.querySelector('#popup-contact-form') || document.querySelector('#contact-form');
-    if (formContainer) {
-      formContainer.appendChild(messageContainer);
-    }
-  }
-  
-  // Function to open contact popup
-  function openContactPopup(event) {
-    event.preventDefault();
-    const popup = document.getElementById('contact-popup');
-    const mainContent = document.getElementById('main-content');
-    const body = document.body;
-  
-    popup.classList.remove('hidden');
-    mainContent.classList.add('blur-background');
-    body.classList.add('no-scroll');
-  }
-  
-  // Function to close contact popup
-  function closeContactPopup() {
-    const popup = document.getElementById('contact-popup');
-    const mainContent = document.getElementById('main-content');
-    const body = document.body;
-  
-    popup.classList.add('hidden');
-    mainContent.classList.remove('blur-background');
-    body.classList.remove('no-scroll');
-  }
-  
-  // Event listener for popup contact form submission
-  const popupContactForm = document.getElementById('popup-contact-form');
-  if (popupContactForm) {
-    popupContactForm.addEventListener('submit', (event) => {
-      event.preventDefault();
-      const email = document.getElementById('popup-email').value;
-      const name = document.getElementById('popup-name').value;
-      const message = document.getElementById('popup-message').value;
-  
-      if (email !== email.toLowerCase()) {
-        alert("Email must be in lower case", "error");
-      } else {
-        emailjs.send("service_dg7cbvb", "template_c6y2nbj", {
-          from_name: name,
-          from_email: email,
-          message: message,
-        })
-        .then((response) => {
-          console.log('SUCCESS!', response.status, response.text);
-          alert("Your Message Has Been Sent Successfully!", "success");
-        }, (err) => {
-          console.error('FAILED...', err);
-          alert("Can't Send Your Message at the Moment, Please Try Again!", "error");
-        });
-        popupContactForm.reset();
-      }
-    });
-  }
-  
-  // Set footer content on page load
-  var footerMobile = document.getElementById("footer-mobile");
-  if (footerMobile) {
-    footerMobile.innerHTML = "Developed by Zohal Mirkhel";
-  }
-  
-  // Function to toggle contact popup
-  function toggleContactPopup(event) {
-    event.preventDefault();
-    const popup = document.getElementById('contact-popup');
-    const mainContent = document.getElementById('main-content');
-    
-    if (popup.style.display === 'block') {
-      popup.style.display = 'none';
-      document.body.classList.remove('no-scroll');
-    } else {
-      popup.style.display = 'block';
-      document.body.classList.add('no-scroll');
-    }
-  }
-  
-  // Event listeners for opening and closing the contact popup
-  document.querySelectorAll('#navbar a[href="#contact-popup"]').forEach(element => {
-    element.addEventListener('click', function(event) {
-      if (window.innerWidth >= 500) {
-        event.preventDefault();
-        toggleContactPopup(event);
-      }
-    });
-  });
-  
-  document.querySelectorAll('a.contact-btn[href="#contact-popup"]').forEach(element => {
-    element.addEventListener('click', function(event) {
-      if (window.innerWidth >= 500) {
-        event.preventDefault();
-        toggleContactPopup(event);
-      }
-    });
-  });
-  
-  document.getElementById('contact-form').addEventListener('submit', function(event) {
-    event.preventDefault();
-    toggleContactPopup(event);
-  });
-  
-  document.getElementById('close-popup').addEventListener('click', function(event) {
-    event.preventDefault();
-    toggleContactPopup(event);
-  });
 });

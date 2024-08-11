@@ -181,11 +181,6 @@
     display: block;
     margin: 0;
     justify-content: center;
-    margin-left: 7%;
-  }
-
-  .edu-button {
-    margin-left: 5%;
   }
 
   .edu-section {
@@ -216,10 +211,14 @@
     margin-bottom: 5%;
   }
 
+  #my-projects {
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 20px;
+  }
+  
+
   #project {
     padding-top: 2rem;
-    margin-left: 4%;
-    margin-right: 0%;
   }
 
   #project h2 {
@@ -235,8 +234,7 @@
 
   #certification {
     margin-top: 10%;
-    margin-right: 0%;
-    margin-left: 4%;
+    margin: auto;
   }
 
   #certification h2 {
@@ -287,6 +285,12 @@
   }
 }
 
+@media (max-width: 800px) {
+  #contact {
+    margin-left: 5%;
+  }
+}
+
 @media (max-width: 680px) {
   .hero-text h3 {
     margin-top: 12%;
@@ -299,6 +303,29 @@
 
   .contact-btn {
     top: 90%;
+  }
+
+  #contact {
+    align-items: center;
+    border-radius: 10px;
+    width: 100%;
+    padding-bottom: 15px;
+    margin: auto;
+    padding-top: 3rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contact-form {
+    width: 90%;
+    order: 2;
+  }
+
+  .contact-info {
+    width: 85%;
+    background-color: #5e532d;
+    height: 420px;
+    order: 1;
   }
 }
 
@@ -373,8 +400,12 @@
 
   #project {
     margin-top: 30%;
-    margin-right: 0%;
-    margin-left: 0%;
+  }
+
+  #my-projects {
+    margin-left: 16%;
+    margin-right: 15%;
+    max-width: 320px;
   }
 
   .proj button {
@@ -394,6 +425,12 @@
     margin-left: 40px;
   }
 
+  #certification .cert {  
+    margin-left: 16%;
+    margin-right: 16%;
+    max-width: 400px;
+  }
+
   #my-projects,
   #certification .cert-list {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -404,10 +441,6 @@
     margin-left: 30.5%;
   }
 
-  #certification {
-    margin: 0%;
-  }
-
   #certification h2 {
     padding: 10px 10px;
     margin-right: 20px;
@@ -416,57 +449,6 @@
 
   #skills {
     margin-top: 0%;
-  }
-
-  #contact {
-    align-items: center;
-    border-radius: 10px;
-    width: 100%;
-    padding-bottom: 15px;
-    margin: 0 auto;
-    padding-top: 3rem;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .contact-form {
-    width: 90%;
-    order: 2;
-  }
-
-  .contact-info {
-    width: 85%;
-    background-color: #5e532d;
-    height: 420px;
-    order: 1;
-  }
-
-  .contact-form input,
-  .contact-form textarea {
-    width: 100%;
-    padding: 0.5em;
-    margin-bottom: 2em;
-    border: none;
-    background-color: #cdad3c;
-    color: #f1f1f1;
-  }
-
-  .contact-form textarea {
-    height: 70px;
-  }
-
-  .contact-form input::placeholder,
-  .contact-form textarea::placeholder {
-    color: #000;
-  }
-
-  .contact-form button:hover {
-    background-color: #e2b007;
-  }
-
-  .contact-info i {
-    margin-right: 1em;
-    color: #000;
   }
 
   .close-btn-mobile {
@@ -484,28 +466,9 @@
     border-radius: 30px;
   }
 
-  #contact-popup {
-    display: none;
-  }
-
   #footer {
-    display: none;
-  }
-
-  #footer-mobile {
-    display: block;
-    text-align: center;
-    padding: 15px 0;
-    background: linear-gradient(to bottom, rgba(149, 131, 64, 0.7) 0%, rgba(94, 83, 45, 0.7) 20%, rgba(67, 58, 26, 0.7) 35%);
-    position: relative;
-    font-family:
-      'jockey one',
-      sans-serif;
-    color: #fff;
     bottom: 0;
     width: 100%;
-    font-size: 17px;
-    font-weight: bold;
   }
 }
 
