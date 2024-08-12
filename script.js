@@ -80,25 +80,6 @@ document.addEventListener('DOMContentLoaded', function() {
   updateActiveLink();
   window.addEventListener('scroll', updateActiveLink);
 
-    // Observe sections using Intersection Observer
-    var observer = new IntersectionObserver(function (entries) {
-        entries.forEach(function (entry) {
-            if (entry.isIntersecting) {
-                updateActiveLink();
-            }
-        });
-    }, {
-        threshold: 0.5
-    });
-
-    sections.forEach(function (section) {
-        observer.observe(section);
-    });
-
-    // Update active link on page load and on scroll
-    updateActiveLink();
-    window.addEventListener('scroll', updateActiveLink);
-
 
   const heroText = document.querySelector('.hero-text');
   const heroImage = document.querySelector('.hero-image');
@@ -138,7 +119,7 @@ document.addEventListener('DOMContentLoaded', function() {
           <img src="images/about.png">
         </div>
         <div class="about-text">
-          <h2>About me</h2>
+          <h2>About Me</h2>
           <p>I'm Zohal Mirkhel, a web developer with a keen eye for creating dynamic and user-friendly websites. My expertise spans across HTML, CSS, Java, JavaScript, SQL, WordPress, and Bootstrap. I take pride in writing clean, efficient code and crafting visually appealing, accessible sites. With HTML and CSS, I design elegant and responsive interfaces. My JavaScript skills enable me to develop interactive, seamless user experiences. I also bring robust backend solutions to life with Java and design efficient, scalable databases using SQL. Additionally, I customize WordPress themes and plugins to fit unique client requirements. I prioritize understanding my clients' needs to deliver innovative and detail-oriented solutions, ensuring each project not only meets but exceeds expectations.</p>
         </div>
       </div>
@@ -280,11 +261,11 @@ const projects = [
 ];
 
 const showMoreSVG = `
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 30" version="1.1" x="0px" y="0px">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" version="1.1" x="0px" y="0px">
   <title>down-1</title>
   <desc>Created with Sketch.</desc>
-  <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-    <g fill="#FFFFFF" fill-rule="nonzero">
+  <g stroke="#000" stroke-width="1" fill="none" fill-rule="evenodd">
+    <g fill="#000" fill-rule="nonzero">
       <path d="M1.95,12 C1.95,6.44953826 6.44953826,1.95 12,1.95 C17.5504617,1.95 22.05,6.44953826 22.05,12 C22.05,17.5504617 17.5504617,22.05 12,22.05 C6.44953826,22.05 1.95,17.5504617 1.95,12 Z M4.05,12 C4.05,16.3906638 7.60933624,19.95 12,19.95 C16.3906638,19.95 19.95,16.3906638 19.95,12 C19.95,7.60933624 16.3906638,4.05 12,4.05 C7.60933624,4.05 4.05,7.60933624 4.05,12 Z M12,12.55 L14.2075379,10.3075379 C14.6175884,9.89748737 15.2824116,9.89748737 15.6924621,10.3075379 C16.1025126,10.7175884 16.1025126,11.3824116 15.6924621,11.7924621 L12.6924621,14.7924621 C12.2824116,15.2025126 11.6175884,15.2025126 11.2075379,14.7924621 L8.20753788,11.7924621 C7.79748737,11.3824116 7.79748737,10.7175884 8.20753788,10.3075379 C8.61758839,9.89748737 9.28241161,9.89748737 9.69246212,10.3075379 L12,12.55 Z"/>
     </g>
   </g>
@@ -293,11 +274,11 @@ const showMoreSVG = `
 `;
 
 const showLessSVG = `
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 30" version="1.1" x="0px" y="0px">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" version="1.1" x="0px" y="0px">
   <title>up-1</title>
   <desc>Created with Sketch.</desc>
-  <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-    <g fill="#FFFFFF" fill-rule="nonzero">
+  <g stroke="#000" stroke-width="1" fill="none" fill-rule="evenodd">
+    <g fill="#000" fill-rule="nonzero">
       <path d="M22.05,12 C22.05,6.44953826 17.5504617,1.95 12,1.95 C6.44953826,1.95 1.95,6.44953826 1.95,12 C1.95,17.5504617 6.44953826,22.05 12,22.05 C17.5504617,22.05 22.05,17.5504617 22.05,12 Z M19.95,12 C19.95,16.3906638 16.3906638,19.95 12,19.95 C7.60933624,19.95 4.05,16.3906638 4.05,12 C4.05,7.60933624 7.60933624,4.05 12,4.05 C16.3906638,4.05 19.95,7.60933624 19.95,12 Z M12,11.45 L9.79246212,13.6924621 C9.38241161,14.1025126 8.71758839,14.1025126 8.30753788,13.6924621 C7.89748737,13.2824116 7.89748737,12.6175884 8.30753788,12.2075379 L11.3075379,9.20753788 C11.7175884,8.79748737 12.3824116,8.79748737 12.7924621,9.20753788 L15.7924621,12.2075379 C16.2025126,12.6175884 16.2025126,13.2824116 15.7924621,13.6924621 C15.3824116,14.1025126 14.7175884,14.1025126 14.3075379,13.6924621 L12,11.45 Z"/>
     </g>
   </g>
@@ -403,8 +384,8 @@ displayProjects();
   const moreText = document.getElementById("more-c");
   const certificate = {
     certificates: [
-      { name: "Responsive Web Design", image: "certificates/responsivewebdesgin.PNG", link: "#" },
-      { name: "JavaScript", image: "certificates/JS.PNG", link: "#" },
+      { name: "Responsive Web Design", image: "certificates/responsivewebdesgin.PNG", link: "https://www.freecodecamp.org/certification/fcc1df38081-f0b1-432b-a943-4ffc5400744f/responsive-web-design" },
+      { name: "JavaScript", image: "certificates/JS.PNG", link: "https://www.freecodecamp.org/certification/fcc1df38081-f0b1-432b-a943-4ffc5400744f/javascript-algorithms-and-data-structures-v8" },
       { name: "Introduction to Programming", image: "certificates/ITCWD.jpg", link: "#" },
       { name: "Capacity Building", image: "certificates/CB.jpg", link: "#" },
       { name: "Advanced HTML & CSS", image: "certificates/SOW.jpg", link: "#" }
@@ -420,7 +401,7 @@ displayProjects();
             (certificate) => `
           <div class="cert">
             <img src="${certificate.image}" alt="${certificate.name}"/>
-            <h5>${certificate.name}</h5>
+            <h5><a href="${certificate.link}" target="_blank">${certificate.name}</a></h5>
           </div>`
           )
           .join("")}
@@ -593,4 +574,8 @@ displayProjects();
     contactForm.appendChild(messageContainer);
   }
 
+  
+  var footer = document.getElementById("footer");
+  footer.innerHTML = "Developed by Zohal Mirkhel";
 });
+
