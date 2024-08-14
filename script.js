@@ -156,7 +156,7 @@ const projects = [
   {
     title: "Afghani Clothes Website",
     shortDescription: "An e-commerce website dedicated to showcasing and selling traditional Afghan clothing and accessories. It features a responsive design, easy-to-use navigation, product listings, an email subscription form, and a search bar.",
-    longDescription: "This e-commerce website showcases and sells traditional Afghan clothing and accessories. Key features include a dynamic banner slider, a user-friendly navigation bar, detailed product listings, an email subscription form, and a search bar. It also highlights the cultural context of Afghan clothing and offers services like fast shipping, easy returns, and 24/7 support. Built with HTML and CSS.",
+    longDescription: "This e-commerce site sells traditional Afghan clothing and accessories. It features a dynamic banner slider, navigation, detailed product listings, a search bar, and a subscription form. The site emphasizes Afghan cultural heritage and offers fast shipping, easy returns, and 24/7 support.",
     image: [
       "images/Product_Landing_Page.png",
       "images/PL1.png",
@@ -179,7 +179,7 @@ const projects = [
   {
     title: "Cash Register",
     shortDescription: "Cash Register is a tool for managing transactions and cash flow in a retail setting. It facilitates the calculation of change and the real-time updating of the cash drawer based on the amount of cash provided by customers.",
-    longDescription: "The Cash Register is a web application designed to calculate change and update the cash drawer based on the amount received from the customer. It features an input field for the received amount, a dropdown menu for selecting the payment method, and a button to process the transaction and display the change due. This application is designed to streamline the checkout process, ensuring accurate and efficient handling of cash transactions, reducing errors, and improving customer service.",
+    longDescription: "The Cash Register web app calculates change and updates the cash drawer based on the amount received. It includes an input for the received amount, a payment method dropdown, and a button to process transactions and display change. This app ensures accurate, efficient cash handling, reducing errors and improving customer service.",
     image: "images/register.png",
     technologies: ["HTML", "CSS", "JavaScript", "Git", "GitHub"],
     liveLink: "https://github.com/ZohalMirkhel/Build-a-Cash-Register",
@@ -197,7 +197,7 @@ const projects = [
   {
     title: "Portfolio Project",
     shortDescription: "This project is a portfolio website designed to showcase various web development projects. The website employs a sleek, dark-themed design with a focus on simplicity and modern aesthetics.",
-    longDescription: "This portfolio website is designed to showcase various web development projects. It features a modern, minimalist design with a dark theme, providing a sleek and professional look. The website includes a navigation bar with links to Home, About, Work, and Contact sections, allowing easy access to different parts of the site. The website is fully responsive, ensuring that it provides a seamless user experience across various devices and screen sizes.",
+    longDescription: "This portfolio website showcases web development projects with a modern, minimalist design and dark theme. It features a responsive layout, a navigation bar with links to Home, About, Work, and Contact sections, and offers a seamless user experience across all devices.",
     image: [
       "images/Portfolio.png",
       "images/portfolio2.png",
@@ -211,7 +211,7 @@ const projects = [
   {
     title: "Tribute Page",
     shortDescription: "This project is a Tribute Page created to showcase a fictional web developer's skills and projects. It demonstrates the use of HTML and CSS to build a responsive and visually appealing website.",
-    longDescription: "This project is a tribute page honoring Dr. Norman Borlaug, the man who saved a billion lives through his contributions to agriculture and the Green Revolution. The main features include a header with Dr. Borlaug's name and a tagline. The tribute page demonstrates the web developer's proficiency in creating a structured and engaging layout. It effectively uses HTML for content organization and CSS for styling and responsiveness, ensuring a seamless user experience across various devices.",
+    longDescription: "This tribute page honors Dr. Norman Borlaug, the man who saved a billion lives through the Green Revolution. It showcases the developer's skill in creating a structured, engaging layout using HTML and CSS, with a responsive design for seamless viewing on all devices.",
     image: "images/tp1.png",
     technologies: ["HTML", "CSS", "Git", "GitHub"],
     liveLink: "https://zohalmirkhel.github.io/tribute-page/",
@@ -220,7 +220,7 @@ const projects = [
   {
     title: "Documentation Page",
     shortDescription: "This is a documentation page about space, covering various topics such as astronomy, the universe, stars, black holes, and galaxies. It serves as an educational resource for understanding the vast expanse beyond Earth's atmosphere.",
-    longDescription: "The Space Documentation page is an extensive educational resource designed to provide comprehensive information about space. Overall, it is a meticulously organized and informative resource, designed to educate readers about the wonders of space. It combines historical context, scientific explanations, and engaging content to foster a deeper understanding of the universe and its myriad components.",
+    longDescription: "The Space Documentation page is a comprehensive educational resource that offers in-depth information about space. It is meticulously organized, combining historical context, scientific explanations, and engaging content to educate readers and foster a deeper understanding of the universe and its many components.",
     image: [
       "images/DemoPic.png",
       "images/SD1.png",
@@ -234,7 +234,7 @@ const projects = [
   {
     title: "Roman Number Converter",
     shortDescription: "The Roman Number Converter is a web application that allows users to convert Arabic numbers to Roman numerals. Simply enter a number in the input field and click the (Convert) button to see the Roman numeral equivalent. ",
-    longDescription: "The Roman Number Converter is a user-friendly web application that simplifies the process of converting Arabic numbers to Roman numerals. The interface features a single input field where users can enter any Arabic number they wish to convert. By clicking the (Convert) button, the application quickly processes the input and displays the equivalent Roman numeral. The application thus not only provides a practical tool but also helps users learn about the historical numeral system.",
+    longDescription: "The Roman Number Converter is a user-friendly web app that converts Arabic numbers to Roman numerals. Users enter a number in a single input field, click (Convert), and the app quickly displays the Roman numeral. It serves as both a practical tool and an educational resource on the historical numeral system.",
     image: "images/RNC.png",
     technologies: ["HTML", "CSS", "JavaScript", "Git", "GitHub"],
     liveLink: "https://zohalmirkhel.github.io/Roman-Numeral-Converter/",

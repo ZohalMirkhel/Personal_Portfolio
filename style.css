@@ -513,6 +513,13 @@ body {
   font-weight: bold;
 }
 
+#popup-content p,
+#popup-content a {
+  font-family:
+    'Jockey One',
+    sans-serif;
+}
+
 #popup-content h3 {
   font-family:
     'Jockey One',

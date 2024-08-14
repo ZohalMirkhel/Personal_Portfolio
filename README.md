@@ -78,9 +78,9 @@ If you want to explore the source code, open the project in your preferred code 
 Note: No additional installations or dependencies are required for the JavaScript to work properly. The code runs directly in the browser.
 
 ## Contribution
-1. **Hadisa Zahirzai**. [LinkdedIn](https://www.linkedin.com/in/hadisa-zahirzai-924033245?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app)
-2. **Zabeena Sherzoie**. [LinkdedIn](https://www.linkedin.com/in/zabeena-sherzoie)
-3. **Safia Iqbal**. [LinkdedIn](https://www.linkedin.com/in/iqbal-safia?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app)
+1. **Hadisa Zahirzai**. [LinkedIn](https://www.linkedin.com/in/hadisa-zahirzai-924033245?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app)
+2. **Zabeena Sherzoie**. [LinkedIn](https://www.linkedin.com/in/zabeena-sherzoie)
+3. **Safia Iqbal**. [LinkedIn](https://www.linkedin.com/in/iqbal-safia?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app)
 
 ## Design
 Click [here](https://www.figma.com/design/n2sJXMUcTX7VmMfxjVnrxQ/Untitled?node-id=0-1&t=yYaXrHKepHBA5ZH9-0) to see the Figma design
