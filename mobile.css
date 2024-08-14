@@ -216,6 +216,7 @@
 
   #project {
     padding-top: 2rem;
+    margin-left: 10%;
   }
 
   #project h2 {
@@ -227,6 +228,11 @@
 
   #pop-up {
     margin: 0 auto;
+    font-size: 20px;
+  }
+
+  #certification {
+    padding-left: 105px;
   }
 
   #certification .cert-list {
@@ -243,7 +249,7 @@
 
   #load-more,
   #load-more-1 {
-    margin-left: 47%;
+    margin-left: 51%;
   }
 
   #skills h2 {
@@ -290,6 +296,15 @@
 }
 
 @media (max-width: 850px) {
+  .pop-project-images.single-image img {
+    margin-left: 40%;
+    margin-right: 60%;
+  }
+
+  .popup-button {
+    margin: 10px 20px;
+  }
+
   #contact {
     margin-left: 5%;
     margin-right: 5%;
@@ -297,6 +312,12 @@
 }
 
 @media (max-width: 680px) {
+  .pop-project-images.single-image img {
+    margin-left: 25%;
+    margin-right: 5%;
+    width: 300px !important;
+  }
+
   .hero-text h3 {
     margin-top: 12%;
     margin-left: 13%;
@@ -321,6 +342,11 @@
     flex-direction: column;
   }
 
+  #certification {
+    padding-left: 60px;
+  }
+
+
   .contact-form {
     width: 90%;
     order: 2;
@@ -331,6 +357,65 @@
     background-color: #5e532d;
     height: 420px;
     order: 1;
+  }
+}
+
+
+@media (max-width: 570px) {
+  .mobile-close-pop {
+    display: block;
+  }
+
+  .close-btn {
+    display: none;
+  }
+
+  #popup-content {
+    height: auto;
+    overflow-y: hidden;
+  }
+
+  .close-btn-mobile {
+    display: block;
+    position: absolute;
+    top: 90%;
+    right: 10px;
+    background: black;
+    color: #d1b44b;
+    border: none;
+    margin: 10px 20px;
+    padding: 10px 30px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 30px;
+  }
+
+  .popup-button {
+    display: inline;
+    background: none;
+    font-family: inherit;
+    font-size: 20px;
+    color: #00e;
+    text-decoration: underline;
+    border-radius: 0;
+    transition: none;
+    padding-bottom: 30px;
+    padding: 20px 5px;
+    margin: 10px 20px;
+    margin-bottom: 60px;
+  }
+
+  .pop-project-images img {
+    display: none;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .pop-project-images img:first-child {
+    border-radius: 30px;
+    display: inline-block;
+    width: 250px;
+    height: 200px;
   }
 }
 
@@ -405,12 +490,17 @@
 
   #project {
     margin-top: 30%;
+    margin-left: 10%;
+    margin-right: 10%;
   }
 
-  #my-projects {
-    margin-left: 16%;
-    margin-right: 15%;
+  #my-projects { 
     max-width: 320px;
+  }
+
+  #load-more,
+  #load-more-1 {
+    margin-left: 44%;
   }
 
   .proj button {
@@ -420,8 +510,8 @@
   }
 
   #my-edu h2 {
-    margin-left: 18%;
-    margin-right: 3%;
+    margin-left: 25%;
+    margin-right: 13%;
   }
 
   #project h2 {
@@ -430,7 +520,12 @@
     margin-left: 40px;
   }
 
-  #certification .cert {  
+  #certification {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  #certification .cert {
     margin-left: 14%;
     margin-right: 14%;
     max-width: 400px;
@@ -441,25 +536,35 @@
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   }
 
-  #load-more,
-  #load-more-1 {
-    margin-left: 30.5%;
-  }
-
   #certification h2 {
     padding: 10px 10px;
-    margin-right: 20px;
-    margin-left: 20px;
+    margin-right: 80px;
+    margin-left: 80px;
   }
 
   #skills {
     margin-top: 0%;
   }
 
+  #pop-up {
+    padding: 15px;
+    line-height: 1rem;
+    font-weight: lighter;
+  }
+
+  .popup-button {
+    margin: 10px 0;
+  }
+
+  #popup-content {
+    height: 60vh;
+    overflow: scroll;
+  }
+
   .close-btn-mobile {
     display: block;
     position: absolute;
-    top: 87%;
+    top: 90%;
     right: 10px;
     background: black;
     color: #d1b44b;
@@ -469,69 +574,20 @@
     font-size: 20px;
     cursor: pointer;
     border-radius: 30px;
+  }
+
+  .pop-project-images img {
+    width: 300px;
+  }
+
+  .pop-project-images.single-image img {
+    width: 250px !important;
+    margin: auto;
   }
 
   #footer {
     bottom: 0;
     width: 100%;
-  }
-}
-
-@media (max-width: 570px) {
-  .mobile-close-pop {
-    display: block;
-  }
-
-  .close-btn {
-    display: none;
-  }
-
-  #popup-content {
-    height: auto;
-    overflow-y: hidden;
-  }
-
-  .close-btn-mobile {
-    display: block;
-    position: absolute;
-    top: 87%;
-    right: 10px;
-    background: black;
-    color: #d1b44b;
-    border: none;
-    margin: 10px 20px;
-    padding: 10px 30px;
-    font-size: 20px;
-    cursor: pointer;
-    border-radius: 30px;
-  }
-
-  .popup-button {
-    display: inline;
-    background: none;
-    font-family: inherit;
-    color: #00e;
-    text-decoration: underline;
-    border-radius: 0;
-    transition: none;
-    padding: 10px 10px;
-    margin: 10px 20px;
-    margin-bottom: 60px;
-  }
-
-  .pop-project-images img {
-    display: none;
-    width: 100%;
-    max-width: 220%;
-    margin: 0 auto;
-  }
-
-  .pop-project-images img:first-child {
-    border-radius: 30px;
-    display: inline-block;
-    width: 250%;
-    height: 200px;
-    object-fit: cover;
   }
 }
 

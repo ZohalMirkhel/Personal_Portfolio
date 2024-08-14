@@ -410,34 +410,23 @@ body {
   border-radius: 8px;
   text-align: center;
   width: 100%;
-  max-width: 450px;
+  max-width: 380px;
   margin: 10px;
   padding: 15px;
   display: none;
   line-height: 2rem;
 }
 
-#more-c span{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  display: block;
-  margin-right: 50%;
-}
-
-svg {
+#svg {
   transition: transform 0.3s;
   display: block;
-  margin-right: 50%;
+  margin-left: 15%;
+  background: #000;
 }
 
-#more-c:hover {
-  transform: rotateY(-10px);
-}
-
-#more-c span {
-  display: block;
+#more-c {
+  background: #000;
+  color: #fff;
 }
 
 .proj:hover {
@@ -514,16 +503,14 @@ svg {
   left: 50%;
   transform: translate(-50%, -50%);
   background: #d1b44b;
-  padding: 60px;
+  padding: 20px;
   justify-content: center;
   align-items: center;
   z-index: 1000;
-  width: 80%;
-  max-width: 850px;
-  height: 55%;
+  width: 70%;
+  max-width: 800px;
   line-height: 2rem;
   font-weight: bold;
-  margin: auto;
 }
 
 #popup-content h3 {
@@ -536,8 +523,14 @@ svg {
 
 #popup-content {
   position: relative;
-  text-align: left;
+  text-align: center;
   overflow-y: auto;
+  margin-bottom: 20px;
+}
+
+#popup-content #tech {
+  padding-top: 20px;
+  text-align: left;
 }
 
 .close-btn {
@@ -571,7 +564,7 @@ svg {
 .popup-button {
   display: inline-block;
   padding: 10px 20px;
-  margin: 40px 60px;
+  margin: 10px 60px;
   background: #000;
   font-family:
     'Sansita One',
@@ -610,17 +603,14 @@ svg {
 }
 
 .pop-project-images.single-image img {
-  margin: auto;
   margin-left: 110%;
   margin-right: 60%;
   width: 400px !important;
-  height: 200px !important;
-  object-fit: cover;
+  height: 150px !important;
 }
 
 /* Certification */
 #certification {
-  padding: 35px;
   text-align: center;
   padding-top: 8rem;
 }
@@ -643,6 +633,16 @@ svg {
 #load-more,
 #load-more-1 {
   margin-left: 47%;
+  background: #000;
+  border: none;
+}
+
+#load-more {
+  margin-top: 5%;
+}
+
+#load-more-1 {
+  margin-top: 10%;
 }
 
 

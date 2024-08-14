@@ -156,7 +156,7 @@ const projects = [
   {
     title: "Afghani Clothes Website",
     shortDescription: "An e-commerce website dedicated to showcasing and selling traditional Afghan clothing and accessories. It features a responsive design, easy-to-use navigation, product listings, an email subscription form, and a search bar.",
-    longDescription: "This e-commerce website showcases and sells traditional Afghan clothing and accessories, focusing on user experience, responsiveness, and aesthetics. Key features include a dynamic banner slider, a user-friendly navigation bar, detailed product listings, an email subscription form, and a search bar. It also highlights the cultural context of Afghan clothing and offers services like fast shipping, easy returns, and 24/7 support. Built with HTML and CSS, the site ensures a fully responsive experience across all devices.",
+    longDescription: "This e-commerce website showcases and sells traditional Afghan clothing and accessories. Key features include a dynamic banner slider, a user-friendly navigation bar, detailed product listings, an email subscription form, and a search bar. It also highlights the cultural context of Afghan clothing and offers services like fast shipping, easy returns, and 24/7 support. Built with HTML and CSS.",
     image: [
       "images/Product_Landing_Page.png",
       "images/PL1.png",
@@ -188,7 +188,7 @@ const projects = [
   {
     title: "Pokémon Search App",
     shortDescription: "The Pokémon Search App is a web application designed to allow users to search for Pokémon by their name or ID. It provides detailed information and a sprite image of the searched Pokémon.",
-    longDescription: "The Pokémon Search App is a web application that enables users to search for Pokémon by entering either the name or ID of the Pokémon they wish to find. Upon initiating the search, the app displays information about the Pokémon. Additionally, the app shows a sprite image of the Pokémon. The user-friendly interface, adorned with a colorful Pokémon-themed banner, enhances the overall experience, making it easy and enjoyable to look up any Pokémon.",
+    longDescription: "The Pokémon Search App is a web application that enables users to search for Pokémon. Upon initiating the search, the app displays information about the Pokémon. Additionally, the app shows a sprite image of the Pokémon. The user-friendly interface, adorned with a colorful Pokémon-themed banner, enhances the overall experience, making it easy and enjoyable to look up any Pokémon.",
     image: "images/PSA.png",
     technologies: ["HTML", "CSS", "JavaScript", "Git", "GitHub", "Spilne"],
     liveLink: "https://zohalmirkhel.github.io/Pok-mon-Search-App/",
@@ -220,7 +220,7 @@ const projects = [
   {
     title: "Documentation Page",
     shortDescription: "This is a documentation page about space, covering various topics such as astronomy, the universe, stars, black holes, and galaxies. It serves as an educational resource for understanding the vast expanse beyond Earth's atmosphere.",
-    longDescription: "The Space Documentation page is an extensive educational resource designed to provide comprehensive information about the vast expanse beyond Earth's atmosphere. Overall, the Space Documentation page is a meticulously organized and informative resource, designed to educate readers about the wonders of space. It combines historical context, scientific explanations, and engaging content to foster a deeper understanding of the universe and its myriad components.",
+    longDescription: "The Space Documentation page is an extensive educational resource designed to provide comprehensive information about space. Overall, it is a meticulously organized and informative resource, designed to educate readers about the wonders of space. It combines historical context, scientific explanations, and engaging content to foster a deeper understanding of the universe and its myriad components.",
     image: [
       "images/DemoPic.png",
       "images/SD1.png",
@@ -261,11 +261,11 @@ const projects = [
 ];
 
 const showMoreSVG = `
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" version="1.1" x="0px" y="0px">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" version="1.1" x="0px" y="0px" id="svg">
   <title>down-1</title>
   <desc>Created with Sketch.</desc>
-  <g stroke="#000" stroke-width="1" fill="none" fill-rule="evenodd">
-    <g fill="#000" fill-rule="nonzero">
+  <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+    <g fill="#fff" fill-rule="nonzero">
       <path d="M1.95,12 C1.95,6.44953826 6.44953826,1.95 12,1.95 C17.5504617,1.95 22.05,6.44953826 22.05,12 C22.05,17.5504617 17.5504617,22.05 12,22.05 C6.44953826,22.05 1.95,17.5504617 1.95,12 Z M4.05,12 C4.05,16.3906638 7.60933624,19.95 12,19.95 C16.3906638,19.95 19.95,16.3906638 19.95,12 C19.95,7.60933624 16.3906638,4.05 12,4.05 C7.60933624,4.05 4.05,7.60933624 4.05,12 Z M12,12.55 L14.2075379,10.3075379 C14.6175884,9.89748737 15.2824116,9.89748737 15.6924621,10.3075379 C16.1025126,10.7175884 16.1025126,11.3824116 15.6924621,11.7924621 L12.6924621,14.7924621 C12.2824116,15.2025126 11.6175884,15.2025126 11.2075379,14.7924621 L8.20753788,11.7924621 C7.79748737,11.3824116 7.79748737,10.7175884 8.20753788,10.3075379 C8.61758839,9.89748737 9.28241161,9.89748737 9.69246212,10.3075379 L12,12.55 Z"/>
     </g>
   </g>
@@ -274,7 +274,7 @@ const showMoreSVG = `
 `;
 
 const showLessSVG = `
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" version="1.1" x="0px" y="0px">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" version="1.1" x="0px" y="0px" id="svg">
   <title>up-1</title>
   <desc>Created with Sketch.</desc>
   <g stroke="#000" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -356,7 +356,7 @@ function displayProjects() {
       ${imagesToShow.map(image => `<img src="${image}" alt="${project.title}" />`).join('')}
     </div>
     <p>${project.longDescription}</p>
-    <p>Technologies: ${project.technologies.join(", ")}</p>
+    <p id="tech">Technologies: ${project.technologies.join(", ")}</p>
     <a class="popup-button" id="live" href="${project.liveLink}" target="_blank">Live Site</a>
     <a class="popup-button" id="git" href="${project.sourceLink}" target="_blank">GitHub Repository</a>
     <button id="mobile-close-pop" class="close-btn-mobile">Close</button>
