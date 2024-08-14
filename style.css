@@ -244,10 +244,6 @@ body {
     sans-serif;
 }
 
-.pop-contact-info h2 {
-  margin: 10%;
-}
-
 #about-me h2 {
   font-family:
     'Jockey One',
@@ -284,15 +280,6 @@ body {
   margin-bottom: 1em;
   padding: 7% 0;
   width: 100%;
-}
-.pop-contact-form p {
-  margin-top: 30px;
-  margin-bottom: 30px;
-}
-
-.pop-contact-info p {
-  padding-bottom: 3%;
-  padding-left: 10%;
 }
 
 #about-me p {
@@ -867,13 +854,12 @@ body {
   text-align: center;
   justify-content: center;
   align-items: center;
-  padding: 20px 0px;
+  padding: 20px 0;
   background-color: linear-gradient(90deg, rgba(67, 58, 26, 0.35) 17%, rgba(122, 107, 55, 0.20) 30%, rgba(149, 131, 64, 0.00) 100%);
   position: relative;
   font-family:
     'Jockey One'
     sans-serif;
-  bottom: 0px;
   width: 100%;
   font-size: 24px;
   color: #fff;
