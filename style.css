@@ -32,6 +32,18 @@ body {
   margin: 0 auto;
 }
 
+.social-links a {
+  margin: 0.5rem 0;
+  color: #fff;
+}
+
+#popup-content p,
+#popup-content a {
+  font-family:
+    'Jockey One',
+    sans-serif;
+}
+
 #navbar li a {
   text-decoration: none;
   color: #fff;
@@ -47,6 +59,11 @@ body {
   color: #f2d24b;
   text-decoration: underline;
   text-underline-offset: 5px;
+}
+
+#certification .cert a {
+  text-decoration: none;
+  color: #fff;
 }
 
 #nav .sidebar a:hover,
@@ -181,11 +198,6 @@ body {
   margin-top: 28%;
 }
 
-.social-links a {
-  margin: 0.5rem 0;
-  color: #fff;
-}
-
 .social-links {
   display: flex;
   flex-direction: column;
@@ -240,7 +252,7 @@ body {
   font-family:
     'Jockey One',
     sans-serif;
-  background-color: rgb(101,85,29);
+  background-color: rgb(101, 85, 29);
   clip-path: polygon(0% 0, 80% 0, 100% 100%, 20% 100%);
   display: inline-block;
   padding: 5px 40px;
@@ -258,18 +270,21 @@ body {
 }
 
 .contact-info p {
-  padding: 3% 18%;
+  padding:3% 18%;
   display: flex;
-  align-items: left;
+  align-items: center;
   color: #fff;
+  font-family:
+    'Sarabun'
+    sans-serif;
 }
 
 .contact-form p {
   color: #fff;
   margin-bottom: 1em;
   padding: 7% 0;
+  width: 100%;
 }
-
 .pop-contact-form p {
   margin-top: 30px;
   margin-bottom: 30px;
@@ -331,7 +346,7 @@ body {
   font-family:
     'Jockey One',
     sans-serif;
-  background-color: rgb(101,85,29);
+  background-color: rgb(101, 85, 29);
   clip-path: polygon(0% 0, 80% 0, 100% 100%, 20% 100%);
   display: inline-block;
   padding: 5px 40px;
@@ -382,7 +397,7 @@ body {
   font-size: 1.5rem;
   margin-bottom: 30px;
   color: #fff;
-  background-color: rgb(101,85,29);
+  background-color: rgb(101, 85, 29);
   clip-path: polygon(0% 0, 80% 0, 100% 100%, 20% 100%);
   padding: 5px 40px;
   justify-content: center;
@@ -513,13 +528,6 @@ body {
   font-weight: bold;
 }
 
-#popup-content p,
-#popup-content a {
-  font-family:
-    'Jockey One',
-    sans-serif;
-}
-
 #popup-content h3 {
   font-family:
     'Jockey One',
@@ -626,7 +634,7 @@ body {
   font-size: 1.5rem;
   margin-bottom: 30px;
   color: #fff;
-  background-color: rgb(101,85,29);
+  background-color: rgb(101, 85, 29);
   clip-path: polygon(0% 0, 80% 0, 100% 100%, 20% 100%);
   padding: 5px 40px;
   justify-content: center;
@@ -652,7 +660,6 @@ body {
   margin-top: 10%;
 }
 
-
 #certification .cert-list {
   display: grid;
   grid-template-columns: repeat(2, minmax(400px, 1fr));
@@ -670,11 +677,6 @@ body {
   margin: 10px;
   padding: 15px;
   display: none;
-}
-
-#certification .cert a {
-  text-decoration: none;
-  color: #fff;
 }
 
 #certification .cert:nth-child(1),
@@ -716,7 +718,7 @@ body {
   font-weight: 100;
   border: solid 2px #000;
   color: #fff;
-  background-color: rgb(101,85,29);
+  background-color: rgb(101, 85, 29);
   clip-path: polygon(0% 0, 80% 0, 100% 100%, 20% 100%);
   padding: 0 60px;
   display: inline-block;
@@ -828,34 +830,6 @@ body {
   float: right;
 }
 
-.contact-info h2 {
-  padding: 6%;
-}
-
-.contact-form h2,
-.contact-info h2 {
-  color: #fff;
-  margin-bottom: 1em;
-  font-family: 'Sansita One';
-}
-
-.contact-info p {
-  padding:3% 18%;
-  display: flex;
-  align-items: center;
-  color: #fff;
-  font-family:
-    'Sarabun'
-    sans-serif;
-}
-
-.contact-form p {
-  color: #fff;
-  margin-bottom: 1em;
-  padding: 7% 0;
-  width: 100%;
-}
-
 .contact-form input,
 .contact-form textarea {
   width: 100%;
@@ -873,18 +847,6 @@ body {
 .contact-form input::placeholder,
 .contact-form textarea::placeholder {
   color: #000;
-}
-
-.contact-form button {
-  background-color: #b09638;
-  color: #272727;
-  border: none;
-  padding: 0.7em 2.2em;
-  margin-left: 38%;
-  margin-bottom: 10%;
-  border-radius: 30px;
-  font-weight: bolder;
-  cursor: pointer;
 }
 
 .contact-form button:hover {
@@ -905,13 +867,13 @@ body {
   text-align: center;
   justify-content: center;
   align-items: center;
-  padding: 20px 0;
+  padding: 20px 0px;
   background-color: linear-gradient(90deg, rgba(67, 58, 26, 0.35) 17%, rgba(122, 107, 55, 0.20) 30%, rgba(149, 131, 64, 0.00) 100%);
   position: relative;
   font-family:
     'Jockey One'
     sans-serif;
-  bottom: 0;
+  bottom: 0px;
   width: 100%;
   font-size: 24px;
   color: #fff;

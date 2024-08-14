@@ -1,6 +1,6 @@
 @media (max-width: 1250px) {
   .social-links {
-  left: -8rem;
+    left: -8rem;
   }
 }
 
@@ -212,7 +212,6 @@
     gap: 20px;
     margin: auto;
   }
-  
 
   #project {
     padding-top: 2rem;
@@ -350,7 +349,6 @@
     padding-left: 60px;
   }
 
-
   .contact-form {
     width: 90%;
     order: 2;
@@ -363,7 +361,6 @@
     order: 1;
   }
 }
-
 
 @media (max-width: 570px) {
   .mobile-close-pop {
@@ -402,8 +399,8 @@
     text-decoration: underline;
     border-radius: 0;
     transition: none;
-    padding-bottom: 30px;
     padding: 20px 2px;
+    padding-bottom: 30px;
     margin: 10px 20px;
     margin-bottom: 60px;
   }
@@ -501,7 +498,7 @@
     margin-right: 10%;
   }
 
-  #my-projects { 
+  #my-projects {
     max-width: 320px;
   }
 
