@@ -37,6 +37,25 @@ body {
   color: #fff;
 }
 
+.contact-info p {
+  padding:3% 18%;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  font-family:
+    'Sarabun'
+    sans-serif;
+}
+
+.proj p {
+  font-family:
+    'Jockey One',
+    sans-serif;
+  font-size: 1rem;
+  margin: 10px 0;
+  color: #fff;
+}
+
 #popup-content p,
 #popup-content a {
   font-family:
@@ -254,25 +273,6 @@ body {
   padding: 5px 40px;
   padding-left: 60px;
   margin-right: 13%;
-}
-
-.proj p {
-  font-family:
-    'Jockey One',
-    sans-serif;
-  font-size: 1rem;
-  margin: 10px 0;
-  color: #fff;
-}
-
-.contact-info p {
-  padding:3% 18%;
-  display: flex;
-  align-items: center;
-  color: #fff;
-  font-family:
-    'Sarabun'
-    sans-serif;
 }
 
 .contact-form p {
