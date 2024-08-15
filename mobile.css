@@ -343,14 +343,11 @@
     padding-top: 3rem;
     display: flex;
     flex-direction: column;
+    margin: 5%;
   }
 
   #certification {
     padding-left: 60px;
-  }
-
-  #contact {
-    margin: 5%;
   }
 
   .contact-form {
