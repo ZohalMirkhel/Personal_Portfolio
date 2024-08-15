@@ -51,7 +51,7 @@ body {
   font-family:
     'Jockey One',
     sans-serif;
-  font-size: 1rem;
+  font-size: 20px;
   margin: 10px 0;
   color: #fff;
 }
@@ -437,8 +437,9 @@ body {
 
 .proj img {
   max-width: 100%;
+  width: 600px;
   border-radius: 30px;
-  height: 280px;
+  height: 245px;
   box-shadow: 0 6px 16px #958340;
 }
 
@@ -619,17 +620,20 @@ body {
 
 #certification h2 {
   font-size: 1.5rem;
+  margin-top: 10%;
   margin-bottom: 30px;
   color: #fff;
   background-color: rgb(101, 85, 29);
   clip-path: polygon(0% 0, 80% 0, 100% 100%, 20% 100%);
-  padding: 5px 40px;
+  padding: 15px 40px;
   justify-content: center;
   text-align: center;
   align-items: center;
-  padding-left: 60px;
-  margin-left: 36%;
-  margin-right: 34%;
+  margin-left: 38%;
+  margin-right: 40%;
+  font-family:
+    'Jockey One'
+    sans-serif;
 }
 
 #load-more,

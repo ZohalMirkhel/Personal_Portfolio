@@ -349,9 +349,14 @@
     padding-left: 60px;
   }
 
+  #contact {
+    margin: 5%;
+  }
+
   .contact-form {
     width: 90%;
     order: 2;
+    margin-right: 12px;
   }
 
   .contact-info {
@@ -587,6 +592,10 @@
   .pop-project-images.single-image img {
     width: 250px !important;
     margin: auto;
+  }
+
+  #contact {
+    margin: 0;
   }
 
   #footer {

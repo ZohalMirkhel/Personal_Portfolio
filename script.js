@@ -394,7 +394,7 @@ displayProjects();
 
   certificationSection.innerHTML = `
     <div id="certification-section">
-      <h2>Certificates</h2>
+      <h2>Certification</h2>
       <div class="cert-list">
         ${certificate.certificates
           .map(
