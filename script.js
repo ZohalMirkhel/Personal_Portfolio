@@ -91,7 +91,7 @@ document.addEventListener('DOMContentLoaded', function() {
       <h3>Hello, My Name is</h3>
       <h2>Zohal Mirkhel</h2>
       <h1>Web Developer</h1>
-      <a href="#contact-popup" class="contact-btn" onclick="toggleContactPopup()">Contact Me</a>
+      <a href="#contact" class="contact-btn">Contact Me</a>
       <a href="#contact" class="contact-btn-mobile">Contact Me</a>
     `;
 

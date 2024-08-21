@@ -804,8 +804,8 @@ body {
   max-width: 1000px;
   width: 100%;
   margin: auto;
-  margin-top: 15%;
-  bottom: 5%;
+  margin-top: 5%;
+  margin-bottom: 45%;
 }
 
 .contact-form {
@@ -828,7 +828,8 @@ body {
   margin-bottom: 2em;
   border: none;
   background-color: #cdad3c;
-  color: #f1f1f1;
+  color: #000;
+  font-weight: bolder;
 }
 
 .contact-form textarea {
