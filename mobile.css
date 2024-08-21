@@ -514,6 +514,10 @@
     float: right;
   }
 
+  #education {
+    margin-bottom: 10%;
+  }
+
   #my-edu h2 {
     margin-top: 10%;
     margin-left: 25%;
