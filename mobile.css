@@ -293,9 +293,6 @@
     margin-right: 13%;
   }
 
-  #menu {
-    margin-left: 700%;
-  }
 }
 
 @media (max-width: 850px) {
@@ -421,10 +418,6 @@
 }
 
 @media (max-width: 500px) {
-  #menu {
-    margin-left: 430%;
-  }
-
   .sidebar {
     width: 80%;
     background: linear-gradient(to bottom, rgba(149, 131, 64, 0.9) 0%, rgba(94, 83, 45, 0.9) 20%, rgba(67, 58, 26, 0.9) 35%, rgba(0, 0, 0, 0.9) 100%);
