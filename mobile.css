@@ -421,6 +421,10 @@
 }
 
 @media (max-width: 500px) {
+  * {
+    overflow-x: hidden;
+  }
+
   #menu {
     margin-left: 430%;
   }
